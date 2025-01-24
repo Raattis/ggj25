@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://j3bp4mwb7p5"]
+
+[ext_resource type="Texture2D" uid="uid://6whcqy7bo0k2" path="res://icon.svg" id="1_8444s"]
+[ext_resource type="Script" uid="uid://ba0gld073xknl" path="res://entity.gd" id="2_7vx24"]
+[ext_resource type="Script" uid="uid://b6pwqdoij3rrb" path="res://spike.gd" id="3_7vx24"]
+
+[node name="Vesa" type="Node2D"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Entity" type="Sprite2D" parent="World"]
+texture = ExtResource("1_8444s")
+script = ExtResource("2_7vx24")
+
+[node name="Spike" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike2" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike3" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike4" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike5" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike6" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike7" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike8" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike9" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike10" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike11" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
+
+[node name="Spike12" type="Sprite2D" parent="World"]
+scale = Vector2(0.1, 1)
+texture = ExtResource("1_8444s")
+script = ExtResource("3_7vx24")
