@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://baye7jmkprwtr"]
+
+[ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_4n66u"]
+[ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo0uw"]
+shader = ExtResource("1_4n66u")
+shader_parameter/aspect_ratio = null
+shader_parameter/bubbles_pos = null
+shader_parameter/bubbles_radius = null
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bo0uw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_bo0uw")
