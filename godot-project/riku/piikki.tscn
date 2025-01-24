@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://xjwqtpiaaa4o"]
+
+[ext_resource type="Texture2D" uid="uid://6whcqy7bo0k2" path="res://icon.svg" id="1_pa8mk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
+
+[node name="piikki" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="gfx" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_pa8mk")
+
+[node name="coll" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cspln")

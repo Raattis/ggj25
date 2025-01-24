@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqafjyevtvphh"]
+
+[ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
+[ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
+[ext_resource type="PackedScene" uid="uid://btuij7cpukcjs" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
+[ext_resource type="PackedScene" uid="uid://b667h66t1lub6" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
+[ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="4_h4tqo"]
+[ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
+[ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
+
+[node name="maailma" type="Node2D"]
+
+[node name="cluster" type="RigidBody2D" parent="."]
+position = Vector2(572, 590)
+collision_mask = 0
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_v0xw8")
+
+[node name="kupla_coll" parent="cluster" instance=ExtResource("3_h4tqo")]
+
+[node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("2_cspln")]
+
+[node name="piikki" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(571, 267)
+
+[node name="piikki2" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(719, 167)
+
+[node name="piikki3" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(344, 167)
+
+[node name="piikki4" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(454, 93)
+
+[node name="piikki5" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(929, 207)
+
+[node name="death_plane" parent="." instance=ExtResource("5_1f6c8")]
+position = Vector2(-71, 322)
+scale = Vector2(1, 5.53272)
+
+[node name="death_plane2" parent="." instance=ExtResource("5_1f6c8")]
+position = Vector2(1225, 325)
+scale = Vector2(1, 5.53272)
+
+[node name="win_plane" parent="." instance=ExtResource("6_1f6c8")]
+position = Vector2(594, -391)
+scale = Vector2(10, 1)
+
+[node name="uusi_kupla" type="Node2D" parent="."]
+
+[node name="kupla_gfx" parent="uusi_kupla" instance=ExtResource("2_cspln")]
+
+[node name="kursori" parent="." instance=ExtResource("1_c3fsg")]
+position = Vector2(378, -80)
+
+[connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
