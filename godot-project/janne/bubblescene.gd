@@ -1,3 +1,4 @@
+class_name SceneVis
 extends ColorRect
 
 class Bubble:
@@ -6,6 +7,10 @@ class Bubble:
 
 var bubbles_pos = []
 var bubbles_radius = []
+
+func push_bubble(pos: Vector2, radius: float):
+	bubbles_pos.push_back(pos)
+	bubbles_radius.push_back(radius)
 
 func _init() -> void:
 	for i in range(0, 128):
@@ -23,3 +28,6 @@ func _process(delta: float) -> void:
 		
 	material.set_shader_parameter("bubbles_pos", bubbles_pos)
 	material.set_shader_parameter("bubbles_radius", bubbles_radius)
+	
+	bubbles_pos.clear()
+	bubbles_radius.clear()

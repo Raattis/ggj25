@@ -1,10 +1,11 @@
 shader_type canvas_item;
 
-uniform float aspect_ratio;
-uniform vec2 bubbles_pos[128];
-uniform float bubbles_radius[128];
-
+const int BUBBLES_COUNT = 256;
 const float PI_HALF = PI / 2.0;
+
+uniform float aspect_ratio;
+uniform vec2 bubbles_pos[BUBBLES_COUNT];
+uniform float bubbles_radius[BUBBLES_COUNT];
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -15,11 +16,11 @@ float sdCircle( vec2 p, float r ) {
 }
 
 vec3 normal_circle(vec2 p, float r) {
-	return vec3(
+	return normalize(vec3(
 		sin(p.x / r * PI_HALF),
 		sin(p.y / r * PI_HALF),
 		cos(length(p) / r * PI_HALF)
-	);
+	));
 }
 
 void fragment() {
@@ -27,7 +28,7 @@ void fragment() {
 	vec2 pos = vec2(aspect_ratio, 1.0) * (UV - vec2(0.5));
 	float dist = 99999999.0;
 	vec3 normal = vec3(1,1,1);
-	for (int i = 0; i < 128; ++i) {
+	for (int i = 0; i < BUBBLES_COUNT; ++i) {
 		float fi = float(i);
 		vec2 p = pos - bubbles_pos[i];
 		float r = bubbles_radius[i];
@@ -43,7 +44,9 @@ void fragment() {
 		discard;
 	}
 	
-	COLOR = vec4(normal, 1.0);
+	float light = -dot(normalize(vec3(pos, 0.0)), normal);
+	
+	COLOR = vec4(vec3(light), 1.0);
 }
 
 //void light() {
