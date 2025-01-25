@@ -7,7 +7,7 @@ const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
 
-@export var gravity_scale := -1
+@export var gravity_scale := -1.0 # miten aktiivisen kuplan pitäisi kelluuntua
 @export var linear_damping := 2.0
 @export var angular_damping := 0.1
 @export var impulse_magnitude := 300.0
@@ -15,7 +15,6 @@ var cluster_parent : Node2D = null
 @export var auto_launch_cooldown := 1.0
 
 @export var tee_auto_laukaisuja := true
-@export var seuraava_kamera := true
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
 var launch_cooldown :float= 0.5
@@ -79,10 +78,12 @@ func launch():
 	new.angular_damp = angular_damping
 	new.impulse_magnitude = impulse_magnitude
 	new.max_angular_velocity = max_angular_velocity
+	new.kulkee = true
 	if kamera:
 		if kamera.get_parent():
 			kamera.get_parent().remove_child(kamera)
 		new.add_child(kamera)
+		kamera.position = Vector2.ZERO
 
 const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):

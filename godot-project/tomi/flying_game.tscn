@@ -1,18 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=9 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="2_x03cg"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_vhjie"]
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="4_yfi2e"]
-[ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_pj3qd"]
-[ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_11i1e"]
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="7_ibo5b"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_7oywc"]
-[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_13je0"]
 [ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_lfb6w"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
 
-[node name="maailma" type="Node2D"]
+[node name="flying_game" type="Node2D"]
 
 [node name="esteet" type="Node" parent="."]
 
@@ -257,18 +254,6 @@ script = null
 self_modulate = Color(1, 1, 1, 1)
 position = Vector2(-250, -266)
 
-[node name="death_plane" parent="." instance=ExtResource("5_pj3qd")]
-position = Vector2(-71, 322)
-scale = Vector2(1, 5.53272)
-
-[node name="death_plane2" parent="." instance=ExtResource("5_pj3qd")]
-position = Vector2(1225, 325)
-scale = Vector2(1, 5.53272)
-
-[node name="win_plane" parent="." instance=ExtResource("6_11i1e")]
-position = Vector2(368, -105)
-scale = Vector2(10, 1)
-
 [node name="uusi_kupla" type="Node2D" parent="."]
 
 [node name="kupla_gfx" parent="uusi_kupla" instance=ExtResource("4_yfi2e")]
@@ -277,33 +262,22 @@ position = Vector2(-175, -61)
 
 [node name="kursori" parent="." instance=ExtResource("7_ibo5b")]
 position = Vector2(378, -80)
+gravity_scale = -0.1
+linear_damping = null
+angular_damping = null
+impulse_magnitude = null
+max_angular_velocity = null
+auto_launch_cooldown = null
 tee_auto_laukaisuja = false
 
 [node name="poks" parent="." instance=ExtResource("8_7oywc")]
 visible = false
 position = Vector2(572, 590)
 
-[node name="death_plane3" parent="." instance=ExtResource("5_pj3qd")]
-position = Vector2(-71, 322)
-scale = Vector2(1, 5.53272)
-
-[node name="death_plane4" parent="." instance=ExtResource("5_pj3qd")]
-position = Vector2(373, -202)
-scale = Vector2(24.1192, 0.469113)
-
-[node name="vittu viratanne" parent="." instance=ExtResource("9_13je0")]
-position = Vector2(129, 260)
-rotation = -0.582529
-scale = Vector2(0.175746, 0.0923746)
-
-[node name="the virtanen" parent="." instance=ExtResource("9_13je0")]
-position = Vector2(339, 284)
-rotation = 2.80721
-scale = Vector2(0.137064, 0.090799)
-
 [node name="the kalanen" parent="." instance=ExtResource("10_lfb6w")]
 
 [node name="Pääkamera" type="Camera2D" parent="."]
+position = Vector2(315, 278)
 position_smoothing_enabled = true
 script = ExtResource("11_5gb5r")
 

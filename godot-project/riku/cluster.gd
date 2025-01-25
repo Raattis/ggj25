@@ -6,6 +6,12 @@ var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
 var merge_velocity :float= 3.0
 const POKS := preload("res://vesa/poks.tscn")
+var kulkee = false
+var liiku_napein = false
+
+func _ready():
+	if get_tree().get_current_scene().name.find("fly") != -1:
+		liiku_napein = true
 
 func _process(delta: float):
 	impulse_cooldown -= delta
@@ -28,7 +34,7 @@ func pop(pop_position: Vector2):
 	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
-	if gravity_scale == 0.0:
+	if not kulkee:
 		return
 	if get_child_count() == 0:
 		queue_free()
