@@ -5,14 +5,11 @@ var offset := Vector2(0,0)
 var start := Vector2(0,0)
 var done_stuff := false
 
-var kursori :Node2D= null
-
 @export var TYYPIT :Array[PackedScene]
 var tyyppi :int= -1
 var obu :Node2D= null
 
 func _ready():
-	kursori = get_tree().root.get_node("maailma/kursori")
 	next()
 
 func next():
@@ -24,7 +21,7 @@ func next():
 	obu.position = Vector2(0,0)
 
 func _process(_delta):
-	if kursori.bubbles_add_mode:
+	if GameManager.bubbles_add_mode:
 		dragging = false
 		return
 
@@ -39,7 +36,7 @@ func is_mouse_over() -> bool:
 	return ((get_global_mouse_position() - global_position) * scale).length() < ($CollisionShape2D.shape as CircleShape2D).radius
 
 func _input(event : InputEvent):
-	if kursori.bubbles_add_mode:
+	if GameManager.bubbles_add_mode:
 		return
 
 	if event is InputEventMouse and dragging:

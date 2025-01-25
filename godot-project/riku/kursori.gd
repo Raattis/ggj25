@@ -1,4 +1,3 @@
-class_name Kursori
 extends Node2D
 
 @onready var target :Cluster= $"../cluster"
@@ -23,8 +22,6 @@ var spawn_cooldown :float= 0.5
 var spawn_radius := 0.1
 var spawn_radius_grow_sign := 1.0
 
-var bubbles_add_mode := true
-
 func _ready():
 	if get_tree().root.has_node("Pääkamera"):
 		kamera = get_tree().root.get_node("Pääkamera")
@@ -42,7 +39,7 @@ func _process(delta: float):
 		get_parent().move_child(cluster_parent, 0)
 
 	spawn_cooldown -= delta
-	if Input.is_action_pressed("spawn") and bubbles_add_mode:
+	if Input.is_action_pressed("spawn") and GameManager.bubbles_add_mode:
 		spawn_radius += delta * 20.0 * spawn_radius_grow_sign
 		if spawn_radius > 30.0:
 			spawn_radius_grow_sign = -1.0
@@ -53,8 +50,8 @@ func _process(delta: float):
 	var target_pos := target.find_closest_spot(position, spawn_radius)
 	var t :float= 1.0 - pow(0.00001, delta)
 	uusi_kupla.global_position = lerp(uusi_kupla.global_position, target_pos, t)
-	uusi_kupla.visible = bubbles_add_mode
-	if bubbles_add_mode:
+	uusi_kupla.visible = GameManager.bubbles_add_mode
+	if GameManager.bubbles_add_mode:
 		var view_size = get_viewport_rect().size
 		var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
 		renderer.push_bubble(
@@ -65,7 +62,7 @@ func _process(delta: float):
 	if launch_cooldown < 0 and tee_auto_laukaisuja:
 		launch()
 
-	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 and bubbles_add_mode:
+	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 and GameManager.bubbles_add_mode:
 		launch()
 
 func launch():
@@ -90,15 +87,15 @@ func launch():
 
 const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):
-	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_LEFT and not bubbles_add_mode:
+	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_LEFT and not GameManager.bubbles_add_mode:
 		var siirreltava := SIIRRELTAVA.instantiate()
 		$"..".find_child("siirreltavat", true).add_child(siirreltava)
 		siirreltava.global_position = get_global_mouse_position()
 	if event.is_action_pressed("launch"):
 		launch()
-	if event.is_action_pressed("remove") and target.get_child_count() > 1 and bubbles_add_mode:
+	if event.is_action_pressed("remove") and target.get_child_count() > 1 and GameManager.bubbles_add_mode:
 		target.remove_closest_child(position)
-	if event.is_action_released("spawn") and spawn_cooldown < 0.0 and bubbles_add_mode:
+	if event.is_action_released("spawn") and spawn_cooldown < 0.0 and GameManager.bubbles_add_mode:
 		if target.get_child_count() > 31:
 			target.remove_child(target.get_child(31))
 			spawn_cooldown = 0.5

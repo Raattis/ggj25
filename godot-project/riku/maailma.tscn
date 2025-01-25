@@ -55,5 +55,7 @@ position = Vector2(226, 142)
 [node name="ankkuri2" parent="." instance=ExtResource("10_msu6y")]
 position = Vector2(453, 146)
 
+[node name="level" type="Node" parent="."]
+
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
 [connection signal="pressed" from="mode_switch" to="mode_switch" method="_on_pressed"]
