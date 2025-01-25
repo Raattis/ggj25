@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dec3wglbl30n4" path="res://vesa/flow.png" id="1_jt0u4"]
 [ext_resource type="Script" uid="uid://cjlx7nsip62f6" path="res://vesa/virtanen.gd" id="2_ay0yp"]
-[ext_resource type="Script" path="res://vesa/virtausanime.gd" id="2_miv4y"]
+[ext_resource type="Script" uid="uid://of275ws8cnp6" path="res://vesa/virtausanime.gd" id="2_miv4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_miv4y"]
 size = Vector2(458, 280)

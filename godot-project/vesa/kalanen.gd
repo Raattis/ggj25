@@ -1,8 +1,8 @@
 extends Area2D
 
-var suunnanmuutokseen_vaadittu_aika = 2;
-var aika_toimettomana = 0;
-var aika_paikallaan = 0;
+var suunnanmuutokseen_vaadittu_aika = 2.0;
+var aika_toimettomana = 0.0;
+var aika_paikallaan = 0.0;
 var elämänsuunta := Vector2(1,0);
 var toimeton_nopeus = 60;
 var olen_toimeton = true;
@@ -14,6 +14,7 @@ var maailman_alaraja_y = 30;
 var maailman_yläraja_y = 500;
 var kuplan_metästys_kesken = false;
 var kupla_kohde_sijainti := Vector2(0,0);
+var huojunta := 0.0
 
 func etippä_toi(kuplunen : Cluster):
 	kupla_kohde_sijainti = kuplunen.position
@@ -24,6 +25,7 @@ func _ready():
 	kalan_koko = scale;
 
 func kuplan_metsästys_tilanpäivitys(delta : float):
+	huojunta += delta * 4.0
 	var direction := Vector2(kupla_kohde_sijainti - position).normalized();
 	var magnitude := sqrt((direction.x* direction.x) + (direction.y*direction.y));
 	var unit_vector := direction / magnitude;
@@ -35,6 +37,7 @@ func kuplan_metsästys_tilanpäivitys(delta : float):
 		olen_toimeton = true;
 
 func toimeton_elämäntila_tilannepäivitys(delta: float):
+	huojunta += delta * 2.0
 	aika_toimettomana += delta;
 	if aika_toimettomana > suunnanmuutokseen_vaadittu_aika:
 		aika_toimettomana = 0
@@ -62,3 +65,6 @@ func _process(delta: float):
 		
 	if kuplan_metästys_kesken:
 		kuplan_metsästys_tilanpäivitys(delta);
+
+	huojunta += delta * 0.5
+	rotation = sin(huojunta) * 0.1

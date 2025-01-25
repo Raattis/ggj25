@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=11 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="Script" uid="uid://db24hqv5btw2k" path="res://kentat/voitto_teksti.gd" id="11_cuxj6"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3c7bh"]
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [node name="maailma" type="Node2D"]
 script = ExtResource("1_w20kg")
@@ -47,11 +51,13 @@ script = ExtResource("11_msu6y")
 [node name="mapit" parent="." instance=ExtResource("8_3c7bh")]
 
 [node name="voitto_teksti" type="Label" parent="."]
+z_index = 10
 offset_left = 188.0
 offset_top = 6.0
 offset_right = 439.0
 offset_bottom = 29.0
 text = "0/10 anchors collected"
+label_settings = SubResource("LabelSettings_3c7bh")
 horizontal_alignment = 1
 script = ExtResource("11_cuxj6")
 

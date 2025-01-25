@@ -1,13 +1,36 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcrrmnmev2k1t"]
+[gd_scene load_steps=9 format=3 uid="uid://bcrrmnmev2k1t"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_brnge"]
+[ext_resource type="Script" uid="uid://cvsm8k5032xtw" path="res://kentat/edit_help.gd" id="2_pwlaw"]
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="3_c42sy"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="4_hfthl"]
 [ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="5_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="6_c42sy"]
+[ext_resource type="Script" uid="uid://d1nf1apeye4ib" path="res://kentat/click_here_to_add_currents.gd" id="7_hfthl"]
 
 [node name="kenta_kahdeksikko" type="Node2D"]
+
+[node name="click_here_to_add_currents" type="Label" parent="."]
+offset_left = 85.0
+offset_top = 329.0
+offset_right = 313.0
+offset_bottom = 352.0
+text = "<-- Click here to edit currents!"
+script = ExtResource("7_hfthl")
+
+[node name="edit_help" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0.52549)
+offset_left = 207.0
+offset_top = 88.0
+offset_right = 529.0
+offset_bottom = 215.0
+text = "Drag currents with mouse
+Hold left click and scroll to rotate
+Hold left click and click right to delete
+Double click to add new
+Click to switch between spike and current"
+script = ExtResource("2_pwlaw")
 
 [node name="esteet" type="Node" parent="."]
 
@@ -237,19 +260,19 @@ position = Vector2(473, 50)
 position = Vector2(929, 207)
 
 [node name="death_plane" parent="." instance=ExtResource("2_qxlhe")]
-position = Vector2(-80, 326)
+position = Vector2(-80, 251)
 scale = Vector2(1, 5.53272)
 
 [node name="death_plane2" parent="." instance=ExtResource("2_qxlhe")]
-position = Vector2(717, 327)
+position = Vector2(717, 252)
 scale = Vector2(1, 5.53272)
 
 [node name="death_plane4" parent="." instance=ExtResource("2_qxlhe")]
-position = Vector2(373, -202)
+position = Vector2(373, -121)
 scale = Vector2(24.1192, 0.469113)
 
 [node name="death_plane5" parent="." instance=ExtResource("2_qxlhe")]
-position = Vector2(373, 709)
+position = Vector2(373, 591)
 scale = Vector2(24.1192, 0.469113)
 
 [node name="siirreltavat" type="Node" parent="."]
@@ -263,7 +286,7 @@ position = Vector2(131, 260)
 rotation = -0.58294
 
 [node name="win_plane" parent="." instance=ExtResource("4_hfthl")]
-position = Vector2(368, -105)
+position = Vector2(368, 523)
 scale = Vector2(10, 1)
 
 [node name="ankkuri" parent="." instance=ExtResource("5_qxlhe")]
@@ -271,9 +294,6 @@ position = Vector2(108, 35)
 
 [node name="ankkuri2" parent="." instance=ExtResource("5_qxlhe")]
 position = Vector2(570, 29)
-
-[node name="ankkuri3" parent="." instance=ExtResource("5_qxlhe")]
-position = Vector2(333, 14)
 
 [node name="mode_switch" parent="." instance=ExtResource("6_c42sy")]
 z_index = 1

@@ -8,9 +8,6 @@ var merge_velocity :float= 3.0
 const POKS := preload("res://vesa/poks.tscn")
 var kulkee = false
 var liiku_napein = false
-var liike_nopeus = 500.0
-var kierto_nopeus = 10000.0
-
 var anchors_collected := 0
 
 func _ready():
@@ -114,24 +111,22 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var pos := state.get_contact_collider_position(0)
-		var obj := state.get_contact_collider_object(0)
-		if obj is StaticBody2D:
-			var closest :CollisionShape2D= null
-			var closest_dist :float= INF
-			var closest_pos := Vector2(0,0)
-			for child in get_children() as Array[Node2D]:
-				var dist := (child.global_position - pos).length_squared()
-				if dist < closest_dist:
-					closest = child
-					closest_dist = dist
-					closest_pos = child.global_position
-			ripple_delete(closest)
-			#var offset := closest_pos - center_of_mass_global
-			apply_impulse((closest_pos - center_of_mass_global).normalized() * -impulse_magnitude, closest_pos)
-			#apply_torque_impulse(offset
-			#angular_velocity = atan2(closest_pos.y - center_of_mass_global.y, closest_pos.x - center_of_mass_global.x)
-			angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
-			impulse_cooldown = 10
+		var closest :CollisionShape2D= null
+		var closest_dist :float= INF
+		var closest_pos := Vector2(0,0)
+		for child in get_children() as Array[Node2D]:
+			var dist := (child.global_position - pos).length_squared()
+			if dist < closest_dist:
+				closest = child
+				closest_dist = dist
+				closest_pos = child.global_position
+		ripple_delete(closest)
+		#var offset := closest_pos - center_of_mass_global
+		apply_impulse((closest_pos - center_of_mass_global).normalized() * -impulse_magnitude, closest_pos)
+		#apply_torque_impulse(offset
+		#angular_velocity = atan2(closest_pos.y - center_of_mass_global.y, closest_pos.x - center_of_mass_global.x)
+		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
+		impulse_cooldown = 10
 	if kamera:
 		add_child(kamera)
 
@@ -145,14 +140,10 @@ func destroy():
 	queue_free()
 
 func _on_body_entered(body: Node2D):
-	var sb = body as StaticBody2D
-	if not sb:
-		return
 	if (body as StaticBody2D).collision_layer & (1<<3) != 0:
 		destroy()
 	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
 		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
-		print("Voittoon mentiin ", anchors_collected, " ankkurin kanssa.")
 		GameManager.anchors_collected += anchors_collected
 		
 
@@ -185,9 +176,3 @@ func remove_closest_child(pos: Vector2):
 			closest_dist = dist
 			closest_child = child
 	ripple_delete(closest_child)
-
-func _input(event):
-	if event.is_pressed():
-		if event.as_text() == "C":
-			# cheats
-			liiku_napein = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdh1dxarb8aqr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_whnvm"]
-radius = 5.0
+radius = 15.0
 
 [node name="kupla_coll" type="CollisionShape2D"]
 shape = SubResource("CircleShape2D_whnvm")

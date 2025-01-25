@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b16pwl1lkdp8p"]
+[gd_scene load_steps=5 format=3 uid="uid://b16pwl1lkdp8p"]
 
 [ext_resource type="Texture2D" uid="uid://clb4py016gnvw" path="res://vesa/ankkurinmappi.png" id="1_y6w5e"]
 [ext_resource type="Script" uid="uid://buf7yicrf2ho4" path="res://vesa/ankkurininen.gd" id="1_yk35j"]
+[ext_resource type="Script" uid="uid://dyrmpvaevdaka" path="res://vesa/ankkuri_heiluu.gd" id="3_c18cs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
 radius = 80.0
@@ -15,6 +16,7 @@ script = ExtResource("1_yk35j")
 [node name="gfx" type="Sprite2D" parent="."]
 scale = Vector2(0.449995, 0.449995)
 texture = ExtResource("1_y6w5e")
+script = ExtResource("3_c18cs")
 
 [node name="coll" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cspln")
