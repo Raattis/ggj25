@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
-[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
-[ext_resource type="PackedScene" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="10_msu6y"]
 
 [node name="maailma" type="Node2D"]
 
@@ -289,16 +289,14 @@ scale = Vector2(1, 5.53272)
 position = Vector2(373, -202)
 scale = Vector2(24.1192, 0.469113)
 
-[node name="vittu viratanne" parent="." instance=ExtResource("9_3c7bh")]
-position = Vector2(129, 260)
-rotation = -0.582529
-scale = Vector2(0.175746, 0.0923746)
-
-[node name="the virtanen" parent="." instance=ExtResource("9_3c7bh")]
-position = Vector2(339, 284)
-rotation = 2.80721
-scale = Vector2(0.137064, 0.090799)
-
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
+
+[node name="siirreltava" parent="." instance=ExtResource("10_msu6y")]
+position = Vector2(339, 283)
+rotation = -3.50811
+
+[node name="siirreltava2" parent="." instance=ExtResource("10_msu6y")]
+position = Vector2(131, 260)
+rotation = -0.58294
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

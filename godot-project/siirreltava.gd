@@ -5,7 +5,7 @@ var offset := Vector2(0,0)
 var start := Vector2(0,0)
 
 @export var TYYPIT :Array[PackedScene]
-var tyyppi :int= 0
+var tyyppi :int= -1
 var obu :Node2D= null
 
 func _ready():

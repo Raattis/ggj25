@@ -8,6 +8,7 @@
 size = Vector2(458, 280)
 
 [node name="the virtanen" type="Area2D"]
+scale = Vector2(0.2, 0.2)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_ay0yp")

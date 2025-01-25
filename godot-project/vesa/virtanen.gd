@@ -6,7 +6,7 @@ var kuplat:Array[Cluster]
 var passed_time = 0
 
 func _physics_process(delta: float) -> void:
-	var suunta = Vector2(1,0).rotated(rotation);
+	var suunta = Vector2(1,0).rotated(global_rotation);
 	for kupla in kuplat:
 		kupla.apply_force(suunta * voima);
 
