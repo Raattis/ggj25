@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf81ogclcnnb6"]
+
+[ext_resource type="Script" uid="uid://d16ijg5l3pcew" path="res://siirreltava.gd" id="1_0wx06"]
+[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="2_ph3t1"]
+[ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="3_1kt2r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0wx06"]
+radius = 50.0
+
+[node name="siirreltava" type="Area2D"]
+collision_mask = 255
+script = ExtResource("1_0wx06")
+TYYPIT = Array[PackedScene]([ExtResource("2_ph3t1"), ExtResource("3_1kt2r")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0wx06")
