@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="ggj25"
-run/main_scene="uid://cqcs45ssbagov"
+run/main_scene="uid://cdtngtk4i4wot"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 scenevis="*res://janne/scenevis.tscn"
-kursori="*res://riku/kursori.tscn"
 
 [display]
 

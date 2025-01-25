@@ -10,6 +10,7 @@ var tyyppi :int= -1
 var obu :Node2D= null
 
 func _ready():
+	#kursori = get_tree().root.find_child("kursori", true)
 	next()
 
 func next():
@@ -21,9 +22,9 @@ func next():
 	obu.position = Vector2(0,0)
 
 func _process(_delta):
-	if kursori.bubbles_add_mode:
-		dragging = false
-		return
+	#if kursori.bubbles_add_mode:
+	#	dragging = false
+	#	return
 
 	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		global_position = get_global_mouse_position() + offset
@@ -36,8 +37,8 @@ func is_mouse_over() -> bool:
 	return ((get_global_mouse_position() - global_position) * scale).length() < ($CollisionShape2D.shape as CircleShape2D).radius
 
 func _input(event : InputEvent):
-	if kursori.bubbles_add_mode:
-		return
+	#if kursori.bubbles_add_mode:
+	#	return
 
 	if event is InputEventMouse and dragging:
 		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
