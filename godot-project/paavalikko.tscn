@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdtngtk4i4wot"]
+[gd_scene load_steps=4 format=3 uid="uid://cdtngtk4i4wot"]
 
+[ext_resource type="Script" uid="uid://dgjlcucbdqyal" path="res://paavalikko.gd" id="1_3hxxp"]
 [ext_resource type="Script" uid="uid://cdc2eyw716kn7" path="res://ykköspeli.gd" id="1_l1235"]
 [ext_resource type="Script" uid="uid://bevcu4pwganjw" path="res://kakkospeli.gd" id="2_3hxxp"]
 
 [node name="Päävalikko" type="Node2D"]
+script = ExtResource("1_3hxxp")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

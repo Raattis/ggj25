@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="4_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
+
 [node name="maailma" type="Node2D"]
 script = ExtResource("1_w20kg")
 
