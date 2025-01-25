@@ -5,13 +5,15 @@ extends Node2D
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 
-var gravity_scale := -1.0
-var linear_damping := 1.0
-var angular_damping := 0.9
+@export var gravity_scale := -1.0
+@export var linear_damping := 1.0
+@export var angular_damping := 0.9
+@export var impulse_magnitude := 300.0
+@export var max_angular_velocity := 30.0
 
-var target_position := Vector2(0,0)
-var was_pressd := false
-var launch_cooldown := 0.5
+var target_position :Vector2= Vector2(0,0)
+var was_pressd :bool= false
+var launch_cooldown :float= 0.5
 
 func _ready():
 	var rect := get_viewport().get_visible_rect()
@@ -39,7 +41,10 @@ func _process(delta: float):
 	launch_cooldown -= delta
 	if launch_cooldown < 0:
 		launch()
-		
+	
+	if Input.is_action_pressed("move_camera"):
+		Input.get_last_mouse_velocity()
+	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		Engine.physics_ticks_per_second = 120
 		Engine.time_scale = 2
@@ -57,6 +62,8 @@ func launch():
 	new.gravity_scale = gravity_scale
 	new.linear_damp = linear_damping
 	new.angular_damp = angular_damping
+	new.impulse_magnitude = impulse_magnitude
+	new.max_angular_velocity = max_angular_velocity
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("launch"):
