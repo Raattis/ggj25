@@ -23,3 +23,4 @@ func _process(_delta: float) -> void:
 	
 	bubbles_pos.clear()
 	bubbles_radius.clear()
+	bubbles_extra.clear()
