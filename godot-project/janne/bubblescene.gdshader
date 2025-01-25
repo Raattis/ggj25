@@ -3,6 +3,7 @@ shader_type canvas_item;
 const int BUBBLES_COUNT = 512;
 const float PI_HALF = PI / 2.0;
 
+uniform sampler2D tex_bg : repeat_enable;
 uniform float aspect_ratio;
 uniform float bubbles_active_count;
 uniform vec2 bubbles_pos[BUBBLES_COUNT];
@@ -17,11 +18,13 @@ float sdCircle( vec2 p, float r ) {
 }
 
 vec3 normal_circle(vec2 p, float r) {
-	return normalize(vec3(
-		sin(p.x / r * PI_HALF),
-		sin(p.y / r * PI_HALF),
-		cos(length(p) / r * PI_HALF)
-	));
+	return //normalize(
+			vec3(
+				sin(clamp(p.x, -1., 1.) / r * PI_HALF),
+				sin(clamp(p.y, -1., 1.) / r * PI_HALF),
+				cos(length(p) / r * PI_HALF)
+		//)
+	);
 }
 
 void fragment() {
@@ -41,16 +44,18 @@ void fragment() {
 			dist = sd;
 		}
 
-		metasum += smoothstep(r * 2.5, 0.0, length(p));
+		metasum += smoothstep(r * 2.0, 0.0, length(p));
 	}
 
 	if (metasum < 0.25) {
-		discard;
+		COLOR = texture(tex_bg, pos);
+	} else {
+		float light = -dot(normalize(vec3(pos, 0.0)), normal);
+		vec4 refracted_sample = texture(tex_bg, pos - normal.xy * 0.015);
+		//COLOR = vec4(vec3(metasum, 0.6, 0.5) * light, 1.0);
+		COLOR = vec4(mix(refracted_sample.xyz, vec3(0.2, 1., 0.) * light, normal.z * 0.5), 1.0);
+		//COLOR = vec4(normal, 1.0);
 	}
-
-	float light = -dot(normalize(vec3(pos, 0.0)), normal);
-
-	COLOR = vec4(vec3(metasum, 0.6, 0.5) * light, 1.0);
 }
 
 //void light() {
