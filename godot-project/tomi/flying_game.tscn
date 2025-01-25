@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=10 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="2_x03cg"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_vhjie"]
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="4_yfi2e"]
+[ext_resource type="PackedScene" uid="uid://b5kyj7iqtoiq6" path="res://tomi/collectable_klupla.tscn" id="6_owugb"]
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="7_ibo5b"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_7oywc"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
@@ -15,58 +16,58 @@ script = ExtResource("1_owugb")
 [node name="esteet" type="Node" parent="."]
 
 [node name="piikki" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(340, 53)
+position = Vector2(185, 6)
 
 [node name="piikki2" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(317, 54)
+position = Vector2(162, 7)
 
 [node name="piikki35" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(296, 53)
+position = Vector2(141, 6)
 
 [node name="piikki36" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(270, 54)
+position = Vector2(115, 7)
 
 [node name="piikki37" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(245, 53)
+position = Vector2(90, 6)
 
 [node name="piikki38" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(216, 53)
+position = Vector2(61, 6)
 
 [node name="piikki39" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(191, 55)
+position = Vector2(36, 8)
 
 [node name="piikki3" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(449, 52)
+position = Vector2(294, 5)
 
 [node name="piikki7" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(421, 53)
+position = Vector2(266, 6)
 
 [node name="piikki10" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(264, 229)
+position = Vector2(389, 4)
 
 [node name="piikki11" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(289, 228)
+position = Vector2(414, 3)
 
 [node name="piikki12" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(312, 227)
+position = Vector2(437, 2)
 
 [node name="piikki13" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(333, 227)
+position = Vector2(458, 2)
 
 [node name="piikki14" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(358, 227)
+position = Vector2(483, 2)
 
 [node name="piikki15" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(383, 227)
+position = Vector2(508, 2)
 
 [node name="piikki16" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(408, 228)
+position = Vector2(533, 3)
 
 [node name="piikki17" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(239, 230)
+position = Vector2(364, 5)
 
 [node name="piikki18" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(431, 229)
+position = Vector2(556, 4)
 
 [node name="piikki19" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(626, 137)
@@ -123,43 +124,79 @@ position = Vector2(627, 361)
 position = Vector2(627, 361)
 
 [node name="piikki20" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(601, 139)
+position = Vector2(611, 26)
+
+[node name="piikki20" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-317, 360)
+
+[node name="piikki21" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-341, 361)
+
+[node name="piikki22" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-365, 361)
+
+[node name="piikki23" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-386, 363)
+
+[node name="piikki24" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-411, 362)
+
+[node name="piikki25" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
+position = Vector2(-434, 362)
+
+[node name="piikki20" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(446, -1)
+
+[node name="piikki21" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(422, 0)
+
+[node name="piikki22" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(398, 0)
+
+[node name="piikki23" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(377, 2)
+
+[node name="piikki24" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(352, 1)
+
+[node name="piikki25" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
+position = Vector2(329, 1)
 
 [node name="piikki21" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(577, 140)
+position = Vector2(587, 27)
 
 [node name="piikki22" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(553, 140)
+position = Vector2(563, 27)
 
 [node name="piikki23" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(532, 142)
+position = Vector2(542, 29)
 
 [node name="piikki24" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(507, 141)
+position = Vector2(517, 28)
 
 [node name="piikki25" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(484, 141)
+position = Vector2(494, 28)
 
 [node name="piikki26" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(182, 146)
+position = Vector2(152, 386)
 
 [node name="piikki27" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(155, 147)
+position = Vector2(125, 387)
 
 [node name="piikki28" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(134, 146)
+position = Vector2(104, 386)
 
 [node name="piikki29" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(110, 149)
+position = Vector2(80, 389)
 
 [node name="piikki30" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(85, 149)
+position = Vector2(55, 389)
 
 [node name="piikki31" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(58, 150)
+position = Vector2(28, 390)
 
 [node name="piikki32" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(33, 150)
+position = Vector2(3, 390)
 
 [node name="piikki33" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(8, 151)
@@ -225,16 +262,16 @@ position = Vector2(1, 363)
 position = Vector2(1, 363)
 
 [node name="piikki8" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(392, 54)
+position = Vector2(237, 7)
 
 [node name="piikki9" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(365, 52)
+position = Vector2(210, 5)
 
 [node name="piikki4" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(496, 50)
+position = Vector2(341, 3)
 
 [node name="piikki6" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(473, 50)
+position = Vector2(318, 3)
 
 [node name="piikki5" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(929, 207)
@@ -249,11 +286,14 @@ max_contacts_reported = 10
 script = ExtResource("2_x03cg")
 
 [node name="kupla_coll" parent="cluster" instance=ExtResource("3_vhjie")]
-script = null
 
 [node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("4_yfi2e")]
+visible = true
 self_modulate = Color(1, 1, 1, 1)
-position = Vector2(-250, -266)
+scale = Vector2(0.018, 0.018)
+
+[node name="Collectable_klupla" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(533, 301)
 
 [node name="uusi_kupla" type="Node2D" parent="."]
 
@@ -265,6 +305,7 @@ position = Vector2(-175, -61)
 position = Vector2(378, -80)
 gravity_scale = -0.1
 tee_auto_laukaisuja = false
+"näytä_kuplia" = true
 
 [node name="poks" parent="." instance=ExtResource("8_7oywc")]
 visible = false
@@ -274,5 +315,29 @@ position = Vector2(572, 590)
 position = Vector2(315, 278)
 position_smoothing_enabled = true
 script = ExtResource("11_5gb5r")
+
+[node name="Collectable_klupla2" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(388, 354)
+
+[node name="Collectable_klupla3" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(442, 154)
+
+[node name="Collectable_klupla4" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(262, 126)
+
+[node name="Collectable_klupla5" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(206, 150)
+
+[node name="Collectable_klupla6" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(183, 199)
+
+[node name="Collectable_klupla7" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(193, 292)
+
+[node name="Collectable_klupla8" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(367, 177)
+
+[node name="Collectable_klupla9" parent="." instance=ExtResource("6_owugb")]
+position = Vector2(488, 229)
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

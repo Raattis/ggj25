@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://daq0pfywwl0eb"]
 
-[ext_resource type="Texture2D" uid="uid://6whcqy7bo0k2" path="res://icon.svg" id="1_jy8uv"]
+[ext_resource type="Texture2D" uid="uid://bjhhpibo7ouu7" path="res://tomi/kupla_temp.png" id="1_jy8uv"]
 
 [node name="kupla_gfx" type="Sprite2D"]
 visible = false

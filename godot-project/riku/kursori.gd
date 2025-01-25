@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var target :Cluster= $"../cluster"
 @onready var uusi_kupla :Node2D= $"../uusi_kupla"
-var kamera :Camera2D= null
+@onready var kamera = $"../Pääkamera"
+
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
@@ -15,6 +16,7 @@ var cluster_parent : Node2D = null
 @export var auto_launch_cooldown := 1.0
 
 @export var tee_auto_laukaisuja := true
+@export var näytä_kuplia := false
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
 var launch_cooldown :float= 0.5
@@ -23,8 +25,6 @@ var spawn_radius := 0.1
 var spawn_radius_grow_sign := 1.0
 
 func _ready():
-	if get_tree().root.has_node("Pääkamera"):
-		kamera = get_tree().root.get_node("Pääkamera")
 	var rect := get_viewport().get_visible_rect()
 	target.global_position.y = rect.position.y + rect.size.y * 0.9
 	target.global_position.x = rect.position.x + rect.size.x * 0.5
@@ -103,10 +103,12 @@ func _input(event: InputEvent):
 			var cll = KUPLA_COLL.instantiate()
 			var gfx = KUPLA_GFX.instantiate()
 			cll.add_child(gfx)
+			gfx.visible = näytä_kuplia
 			target.add_child(cll)
 			cll.global_position = uusi_kupla.global_position
 			cll.shape = CircleShape2D.new()
 			cll.shape.radius = spawn_radius
+			gfx.scale = Vector2.ONE * 0.0034 * spawn_radius
 			spawn_radius = target.get_child(0).shape.get_radius()
 			#launch()
 	#if event is InputEventMouseMotion and Input.is_action_pressed("move_camera"):

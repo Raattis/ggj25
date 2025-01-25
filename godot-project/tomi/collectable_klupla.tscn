@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5kyj7iqtoiq6"]
+
+[ext_resource type="Script" uid="uid://d15woppgnpod2" path="res://tomi/collectable_kupla.gd" id="1_bons3"]
+[ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="2_58rk3"]
+[ext_resource type="Texture2D" uid="uid://bjhhpibo7ouu7" path="res://tomi/kupla_temp.png" id="4_58rk3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_owugb"]
+
+[node name="Collectable_klupla" type="RigidBody2D"]
+collision_layer = 255
+collision_mask = 255
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_bons3")
+
+[node name="kupla_coll" parent="." instance=ExtResource("2_58rk3")]
+shape = SubResource("CircleShape2D_owugb")
+
+[node name="Sprite2D" type="Sprite2D" parent="kupla_coll"]
+scale = Vector2(0.034, 0.034)
+texture = ExtResource("4_58rk3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
