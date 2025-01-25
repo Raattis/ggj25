@@ -6,6 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bo0uw"]
 shader = ExtResource("1_4n66u")
 shader_parameter/aspect_ratio = null
+shader_parameter/bubbles_active_count = null
 shader_parameter/bubbles_pos = null
 shader_parameter/bubbles_radius = null
 
