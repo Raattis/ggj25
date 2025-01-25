@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-const int BUBBLES_COUNT = 256;
+const int BUBBLES_COUNT = 512;
 const float PI_HALF = PI / 2.0;
 
 uniform float aspect_ratio;

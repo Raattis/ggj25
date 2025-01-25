@@ -3,8 +3,9 @@ extends RigidBody2D
 
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
-var impulse_cooldown := 0.0
+var impulse_cooldown :int= 0
 const POKS = preload("res://vesa/poks.tscn")
+
 func _process(delta: float):
 	impulse_cooldown -= delta
 	if global_position.length() > 10000:
@@ -24,19 +25,43 @@ func pop(pop_position: Vector2):
 	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
-	angular_velocity = clamp(angular_velocity, -1000, 1000)
-	var center_of_mass := Vector2(0,0)
-	for child in get_children() as Array[Node2D]:
-		center_of_mass += child.global_position
-	center_of_mass /= get_child_count()
+	if gravity_scale == 0.0:
+		return
+	if get_child_count() == 0:
+		queue_free()
+		return
 
-	if impulse_cooldown < 0.0 and state.get_contact_count() > 0:
+	var center_of_mass_local := Vector2(0,0)
+	for child in get_children() as Array[Node2D]:
+		center_of_mass_local += child.position
+	center_of_mass_local /= get_child_count()
+	var center_of_mass := to_global(center_of_mass_local)
+
+	if get_child_count() > 0:
+		for child in get_children() as Array[CollisionShape2D]:
+			var dont_move := false
+			var p := child.position
+			var n :Vector2= lerp(p, center_of_mass_local, 0.05)
+			var r :float= child.shape.radius
+			for b in get_children() as Array[CollisionShape2D]:
+				if child == b:
+					continue
+				var radii :float= r + child.shape.radius
+				var radii_sqrd := radii * radii
+				var dist_sqrd := (b.position - p).length_squared()
+				var new_dist_sqrd := (b.position - n).length_squared()
+				if dist_sqrd <= radii_sqrd and new_dist_sqrd < dist_sqrd:
+					# touching, and moving would make these closer
+					dont_move = true
+					break
+			if not dont_move:
+				child.position = n
+
+	impulse_cooldown -= 1
+	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var contact_point := state.get_contact_collider_position(0)
 		var collider := state.get_contact_collider_object(0)
 		var pos := state.get_contact_collider_position(0)
-		if get_child_count() == 0:
-			queue_free()
-			return
 		var closest :CollisionShape2D= null
 		var closest_dist :float= INF
 		var closest_pos := Vector2(0,0)
@@ -46,11 +71,13 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 				closest = child
 				closest_dist = dist
 				closest_pos = child.global_position
-		closest.queue_free() # TODO: Pop effect
-		pop(closest_pos)
-		apply_impulse((closest_pos - center_of_mass).normalized() * -impulse_magnitude, pos)
+		ripple_delete(closest)
+		#var offset := closest_pos - center_of_mass
+		apply_impulse((closest_pos - center_of_mass).normalized() * -impulse_magnitude, closest_pos)
+		#apply_torque_impulse(offset
+		#angular_velocity = atan2(closest_pos.y - center_of_mass.y, closest_pos.x - center_of_mass.x)
 		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
-		impulse_cooldown = 0.05
+		impulse_cooldown = 10
 
 func destroy():
 	for child in get_children() as Array[Node2D]:
@@ -63,7 +90,7 @@ func _on_body_entered(body: Node2D):
 	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
 		print("you win!")
 
-func find_closest_spot(pos: Vector2) -> Vector2:
+func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF
 	var closest_pos := Vector2(0,0)
 	for child in get_children() as Array[CollisionShape2D]:
@@ -71,5 +98,24 @@ func find_closest_spot(pos: Vector2) -> Vector2:
 		var dist := diff.length_squared()
 		if dist < closest_dist:
 			closest_dist = dist
-			closest_pos = child.global_position - diff.normalized() * (child.shape as CircleShape2D).radius * 2
+			closest_pos = child.global_position - diff.normalized() * ((child.shape as CircleShape2D).radius + radius)
 	return closest_pos
+
+func ripple_delete(child: Node2D):
+	pop(child.global_position)
+	child.queue_free()
+
+func ripple_pull(child: Node2D, position: Vector2):
+	pop(child.global_position)
+	child.queue_free()
+
+func remove_closest_child(pos: Vector2):
+	var closest_dist :float= INF
+	var closest_child :CollisionShape2D= null
+	for child in get_children() as Array[CollisionShape2D]:
+		var diff := (child.global_position - pos)
+		var dist := diff.length_squared()
+		if dist < closest_dist:
+			closest_dist = dist
+			closest_child = child
+	ripple_delete(closest_child)
