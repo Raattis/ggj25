@@ -25,6 +25,11 @@ func pop(pop_position: Vector2):
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	angular_velocity = clamp(angular_velocity, -1000, 1000)
+	var center_of_mass := Vector2(0,0)
+	for child in get_children() as Array[Node2D]:
+		center_of_mass += child.global_position
+	center_of_mass /= get_child_count()
+
 	if impulse_cooldown < 0.0 and state.get_contact_count() > 0:
 		var contact_point := state.get_contact_collider_position(0)
 		var collider := state.get_contact_collider_object(0)
@@ -43,9 +48,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 				closest_pos = child.global_position
 		closest.queue_free() # TODO: Pop effect
 		pop(closest_pos)
-		apply_impulse((pos - closest_pos).normalized() * -impulse_magnitude, pos)
+		apply_impulse((closest_pos - center_of_mass).normalized() * -impulse_magnitude, pos)
 		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
-		impulse_cooldown = 0.1
+		impulse_cooldown = 0.05
 
 func destroy():
 	for child in get_children() as Array[Node2D]:
