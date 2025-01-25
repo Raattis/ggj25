@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var target :Cluster= $"../cluster"
 @onready var uusi_kupla :Node2D= $"../uusi_kupla"
+@onready var kamera = $"../Pääkamera"
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
@@ -13,6 +14,8 @@ var cluster_parent : Node2D = null
 @export var max_angular_velocity := 10000.0
 @export var auto_launch_cooldown := 1.0
 
+@export var tee_auto_laukaisuja := true
+@export var seuraava_kamera := true
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
 var launch_cooldown :float= 0.5
@@ -25,6 +28,7 @@ func _ready():
 	target.global_position.y = rect.position.y + rect.size.y * 0.9
 	target.global_position.x = rect.position.x + rect.size.x * 0.5
 	target_position = target.global_position
+
 
 func _process(delta: float):
 	if not cluster_parent:
@@ -53,11 +57,14 @@ func _process(delta: float):
 		spawn_radius / view_size.y
 	)
 	launch_cooldown -= delta
-	if launch_cooldown < 0:
+	if launch_cooldown < 0 and tee_auto_laukaisuja:
 		launch()
 
 	if Input.is_action_pressed("move_camera"):
 		Input.get_last_mouse_velocity()
+		
+	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 :
+		launch()
 
 func launch():
 	if cluster_parent.get_child_count() > 15: # MAX CLUSTER COUNT
@@ -72,6 +79,10 @@ func launch():
 	new.angular_damp = angular_damping
 	new.impulse_magnitude = impulse_magnitude
 	new.max_angular_velocity = max_angular_velocity
+	if kamera:
+		if kamera.get_parent():
+			kamera.get_parent().remove_child(kamera)
+		new.add_child(kamera)
 
 const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):

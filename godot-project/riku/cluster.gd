@@ -12,7 +12,9 @@ func _process(delta: float):
 	if global_position.length() > 10000:
 		queue_free()
 	var view_size = get_viewport_rect().size
-	for child in get_children() as Array[Node2D]:
+	for child in get_children():
+		if child is Pääkamera:
+			continue
 		var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
 		renderer.push_bubble(
 			(child.global_position - view_size / 2.0) / view_size.y,
@@ -31,6 +33,12 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	if get_child_count() == 0:
 		queue_free()
 		return
+	
+	var kamera = null
+	for c in get_children():
+		if c is Pääkamera:
+			remove_child(c)
+			kamera = c
 
 	var center_of_mass_local := Vector2(0,0)
 	for child in get_children() as Array[Node2D]:
@@ -39,25 +47,26 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	var center_of_mass := to_global(center_of_mass_local)
 
 	if get_child_count() > 0:
-		for child in get_children() as Array[CollisionShape2D]:
+		for child in get_children():
+			child = child as CollisionShape2D
 			var dont_move := false
-			var p := child.position
+			var p = child.position
 			var candidate_position :Vector2= p + (center_of_mass_local - p).limit_length(merge_velocity)
 			var r :float= child.shape.radius
 			for b in get_children() as Array[CollisionShape2D]:
-				if child == b:
+				if b == child:
 					continue
 				var radii :float= r + child.shape.radius
 				var radii_sqrd := radii * radii
-				var dist_sqrd := (b.position - p).length_squared()
-				var new_dist_sqrd := (b.position - candidate_position).length_squared()
+				var dist_sqrd = (b.position - p).length_squared()
+				var new_dist_sqrd = (b.position - candidate_position).length_squared()
 				if dist_sqrd <= radii_sqrd and new_dist_sqrd < dist_sqrd:
 					# touching, and moving would make these closer
 					dont_move = true
 					break
 			if not dont_move:
 				child.position = candidate_position
-
+	
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var contact_point := state.get_contact_collider_position(0)
@@ -79,8 +88,14 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		#angular_velocity = atan2(closest_pos.y - center_of_mass.y, closest_pos.x - center_of_mass.x)
 		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
 		impulse_cooldown = 10
+	if kamera:
+		add_child(kamera)
 
 func destroy():
+	for c in get_children():
+		if c is Pääkamera:
+			remove_child(c)
+			
 	for child in get_children() as Array[Node2D]:
 		child.queue_free() # TODO: Pop effect
 	queue_free()
@@ -95,9 +110,11 @@ func _on_body_entered(body: Node2D):
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF
 	var closest_pos := Vector2(0,0)
-	for child in get_children() as Array[CollisionShape2D]:
-		var diff := (child.global_position - pos)
-		var dist := diff.length_squared()
+	for child in get_children():
+		if child is Pääkamera:
+			continue
+		var diff = (child.global_position - pos)
+		var dist = diff.length_squared()
 		if dist < closest_dist:
 			closest_dist = dist
 			closest_pos = child.global_position - diff.normalized() * ((child.shape as CircleShape2D).radius + radius)
