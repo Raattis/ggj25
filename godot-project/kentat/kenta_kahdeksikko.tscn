@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcrrmnmev2k1t"]
+[gd_scene load_steps=7 format=3 uid="uid://bcrrmnmev2k1t"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_brnge"]
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="3_c42sy"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="4_hfthl"]
+[ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="5_qxlhe"]
+[ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="6_c42sy"]
 
 [node name="kenta_kahdeksikko" type="Node2D"]
 
@@ -260,23 +262,26 @@ rotation = 2.77507
 position = Vector2(131, 260)
 rotation = -0.58294
 
-[node name="siirreltava3" parent="siirreltavat" instance=ExtResource("3_c42sy")]
-position = Vector2(577, 145)
-
-[node name="siirreltava6" parent="siirreltavat" instance=ExtResource("3_c42sy")]
-position = Vector2(371, 9)
-rotation = 0.785398
-
-[node name="siirreltava7" parent="siirreltavat" instance=ExtResource("3_c42sy")]
-position = Vector2(552, 63)
-rotation = 2.0944
-
-[node name="siirreltava4" parent="siirreltavat" instance=ExtResource("3_c42sy")]
-position = Vector2(574, 230)
-
-[node name="siirreltava5" parent="siirreltavat" instance=ExtResource("3_c42sy")]
-position = Vector2(572, 319)
-
 [node name="win_plane" parent="." instance=ExtResource("4_hfthl")]
 position = Vector2(368, -105)
 scale = Vector2(10, 1)
+
+[node name="ankkuri" parent="." instance=ExtResource("5_qxlhe")]
+position = Vector2(108, 35)
+
+[node name="ankkuri2" parent="." instance=ExtResource("5_qxlhe")]
+position = Vector2(570, 29)
+
+[node name="ankkuri3" parent="." instance=ExtResource("5_qxlhe")]
+position = Vector2(333, 14)
+
+[node name="mode_switch" parent="." instance=ExtResource("6_c42sy")]
+z_index = 1
+offset_left = 9.0
+offset_top = 299.0
+offset_right = 79.0
+offset_bottom = 353.0
+text = "editing
+bubbles"
+
+[connection signal="pressed" from="mode_switch" to="mode_switch" method="_on_pressed"]

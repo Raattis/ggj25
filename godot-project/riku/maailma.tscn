@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=12 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
 [ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="4_1f6c8"]
-[ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="8_w20kg"]
-[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
-[ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="10_msu6y"]
+[ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="Script" uid="uid://cj3j5u15dfmam" path="res://riku/mapin_vaihto.gd" id="10_msu6y"]
+[ext_resource type="Script" uid="uid://db24hqv5btw2k" path="res://kentat/voitto_teksti.gd" id="11_cuxj6"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
 
 [node name="maailma" type="Node2D"]
@@ -44,18 +44,17 @@ position = Vector2(378, -80)
 position = Vector2(320, 180)
 script = ExtResource("11_msu6y")
 
-[node name="kenta_kahdeksikko" parent="." instance=ExtResource("4_1f6c8")]
+[node name="mapit" type="Node" parent="."]
+script = ExtResource("10_msu6y")
+arr = Array[PackedScene]([ExtResource("10_cuxj6"), ExtResource("4_1f6c8")])
 
-[node name="mode_switch" parent="." instance=ExtResource("8_w20kg")]
-z_index = 1
-
-[node name="ankkuri" parent="." instance=ExtResource("10_msu6y")]
-position = Vector2(226, 142)
-
-[node name="ankkuri2" parent="." instance=ExtResource("10_msu6y")]
-position = Vector2(453, 146)
-
-[node name="level" type="Node" parent="."]
+[node name="voitto_teksti" type="Label" parent="."]
+offset_left = 188.0
+offset_top = 6.0
+offset_right = 439.0
+offset_bottom = 29.0
+text = "0/10 anchors collected"
+horizontal_alignment = 1
+script = ExtResource("11_cuxj6")
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
-[connection signal="pressed" from="mode_switch" to="mode_switch" method="_on_pressed"]

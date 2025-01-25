@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://buf7yicrf2ho4" path="res://vesa/ankkurininen.gd" id="1_yk35j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
-radius = 30.0
+radius = 80.0
 
 [node name="ankkuri" type="Area2D"]
 scale = Vector2(0.16, 0.16)
-collision_layer = 63
-collision_mask = 63
+collision_layer = 32
+collision_mask = 2
 script = ExtResource("1_yk35j")
 
 [node name="gfx" type="Sprite2D" parent="."]

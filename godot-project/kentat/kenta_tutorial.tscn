@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://71mwi3rl47cg"]
+
+[ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_hovwc"]
+[ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_8tc5p"]
+[ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="3_loxyf"]
+[ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="4_ktpr6"]
+[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="5_i1tjq"]
+
+[node name="kenta_tutorial" type="Node2D"]
+
+[node name="ohjeet" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 118.0
+offset_right = 292.0
+offset_bottom = 219.0
+text = "Left click to attach bubbles
+Right click to delete
+Collect 10 anchors to win the level!
+"
+
+[node name="esteet" type="Node" parent="."]
+
+[node name="piikki" parent="esteet" instance=ExtResource("1_hovwc")]
+position = Vector2(325, 181)
+scale = Vector2(1.8255, 1.8255)
+
+[node name="piikki2" parent="esteet" instance=ExtResource("1_hovwc")]
+position = Vector2(154, 81)
+
+[node name="piikki3" parent="esteet" instance=ExtResource("1_hovwc")]
+position = Vector2(570, 81)
+
+[node name="death_plane" parent="." instance=ExtResource("2_8tc5p")]
+position = Vector2(-80, 259)
+scale = Vector2(1, 5.53272)
+
+[node name="death_plane2" parent="." instance=ExtResource("2_8tc5p")]
+position = Vector2(717, 260)
+scale = Vector2(1, 5.53272)
+
+[node name="death_plane4" parent="." instance=ExtResource("2_8tc5p")]
+position = Vector2(377, -123)
+scale = Vector2(24.1192, 0.469113)
+
+[node name="death_plane5" parent="." instance=ExtResource("2_8tc5p")]
+position = Vector2(385, 636)
+scale = Vector2(24.1192, 0.469113)
+
+[node name="siirreltavat" type="Node" parent="."]
+
+[node name="win_plane" parent="." instance=ExtResource("3_loxyf")]
+position = Vector2(368, 466)
+scale = Vector2(10, 1)
+
+[node name="ankkuri3" parent="." instance=ExtResource("4_ktpr6")]
+position = Vector2(331, 101)
+
+[node name="the virtanen" parent="." instance=ExtResource("5_i1tjq")]
+position = Vector2(280, 74)
+rotation = 0.329232
+
+[node name="the virtanen2" parent="." instance=ExtResource("5_i1tjq")]
+position = Vector2(375, 51)
+rotation = 2.69337

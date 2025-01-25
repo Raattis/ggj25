@@ -32,6 +32,12 @@ func _ready():
 
 
 func _process(delta: float):
+	if GameManager.map_changed and cluster_parent:
+		GameManager.map_changed = false
+		cluster_parent.name = "old_cluster_parent"
+		cluster_parent.queue_free()
+		cluster_parent = null
+
 	if not cluster_parent:
 		cluster_parent = Node2D.new()
 		cluster_parent.name = "cluster_parent"
@@ -87,9 +93,9 @@ func launch():
 
 const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):
-	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_LEFT and not GameManager.bubbles_add_mode:
+	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_LEFT and not GameManager.bubbles_add_mode and GameManager.siirreltavat:
 		var siirreltava := SIIRRELTAVA.instantiate()
-		$"..".find_child("siirreltavat", true).add_child(siirreltava)
+		GameManager.siirreltavat.add_child(siirreltava)
 		siirreltava.global_position = get_global_mouse_position()
 	if event.is_action_pressed("launch"):
 		launch()

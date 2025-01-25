@@ -11,6 +11,7 @@ var liiku_napein = false
 var liike_nopeus = 500.0
 var kierto_nopeus = 10000.0
 
+var anchors_collected := 0
 
 func _ready():
 	if get_tree().get_current_scene().name.find("fly") != -1:
@@ -90,7 +91,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	center_of_mass_local /= get_child_count()
 	var center_of_mass_global := to_global(center_of_mass_local)
 
-	if get_child_count() > 0:
+	if get_child_count() > 1:
 		for child in get_children():
 			child = child as CollisionShape2D
 			var dont_move := false
@@ -100,7 +101,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			for b in get_children() as Array[CollisionShape2D]:
 				if b == child:
 					continue
-				var radii :float= r + child.shape.radius
+				var radii :float= r + b.shape.radius
 				var radii_sqrd := radii * radii
 				var dist_sqrd = (b.position - p).length_squared()
 				var new_dist_sqrd = (b.position - candidate_position).length_squared()
@@ -152,7 +153,9 @@ func _on_body_entered(body: Node2D):
 		destroy()
 	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
 		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
-		print("Kalanen hengitti kuplan!")
+		print("Voittoon mentiin ", anchors_collected, " ankkurin kanssa.")
+		GameManager.anchors_collected += anchors_collected
+		
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF
