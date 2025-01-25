@@ -11,7 +11,7 @@ size = Vector2(458, 280)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_ay0yp")
-suunta = Vector2(10, 0)
+voima = 1000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 13)

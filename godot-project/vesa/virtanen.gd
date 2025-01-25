@@ -1,20 +1,17 @@
 extends Area2D
 
-@export var suunta:= Vector2(0,0);;;;
-
+@export var voima:= 1
 var kuplat:Array[Cluster]
 
 var passed_time = 0
 
-func virtaus(delta):
-	pass	
-
-
 func _physics_process(delta: float) -> void:
+	var suunta = Vector2(1,0).rotated(rotation);
 	for kupla in kuplat:
-		kupla.apply_force(suunta);
+		kupla.apply_force(suunta * voima);
 
 func _process(delta: float):
+	print(	rotation);
 	pass
 
 func _on_body_entered(body: Node2D) -> void:

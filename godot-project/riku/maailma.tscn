@@ -287,8 +287,13 @@ position = Vector2(373, -202)
 scale = Vector2(24.1192, 0.469113)
 
 [node name="vittu viratanne" parent="." instance=ExtResource("9_3c7bh")]
-position = Vector2(331, 280)
-scale = Vector2(0.1, 0.1)
-suunta = Vector2(1000, 0)
+position = Vector2(129, 260)
+rotation = -0.582529
+scale = Vector2(0.175746, 0.0923746)
+
+[node name="the virtanen" parent="." instance=ExtResource("9_3c7bh")]
+position = Vector2(339, 284)
+rotation = 2.80721
+scale = Vector2(0.137064, 0.090799)
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
