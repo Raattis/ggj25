@@ -4,6 +4,5 @@
 
 [node name="kupla_gfx" type="Sprite2D"]
 visible = false
-self_modulate = Color(1, 1, 1, 0.321569)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_jy8uv")
