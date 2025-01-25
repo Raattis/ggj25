@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdtngtk4i4wot"]
 
-[ext_resource type="Script" path="res://ykköspeli.gd" id="1_l1235"]
-[ext_resource type="Script" path="res://kakkospeli.gd" id="2_3hxxp"]
+[ext_resource type="Script" uid="uid://cdc2eyw716kn7" path="res://ykköspeli.gd" id="1_l1235"]
+[ext_resource type="Script" uid="uid://bevcu4pwganjw" path="res://kakkospeli.gd" id="2_3hxxp"]
 
 [node name="Päävalikko" type="Node2D"]
 
