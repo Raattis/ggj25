@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://blhgyhqy0sdsu"]
+
+[ext_resource type="Script" uid="uid://dx6t4rudo5lo6" path="res://riku/mode_switch.gd" id="1_akycu"]
+
+[node name="mode_switch" type="Button"]
+offset_left = 4.0
+offset_top = 302.0
+offset_right = 74.0
+offset_bottom = 356.0
+text = "edit
+bubbles"
+script = ExtResource("1_akycu")

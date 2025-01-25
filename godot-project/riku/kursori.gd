@@ -1,3 +1,4 @@
+class_name Kursori
 extends Node2D
 
 @onready var target :Cluster= $"../cluster"
@@ -87,7 +88,7 @@ func launch():
 
 const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):
-	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_RIGHT:
+	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_LEFT and not bubbles_add_mode:
 		var siirreltava := SIIRRELTAVA.instantiate()
 		$"..".find_child("siirreltavat", true).add_child(siirreltava)
 		siirreltava.global_position = get_global_mouse_position()
