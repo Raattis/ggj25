@@ -25,7 +25,11 @@ func _process(_delta: float):
 		queue_free()
 
 
-func _on_body_entered(body: Cluster):
+func _on_body_entered(body):
+	if body is Cluster:
+		print("on") 
+	else:
+		return
 	for c in get_children() as Array[Node2D]:
 		var pos = c.global_position
 		remove_child(c)

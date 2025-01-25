@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=15 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_7oywc"]
 [ext_resource type="Script" uid="uid://555ydg2oiu3j" path="res://tomi/kupla_spawnerit.gd" id="10_5gb5r"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
+[ext_resource type="PackedScene" uid="uid://raub18716gf3" path="res://tomi/kala.tscn" id="11_hjf23"]
 
 [sub_resource type="Gradient" id="Gradient_owugb"]
 colors = PackedColorArray(0.0156863, 0.611765, 0.827451, 1, 0.47451, 0.717647, 0.835294, 1)
@@ -1007,5 +1008,8 @@ Q & E to rotate
 
 [node name="KuplaSpawnerit" type="Node2D" parent="."]
 script = ExtResource("10_5gb5r")
+
+[node name="Kala" parent="." instance=ExtResource("11_hjf23")]
+position = Vector2(505, 332)
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

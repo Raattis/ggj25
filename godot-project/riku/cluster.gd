@@ -146,6 +146,9 @@ func destroy():
 
 func _on_body_entered(body: Node2D):
 	var sb = body as StaticBody2D
+	if body as Kala:
+		if body.spawn_sydän():
+			remove_closest_child(body.position)
 	if not sb:
 		return
 	if (body as StaticBody2D).collision_layer & (1<<3) != 0:
