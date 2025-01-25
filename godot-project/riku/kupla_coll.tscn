@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://4vbnx0be0kui" path="res://riku/kupla_coll.gd" id="1_l6sj8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_whnvm"]
-radius = 15.0
+radius = 5.0
 
 [node name="kupla_coll" type="CollisionShape2D"]
 shape = SubResource("CircleShape2D_whnvm")

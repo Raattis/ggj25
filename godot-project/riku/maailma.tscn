@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=9 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
-[ext_resource type="Script" uid="uid://dyaqvlmr7vuad" path="res://vesa/poks.gd" id="9_3c7bh"]
 
 [node name="maailma" type="Node2D"]
 
@@ -26,16 +25,28 @@ script = ExtResource("1_v0xw8")
 [node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("2_cspln")]
 
 [node name="piikki" parent="." instance=ExtResource("4_h4tqo")]
-position = Vector2(571, 267)
+position = Vector2(606, 190)
 
 [node name="piikki2" parent="." instance=ExtResource("4_h4tqo")]
 position = Vector2(719, 167)
 
 [node name="piikki3" parent="." instance=ExtResource("4_h4tqo")]
-position = Vector2(344, 167)
+position = Vector2(327, 163)
+
+[node name="piikki7" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(252, 190)
+
+[node name="piikki8" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(172, 183)
+
+[node name="piikki9" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(81, 136)
 
 [node name="piikki4" parent="." instance=ExtResource("4_h4tqo")]
-position = Vector2(454, 93)
+position = Vector2(432, 191)
+
+[node name="piikki6" parent="." instance=ExtResource("4_h4tqo")]
+position = Vector2(482, 137)
 
 [node name="piikki5" parent="." instance=ExtResource("4_h4tqo")]
 position = Vector2(929, 207)
@@ -62,6 +73,5 @@ position = Vector2(378, -80)
 [node name="poks" parent="." instance=ExtResource("8_w20kg")]
 visible = false
 position = Vector2(572, 590)
-script = ExtResource("9_3c7bh")
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
