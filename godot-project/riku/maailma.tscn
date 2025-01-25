@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="4_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
-
 [node name="maailma" type="Node2D"]
 
 [node name="cluster" type="RigidBody2D" parent="."]
