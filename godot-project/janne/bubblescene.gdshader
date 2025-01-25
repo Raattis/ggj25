@@ -9,6 +9,7 @@ uniform float aspect_ratio;
 uniform float bubbles_active_count;
 uniform vec2 bubbles_pos[BUBBLES_COUNT];
 uniform float bubbles_radius[BUBBLES_COUNT];
+uniform float bubbles_extra[BUBBLES_COUNT];
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -34,6 +35,7 @@ void fragment() {
 	float dist = 99999999.0;
 	vec3 normal = vec3(1,1,1);
 	float metasum = 0.0;
+	float extra = 0.0;
 	for (int i = 0; i < BUBBLES_COUNT; ++i) {
 		float fi = float(i);
 		vec2 p = pos - bubbles_pos[i];
@@ -42,6 +44,7 @@ void fragment() {
 		float sd = sdCircle(p, r);
 		if (sd < dist) {
 			normal = normal_circle(p, r);
+			extra = bubbles_extra[i];
 			dist = sd;
 		}
 
@@ -49,16 +52,17 @@ void fragment() {
 	}
 
 	if (metasum < 0.3) {
-		COLOR = texture(tex_bg, pos);
+		//COLOR = texture(tex_bg, pos);
+		COLOR = texture(tex_bg, UV);
 	} else {
 		float light = -dot(normalize(vec3(pos, -.25)), normal) * 1.4;
 		vec4 refracted_sample = texture(
 			tex_bg,
-			pos - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
+			UV - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
 		); 
 		COLOR = vec4(
 			mix(
-				bubble_color * light,
+				(bubble_color + extra) * light,
 				refracted_sample.xyz,
 				1. - normal.z
 			),

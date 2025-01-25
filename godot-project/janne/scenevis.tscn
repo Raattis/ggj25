@@ -1,7 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://baye7jmkprwtr"]
+[gd_scene load_steps=10 format=3 uid="uid://baye7jmkprwtr"]
 
-[ext_resource type="Material" uid="uid://bfw0giedr1qdb" path="res://janne/scenevis.tres" id="1_bo0uw"]
+[ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_bo0uw"]
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
+[ext_resource type="Shader" uid="uid://clostlp4rfcns" path="res://janne/terrain.gdshader" id="3_u224b"]
+[ext_resource type="Texture2D" uid="uid://bp2als6xo6tmt" path="res://janne/scene_noise.tres" id="4_yms0o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_u224b"]
+viewport_path = NodePath("maisema")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yms0o"]
+resource_local_to_scene = true
+shader = ExtResource("1_bo0uw")
+shader_parameter/tex_bg = SubResource("ViewportTexture_u224b")
+shader_parameter/bubble_color = Color(1, 0.105882, 0, 1)
+shader_parameter/aspect_ratio = null
+shader_parameter/bubbles_active_count = null
+shader_parameter/bubbles_pos = null
+shader_parameter/bubbles_radius = null
+shader_parameter/bubbles_extra = null
+
+[sub_resource type="Environment" id="Environment_bo0uw"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(8.42288e-07, 0.197873, 0.385655, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1u3gn"]
+render_priority = 0
+shader = ExtResource("3_u224b")
+shader_parameter/heightmap = ExtResource("4_yms0o")
+shader_parameter/displacement = 19.645
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bo0uw"]
+material = SubResource("ShaderMaterial_1u3gn")
+size = Vector2(100, 100)
+subdivide_width = 32
+subdivide_depth = 32
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,7 +46,7 @@ grow_vertical = 2
 
 [node name="BubbleSceneRenderer" type="ColorRect" parent="."]
 texture_repeat = 2
-material = ExtResource("1_bo0uw")
+material = SubResource("ShaderMaterial_yms0o")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,3 +54,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_bo0uw")
+
+[node name="maisema" type="SubViewport" parent="."]
+size = Vector2i(640, 360)
+
+[node name="Camera3D" type="Camera3D" parent="maisema"]
+transform = Transform3D(0.970418, 0, 0.241431, 0, 1, 0, -0.241431, 0, 0.970418, 1.19981, 0.595106, 1.98614)
+environment = SubResource("Environment_bo0uw")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="maisema"]
+transform = Transform3D(1, 0, 0, 0, 1, 0.00020944, 0, -0.00020944, 1, 0.191115, 0.950753, 1.26687)
+
+[node name="terrain" type="MeshInstance3D" parent="maisema"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.172, -47.2324)
+mesh = SubResource("PlaneMesh_bo0uw")
