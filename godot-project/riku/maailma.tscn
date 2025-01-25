@@ -302,9 +302,8 @@ position = Vector2(339, 284)
 rotation = 2.80721
 scale = Vector2(0.137064, 0.090799)
 
-<<<<<<< HEAD
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
-=======
+
 [node name="siirreltava" type="Area2D" parent="."]
 script = ExtResource("10_em6w7")
 TYYPIT = Array[PackedScene]([ExtResource("9_3c7bh"), ExtResource("4_h4tqo")])
@@ -315,7 +314,6 @@ position = Vector2(225, 120)
 [node name="grab_shape" type="CollisionShape2D" parent="siirreltava"]
 position = Vector2(303, 143)
 shape = SubResource("CircleShape2D_em6w7")
->>>>>>> wip
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
 [connection signal="input_event" from="siirreltava" to="siirreltava" method="_on_input_event"]
