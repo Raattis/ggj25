@@ -4,6 +4,7 @@ const int BUBBLES_COUNT = 512;
 const float PI_HALF = PI / 2.0;
 
 uniform sampler2D tex_bg : repeat_enable;
+uniform vec3 bubble_color : source_color;
 uniform float aspect_ratio;
 uniform float bubbles_active_count;
 uniform vec2 bubbles_pos[BUBBLES_COUNT];
@@ -57,7 +58,7 @@ void fragment() {
 		); 
 		COLOR = vec4(
 			mix(
-				vec3(1.0, .7, 0.4) * light,
+				bubble_color * light,
 				refracted_sample.xyz,
 				1. - normal.z
 			),

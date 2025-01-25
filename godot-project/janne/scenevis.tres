@@ -16,6 +16,7 @@ noise = SubResource("FastNoiseLite_q6k2k")
 [resource]
 shader = ExtResource("1_q6k2k")
 shader_parameter/tex_bg = SubResource("NoiseTexture2D_q6k2k")
+shader_parameter/bubble_color = Color(0.712252, 0.0491735, 0, 1)
 shader_parameter/aspect_ratio = null
 shader_parameter/bubbles_active_count = null
 shader_parameter/bubbles_pos = null
