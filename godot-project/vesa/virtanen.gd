@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void:
 		kupla.apply_force(suunta * voima);
 
 func _process(delta: float):
-	print(	rotation);
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
