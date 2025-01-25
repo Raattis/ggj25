@@ -50,7 +50,7 @@ void fragment() {
 
 	float light = -dot(normalize(vec3(pos, 0.0)), normal);
 
-	COLOR = vec4(metasum, light, 0.5, 1.0);
+	COLOR = vec4(vec3(metasum, 0.6, 0.5) * light, 1.0);
 }
 
 //void light() {
