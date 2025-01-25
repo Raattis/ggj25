@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=10 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
 [ext_resource type="Script" uid="uid://0jsxf63umreb" path="res://riku/maailma.gd" id="1_w20kg"]
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
-[ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="4_1f6c8"]
+[ext_resource type="PackedScene" uid="uid://ckchqys4sj7xu" path="res://riku/mapit.tscn" id="8_3c7bh"]
 [ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
-[ext_resource type="Script" uid="uid://cj3j5u15dfmam" path="res://riku/mapin_vaihto.gd" id="10_msu6y"]
 [ext_resource type="Script" uid="uid://db24hqv5btw2k" path="res://kentat/voitto_teksti.gd" id="11_cuxj6"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
 
@@ -39,14 +38,13 @@ position = Vector2(-175, -61)
 position = Vector2(378, -80)
 
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
+position = Vector2(566, 365)
 
 [node name="drag_camera" type="Camera2D" parent="."]
 position = Vector2(320, 180)
 script = ExtResource("11_msu6y")
 
-[node name="mapit" type="Node" parent="."]
-script = ExtResource("10_msu6y")
-arr = Array[PackedScene]([ExtResource("10_cuxj6"), ExtResource("4_1f6c8")])
+[node name="mapit" parent="." instance=ExtResource("8_3c7bh")]
 
 [node name="voitto_teksti" type="Label" parent="."]
 offset_left = 188.0

@@ -11,7 +11,7 @@ var toimeton_y_nopeus = 10;
 var maailman_alaraja_x = 100;
 var maailman_yläraja_x = 600;
 var maailman_alaraja_y = 30;
-var maailman_yläraja_y = 70;
+var maailman_yläraja_y = 500;
 var kuplan_metästys_kesken = false;
 var kupla_kohde_sijainti := Vector2(0,0);
 
