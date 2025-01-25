@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdh1dxarb8aqr"]
 
-[ext_resource type="Script" uid="uid://4vbnx0be0kui" path="res://riku/kupla_coll.gd" id="1_l6sj8"]
+[ext_resource type="Script" path="res://riku/kupla_coll.gd" id="1_l6sj8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_whnvm"]
 radius = 15.0

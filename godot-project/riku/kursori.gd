@@ -5,6 +5,10 @@ extends Node2D
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 
+var gravity_scale := -1.0
+var linear_damping := 1.0
+var angular_damping := 0.9
+
 var target_position := Vector2(0,0)
 var was_pressd := false
 var launch_cooldown := 0.5
@@ -50,7 +54,9 @@ func launch():
 	get_parent().move_child(new, target.get_index())
 	new.collision_layer = 2
 	new.collision_mask = ((1<<8)-1) & ~3
-	new.gravity_scale = -1.0
+	new.gravity_scale = gravity_scale
+	new.linear_damp = linear_damping
+	new.angular_damp = angular_damping
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("launch"):

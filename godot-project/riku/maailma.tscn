@@ -22,8 +22,10 @@ max_contacts_reported = 10
 script = ExtResource("1_v0xw8")
 
 [node name="kupla_coll" parent="cluster" instance=ExtResource("3_h4tqo")]
+script = null
 
 [node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("2_cspln")]
+self_modulate = Color(1, 1, 1, 1)
 
 [node name="piikki" parent="." instance=ExtResource("4_h4tqo")]
 position = Vector2(571, 267)
@@ -55,6 +57,7 @@ scale = Vector2(10, 1)
 [node name="uusi_kupla" type="Node2D" parent="."]
 
 [node name="kupla_gfx" parent="uusi_kupla" instance=ExtResource("2_cspln")]
+self_modulate = Color(1, 1, 1, 1)
 
 [node name="kursori" parent="." instance=ExtResource("1_c3fsg")]
 position = Vector2(378, -80)
