@@ -1,6 +1,8 @@
 class_name Cluster
 extends RigidBody2D
 
+var impulse_magnitude := 300.0
+var max_angular_velocity := 30.0
 var impulse_cooldown := 0.0
 const POKS = preload("res://vesa/poks.tscn")
 func _process(delta: float):
@@ -15,6 +17,7 @@ func pop(pop_position: Vector2):
 	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
+	angular_velocity = clamp(angular_velocity, -1000, 1000)
 	if impulse_cooldown < 0.0 and state.get_contact_count() > 0:
 		var contact_point := state.get_contact_collider_position(0)
 		var collider := state.get_contact_collider_object(0)
@@ -33,7 +36,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 				closest_pos = child.global_position
 		closest.queue_free() # TODO: Pop effect
 		pop(closest_pos)
-		apply_impulse((pos - closest_pos).normalized() * -300.0, pos)
+		apply_impulse((pos - closest_pos).normalized() * -impulse_magnitude, pos)
+		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
 		impulse_cooldown = 0.1
 
 func destroy():
