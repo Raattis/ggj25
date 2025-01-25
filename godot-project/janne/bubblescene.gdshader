@@ -44,16 +44,16 @@ void fragment() {
 			dist = sd;
 		}
 
-		metasum += smoothstep(r * 2.0, 0.0, length(p));
+		metasum += smoothstep(r * 1.8, 0.0, length(p));
 	}
 
-	if (metasum < 0.25) {
+	if (metasum < 0.1) {
 		COLOR = texture(tex_bg, pos);
 	} else {
 		float light = -dot(normalize(vec3(pos, 0.0)), normal);
 		vec4 refracted_sample = texture(tex_bg, pos - normal.xy * 0.015);
 		//COLOR = vec4(vec3(metasum, 0.6, 0.5) * light, 1.0);
-		COLOR = vec4(mix(refracted_sample.xyz, vec3(0.2, 1., 0.) * light, normal.z * 0.5), 1.0);
+		COLOR = vec4(mix(vec3(0.2, 1., 1.) * light, refracted_sample.xyz, 1. - normal.z * 0.7), 1.0);
 		//COLOR = vec4(normal, 1.0);
 	}
 }
