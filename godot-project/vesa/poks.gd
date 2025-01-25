@@ -1,7 +1,12 @@
 extends Sprite2D
+class_name Poks
+
+
 var passed_time = 0
 var duration = 0.05;
 var frame_duration = duration / 4.0;
+
+
 func _ready():
 	pass
 

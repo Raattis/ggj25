@@ -2,16 +2,20 @@ extends Node2D
 
 @onready var target :Cluster= $"../cluster"
 @onready var uusi_kupla :Node2D= $"../uusi_kupla"
+@onready var kamera = $"../Pääkamera"
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
 
 @export var gravity_scale := -1
-@export var linear_damping := 10.0
-@export var angular_damping := 0.9
+@export var linear_damping := 2.0
+@export var angular_damping := 0.1
 @export var impulse_magnitude := 300.0
 @export var max_angular_velocity := 10000.0
+@export var auto_launch_cooldown := 1.0
 
+@export var tee_auto_laukaisuja := true
+@export var seuraava_kamera := true
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
 var launch_cooldown :float= 0.5
@@ -24,6 +28,7 @@ func _ready():
 	target.global_position.y = rect.position.y + rect.size.y * 0.9
 	target.global_position.x = rect.position.x + rect.size.x * 0.5
 	target_position = target.global_position
+
 
 func _process(delta: float):
 	if not cluster_parent:
@@ -52,27 +57,39 @@ func _process(delta: float):
 		spawn_radius / view_size.y
 	)
 	launch_cooldown -= delta
-	if launch_cooldown < 0:
+	if launch_cooldown < 0 and tee_auto_laukaisuja:
 		launch()
 
 	if Input.is_action_pressed("move_camera"):
 		Input.get_last_mouse_velocity()
+		
+	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 :
+		launch()
 
 func launch():
 	if cluster_parent.get_child_count() > 15: # MAX CLUSTER COUNT
 		return
-	launch_cooldown = 10.0
+	launch_cooldown = auto_launch_cooldown
 	var new :RigidBody2D= target.duplicate()
 	cluster_parent.add_child(new)
 	new.collision_layer = 2
-	new.collision_mask = ((1<<8)-1) & ~3 
+	new.collision_mask = ((1<<8)-1) & ~3
 	new.gravity_scale = gravity_scale
 	new.linear_damp = linear_damping
 	new.angular_damp = angular_damping
 	new.impulse_magnitude = impulse_magnitude
 	new.max_angular_velocity = max_angular_velocity
+	if kamera:
+		if kamera.get_parent():
+			kamera.get_parent().remove_child(kamera)
+		new.add_child(kamera)
 
+const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):
+	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_RIGHT:
+		var siirreltava := SIIRRELTAVA.instantiate()
+		$"..".find_child("siirreltavat", true).add_child(siirreltava)
+		siirreltava.global_position = get_global_mouse_position()
 	if event.is_action_pressed("launch"):
 		launch()
 	if event.is_action_pressed("remove") and target.get_child_count() > 1:
@@ -91,3 +108,5 @@ func _input(event: InputEvent):
 			cll.shape.radius = spawn_radius
 			spawn_radius = target.get_child(0).shape.get_radius()
 			#launch()
+	#if event is InputEventMouseMotion and Input.is_action_pressed("move_camera"):
+	#	get_viewport().get_camera_2d().position.y -= event.relative.y
