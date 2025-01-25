@@ -73,10 +73,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			if linear_velocity.y < 0:
 				multi = 5
 			y = liike_nopeus * multi
-		print("force " + str(x) + " " + str(y))
 		constant_force = Vector2(x, y)
-		# Rotate?
 		
+		# Rotate?
 		var torkki = 0
 		if Input.is_action_pressed("kierräplus"):
 			torkki = kierto_nopeus

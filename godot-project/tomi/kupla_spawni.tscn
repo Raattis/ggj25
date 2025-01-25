@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c884t5hg3te2t"]
+
+[ext_resource type="Script" uid="uid://dfl0x5jbealpm" path="res://tomi/kupla_spawni.gd" id="1_yuw2a"]
+
+[node name="Kupla_spawni" type="Node2D"]
+script = ExtResource("1_yuw2a")

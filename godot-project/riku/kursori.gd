@@ -17,6 +17,7 @@ var cluster_parent : Node2D = null
 
 @export var tee_auto_laukaisuja := true
 @export var näytä_kuplia := false
+@export var cluster_parent_index = 0
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
 var launch_cooldown :float= 0.5
@@ -42,7 +43,7 @@ func _process(delta: float):
 		cluster_parent = Node2D.new()
 		cluster_parent.name = "cluster_parent"
 		get_parent().add_child(cluster_parent)
-		get_parent().move_child(cluster_parent, 0)
+		get_parent().move_child(cluster_parent, cluster_parent_index)
 
 	spawn_cooldown -= delta
 	if Input.is_action_pressed("spawn") and GameManager.bubbles_add_mode:
@@ -72,6 +73,10 @@ func _process(delta: float):
 		launch()
 
 func launch():
+	if not tee_auto_laukaisuja:
+		#lentopeli, vain yksi hahmo
+		for c in cluster_parent.get_children():
+			c.queue_free()
 	if cluster_parent.get_child_count() > 15: # MAX CLUSTER COUNT
 		return
 	launch_cooldown = auto_launch_cooldown
