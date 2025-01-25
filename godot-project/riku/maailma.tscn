@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
 [ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
-[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="PackedScene" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 
 [node name="maailma" type="Node2D"]
 

@@ -44,7 +44,7 @@ void fragment() {
 			dist = sd;
 		}
 
-		metasum += smoothstep(r * 1.8, 0.0, length(p));
+		metasum += 1.0 - smoothstep(0.0, r * 1.8, length(p));
 	}
 
 	if (metasum < 0.1) {
