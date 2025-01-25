@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xjwqtpiaaa4o"]
 
-[ext_resource type="Texture2D" uid="uid://6whcqy7bo0k2" path="res://icon.svg" id="1_pa8mk"]
+[ext_resource type="Texture2D" uid="uid://d3yylr5yhuygk" path="res://piikkiii.png" id="1_pa8mk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
 
