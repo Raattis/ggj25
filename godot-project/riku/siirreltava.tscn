@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cf81ogclcnnb6"]
 
-[ext_resource type="Script" uid="uid://d16ijg5l3pcew" path="res://siirreltava.gd" id="1_0wx06"]
+[ext_resource type="Script" uid="uid://d16ijg5l3pcew" path="res://riku/siirreltava.gd" id="1_0wx06"]
 [ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="2_ph3t1"]
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="3_1kt2r"]
 

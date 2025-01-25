@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=12 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
-[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="10_msu6y"]
+[ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
 
 [node name="maailma" type="Node2D"]
 
@@ -317,5 +318,9 @@ position = Vector2(574, 230)
 
 [node name="siirreltava5" parent="siirreltavat" instance=ExtResource("10_msu6y")]
 position = Vector2(572, 319)
+
+[node name="drag_camera" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+script = ExtResource("11_msu6y")
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
