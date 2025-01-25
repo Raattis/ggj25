@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6xc05f84igpk"]
+
+[ext_resource type="Texture2D" uid="uid://dec3wglbl30n4" path="res://vesa/flow.png" id="1_jt0u4"]
+[ext_resource type="Script" uid="uid://cjlx7nsip62f6" path="res://vesa/virtanen.gd" id="2_ay0yp"]
+[ext_resource type="Script" uid="uid://of275ws8cnp6" path="res://vesa/virtausanime.gd" id="2_miv4y"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jt0u4"]
+b = Vector2(30, 0)
+
+[node name="Sprite2D" type="RigidBody2D"]
+script = ExtResource("2_ay0yp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_jt0u4")
+
+[node name="virtausanime" type="Sprite2D" parent="."]
+texture = ExtResource("1_jt0u4")
+hframes = 2
+vframes = 2
+script = ExtResource("2_miv4y")

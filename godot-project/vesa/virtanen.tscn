@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6xc05f84igpk"]
+
+[ext_resource type="Texture2D" uid="uid://dec3wglbl30n4" path="res://vesa/flow.png" id="1_jt0u4"]
+[ext_resource type="Script" uid="uid://cjlx7nsip62f6" path="res://vesa/virtanen.gd" id="2_ay0yp"]
+[ext_resource type="Script" uid="uid://of275ws8cnp6" path="res://vesa/virtausanime.gd" id="2_miv4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miv4y"]
+size = Vector2(458, 280)
+
+[node name="the virtanen" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_ay0yp")
+suunta = Vector2(10, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 13)
+shape = SubResource("RectangleShape2D_miv4y")
+
+[node name="virtausanime" type="Sprite2D" parent="."]
+texture = ExtResource("1_jt0u4")
+hframes = 2
+vframes = 2
+script = ExtResource("2_miv4y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=10 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
+[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
 
 [node name="maailma" type="Node2D"]
 
@@ -261,7 +262,7 @@ position = Vector2(1225, 325)
 scale = Vector2(1, 5.53272)
 
 [node name="win_plane" parent="." instance=ExtResource("6_1f6c8")]
-position = Vector2(594, -391)
+position = Vector2(368, -105)
 scale = Vector2(10, 1)
 
 [node name="uusi_kupla" type="Node2D" parent="."]
@@ -276,5 +277,18 @@ position = Vector2(378, -80)
 [node name="poks" parent="." instance=ExtResource("8_w20kg")]
 visible = false
 position = Vector2(572, 590)
+
+[node name="death_plane3" parent="." instance=ExtResource("5_1f6c8")]
+position = Vector2(-71, 322)
+scale = Vector2(1, 5.53272)
+
+[node name="death_plane4" parent="." instance=ExtResource("5_1f6c8")]
+position = Vector2(373, -202)
+scale = Vector2(24.1192, 0.469113)
+
+[node name="vittu viratanne" parent="." instance=ExtResource("9_3c7bh")]
+position = Vector2(331, 280)
+scale = Vector2(0.1, 0.1)
+suunta = Vector2(1000, 0)
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
