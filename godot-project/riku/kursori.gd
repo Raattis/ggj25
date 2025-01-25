@@ -7,7 +7,7 @@ const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
 
 @export var gravity_scale := -1
-@export var linear_damping := 1.0
+@export var linear_damping := 2.0
 @export var angular_damping := 0.1
 @export var impulse_magnitude := 300.0
 @export var max_angular_velocity := 10000.0
@@ -92,3 +92,5 @@ func _input(event: InputEvent):
 			cll.shape.radius = spawn_radius
 			spawn_radius = target.get_child(0).shape.get_radius()
 			#launch()
+	#if event is InputEventMouseMotion and Input.is_action_pressed("move_camera"):
+	#	get_viewport().get_camera_2d().position.y -= event.relative.y

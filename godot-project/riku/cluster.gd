@@ -4,6 +4,7 @@ extends RigidBody2D
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
+var merge_velocity :float= 3.0
 const POKS = preload("res://vesa/poks.tscn")
 
 func _process(delta: float):
@@ -41,10 +42,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		for child in get_children() as Array[CollisionShape2D]:
 			var dont_move := false
 			var p := child.position
-			var center_dist :Vector2= (center_of_mass_local - p)
-			if center_dist.length_squared() > 1.0:
-				center_dist = center_dist.normalized()
-			var n :Vector2= p + center_dist * 0.1
+			var candidate_position :Vector2= p + (center_of_mass_local - p).limit_length(merge_velocity)
 			var r :float= child.shape.radius
 			for b in get_children() as Array[CollisionShape2D]:
 				if child == b:
@@ -52,13 +50,13 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 				var radii :float= r + child.shape.radius
 				var radii_sqrd := radii * radii
 				var dist_sqrd := (b.position - p).length_squared()
-				var new_dist_sqrd := (b.position - n).length_squared()
+				var new_dist_sqrd := (b.position - candidate_position).length_squared()
 				if dist_sqrd <= radii_sqrd and new_dist_sqrd < dist_sqrd:
 					# touching, and moving would make these closer
 					dont_move = true
 					break
 			if not dont_move:
-				child.position = n
+				child.position = candidate_position
 
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
@@ -116,6 +114,8 @@ func remove_closest_child(pos: Vector2):
 	var closest_dist :float= INF
 	var closest_child :CollisionShape2D= null
 	for child in get_children() as Array[CollisionShape2D]:
+		if child.get_index() == 0:
+			continue
 		var diff := (child.global_position - pos)
 		var dist := diff.length_squared()
 		if dist < closest_dist:
