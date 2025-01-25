@@ -89,7 +89,8 @@ func _on_body_entered(body: Node2D):
 	if (body as StaticBody2D).collision_layer & (1<<3) != 0:
 		destroy()
 	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
-		print("you win!")
+		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
+		print("Kalanen hengitti kuplan!")
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF

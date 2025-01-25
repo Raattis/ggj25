@@ -12,9 +12,28 @@ var maailman_alaraja_x = 100;
 var maailman_yläraja_x = 600;
 var maailman_alaraja_y = 30;
 var maailman_yläraja_y = 70;
+var kuplan_metästys_kesken = false;
+var kupla_kohde_sijainti := Vector2(0,0);
+
+func etippä_toi(kuplunen : Cluster):
+	kupla_kohde_sijainti = kuplunen.position
+	kuplan_metästys_kesken = true;
+	kuplunen.position
+	olen_toimeton =false;
 
 func _ready():
 	kalan_koko = scale;
+
+func kuplan_metsästys_tilanpäivitys(delta : float):
+	var direction := Vector2(kupla_kohde_sijainti - position).normalized();
+	var magnitude := sqrt((direction.x* direction.x) + (direction.y*direction.y));
+	var unit_vector := direction / magnitude;
+	var kupla_etäisyys = kupla_kohde_sijainti.distance_to(position)
+	if kupla_etäisyys > 10:
+		position += unit_vector * delta * 650;
+	else:
+		kuplan_metästys_kesken = false;
+		olen_toimeton = true;
 
 func toimeton_elämäntila_tilannepäivitys(delta: float):
 	aika_toimettomana += delta;
@@ -45,3 +64,5 @@ func _process(delta: float):
 	if(olen_toimeton):
 		toimeton_elämäntila_tilannepäivitys(delta);;;;
 		
+	if kuplan_metästys_kesken:
+		kuplan_metsästys_tilanpäivitys(delta);

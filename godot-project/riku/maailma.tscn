@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=11 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
 [ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
+[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 
 [node name="maailma" type="Node2D"]
 
@@ -297,5 +298,7 @@ scale = Vector2(0.175746, 0.0923746)
 position = Vector2(339, 284)
 rotation = 2.80721
 scale = Vector2(0.137064, 0.090799)
+
+[node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

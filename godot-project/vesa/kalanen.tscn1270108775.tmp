@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b684m0s4us8kb"]
+
+[ext_resource type="Script" uid="uid://dnhr17xgn8n5k" path="res://vesa/kalanen.gd" id="1_4gne8"]
+[ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="2_y30yw"]
+[ext_resource type="Texture2D" uid="uid://dj1s7ow3hiq6d" path="res://vesa/naamat.png" id="4_5e8o5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miv4y"]
+size = Vector2(458, 280)
+
+[node name="the kalanen" type="Area2D"]
+scale = Vector2(0.25, 0.25)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_4gne8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 13)
+shape = SubResource("RectangleShape2D_miv4y")
+
+[node name="kalasprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_y30yw")
+
+[node name="animenaama" type="Sprite2D" parent="kalasprite"]
+position = Vector2(-55, 22)
+scale = Vector2(0.350424, 0.356418)
+texture = ExtResource("4_5e8o5")
+hframes = 2
+vframes = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
