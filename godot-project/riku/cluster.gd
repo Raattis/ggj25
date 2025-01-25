@@ -8,6 +8,8 @@ var merge_velocity :float= 3.0
 const POKS := preload("res://vesa/poks.tscn")
 var kulkee = false
 var liiku_napein = false
+var liike_nopeus = 500.0
+
 
 func _ready():
 	if get_tree().get_current_scene().name.find("fly") != -1:
@@ -44,7 +46,35 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		if c is Pääkamera:
 			remove_child(c)
 			kamera = c
-
+			
+	# liikuta napein, jos flying kohtaus
+	if liiku_napein:
+		var x = 0.0
+		if Input.is_action_pressed("vasen"):
+			var multi = 1
+			if linear_velocity.x > 0:
+				multi = 10
+			x = -liike_nopeus * multi
+		if Input.is_action_pressed("oikea"):
+			var multi = 1
+			if linear_velocity.x < 0:
+				multi = 5
+			x = liike_nopeus * multi
+		var y = 0.0
+		if Input.is_action_pressed("ylös"):
+			var multi = 1
+			if linear_velocity.y > 0:
+				multi = 10
+			y = -liike_nopeus * multi
+		if Input.is_action_pressed("alas"):
+			var multi = 1
+			if linear_velocity.y < 0:
+				multi = 5
+			y = liike_nopeus * multi
+		print("force " + str(x) + " " + str(y))
+		constant_force = Vector2(x, y)
+		
+		
 	var center_of_mass_local := Vector2(0,0)
 	for child in get_children() as Array[Node2D]:
 		center_of_mass_local += child.position

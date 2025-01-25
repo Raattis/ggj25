@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=9 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="4_yfi2e"]
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="7_ibo5b"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_7oywc"]
-[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_lfb6w"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
 
 [node name="flying_game" type="Node2D"]
@@ -265,18 +264,11 @@ position = Vector2(-175, -61)
 [node name="kursori" parent="." instance=ExtResource("7_ibo5b")]
 position = Vector2(378, -80)
 gravity_scale = -0.1
-linear_damping = null
-angular_damping = null
-impulse_magnitude = null
-max_angular_velocity = null
-auto_launch_cooldown = null
 tee_auto_laukaisuja = false
 
 [node name="poks" parent="." instance=ExtResource("8_7oywc")]
 visible = false
 position = Vector2(572, 590)
-
-[node name="the kalanen" parent="." instance=ExtResource("10_lfb6w")]
 
 [node name="Pääkamera" type="Camera2D" parent="."]
 position = Vector2(315, 278)

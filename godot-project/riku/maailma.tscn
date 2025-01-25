@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
 [ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="4_1f6c8"]
-[ext_resource type="PackedScene" path="res://riku/mode_switch.tscn" id="8_w20kg"]
-[ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
+[ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="8_w20kg"]
+[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="10_msu6y"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
 

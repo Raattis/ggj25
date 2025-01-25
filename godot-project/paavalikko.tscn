@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtngtk4i4wot"]
+[gd_scene load_steps=6 format=3 uid="uid://cdtngtk4i4wot"]
 
 [ext_resource type="Script" uid="uid://dgjlcucbdqyal" path="res://paavalikko.gd" id="1_3hxxp"]
 [ext_resource type="Script" uid="uid://cdc2eyw716kn7" path="res://ykköspeli.gd" id="1_l1235"]
 [ext_resource type="Script" uid="uid://bevcu4pwganjw" path="res://kakkospeli.gd" id="2_3hxxp"]
+[ext_resource type="Script" uid="uid://cel4yy16mibbp" path="res://kuvaasetukset.gd" id="4_vr3r7"]
+[ext_resource type="Script" uid="uid://bty44e1iesyxq" path="res://veke.gd" id="5_cux2q"]
 
 [node name="Päävalikko" type="Node2D"]
 script = ExtResource("1_3hxxp")
@@ -41,5 +43,25 @@ offset_bottom = 236.0
 text = "Kuplan Lento"
 script = ExtResource("2_3hxxp")
 
+[node name="kuvaasetus" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 51.0
+offset_right = 619.0
+offset_bottom = 82.0
+text = "Vaiha screen mode"
+script = ExtResource("4_vr3r7")
+
+[node name="pois" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 245.0
+offset_bottom = 38.0
+text = "quit exit veke pois"
+script = ExtResource("5_cux2q")
+
 [connection signal="button_down" from="Control/ykköspeli" to="Control/ykköspeli" method="_on_button_down"]
 [connection signal="button_down" from="Control/kakkospeli" to="Control/kakkospeli" method="_on_button_down"]
+[connection signal="pressed" from="Control/kuvaasetus" to="Control/kuvaasetus" method="_on_pressed"]
+[connection signal="pressed" from="Control/pois" to="Control/pois" method="_on_pressed"]
