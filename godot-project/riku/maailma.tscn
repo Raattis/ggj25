@@ -8,11 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="6_1f6c8"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_w20kg"]
-[ext_resource type="PackedScene" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
-[ext_resource type="PackedScene" path="res://vesa/kalanen.tscn" id="10_em6w7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_em6w7"]
-radius = 421.51
+[ext_resource type="PackedScene" uid="uid://c6xc05f84igpk" path="res://vesa/virtanen.tscn" id="9_3c7bh"]
+[ext_resource type="PackedScene" uid="uid://b684m0s4us8kb" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 
 [node name="maailma" type="Node2D"]
 
@@ -304,16 +301,4 @@ scale = Vector2(0.137064, 0.090799)
 
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
 
-[node name="siirreltava" type="Area2D" parent="."]
-script = ExtResource("10_em6w7")
-TYYPIT = Array[PackedScene]([ExtResource("9_3c7bh"), ExtResource("4_h4tqo")])
-
-[node name="the virtanen" parent="siirreltava" instance=ExtResource("9_3c7bh")]
-position = Vector2(225, 120)
-
-[node name="grab_shape" type="CollisionShape2D" parent="siirreltava"]
-position = Vector2(303, 143)
-shape = SubResource("CircleShape2D_em6w7")
-
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]
-[connection signal="input_event" from="siirreltava" to="siirreltava" method="_on_input_event"]
