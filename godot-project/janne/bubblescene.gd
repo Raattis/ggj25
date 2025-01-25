@@ -12,8 +12,7 @@ func push_bubble(pos: Vector2, radius: float):
 	bubbles_pos.push_back(pos)
 	bubbles_radius.push_back(radius)
 
-func _process(delta: float) -> void:
-	var time = Time.get_ticks_msec() / 1000.0
+func _process(_delta: float) -> void:
 	var mat: ShaderMaterial = material;
 	
 	var aspect_ratio = size.x / size.y

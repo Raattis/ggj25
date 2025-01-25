@@ -5,13 +5,10 @@ var kuplat:Array[Cluster]
 
 var passed_time = 0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var suunta = Vector2(1,0).rotated(global_rotation);
 	for kupla in kuplat:
 		kupla.apply_force(suunta * voima);
-
-func _process(delta: float):
-	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	kuplat.append(body as Cluster);

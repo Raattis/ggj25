@@ -13,8 +13,7 @@ func _ready():
 	if get_tree().get_current_scene().name.find("fly") != -1:
 		liiku_napein = true
 
-func _process(delta: float):
-	impulse_cooldown -= delta
+func _process(_delta: float):
 	if global_position.length() > 10000:
 		queue_free()
 	var view_size = get_viewport_rect().size
@@ -50,7 +49,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	for child in get_children() as Array[Node2D]:
 		center_of_mass_local += child.position
 	center_of_mass_local /= get_child_count()
-	var center_of_mass := to_global(center_of_mass_local)
+	var center_of_mass_global := to_global(center_of_mass_local)
 
 	if get_child_count() > 0:
 		for child in get_children():
@@ -75,8 +74,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
-		var contact_point := state.get_contact_collider_position(0)
-		var collider := state.get_contact_collider_object(0)
 		var pos := state.get_contact_collider_position(0)
 		var closest :CollisionShape2D= null
 		var closest_dist :float= INF
@@ -88,10 +85,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 				closest_dist = dist
 				closest_pos = child.global_position
 		ripple_delete(closest)
-		#var offset := closest_pos - center_of_mass
-		apply_impulse((closest_pos - center_of_mass).normalized() * -impulse_magnitude, closest_pos)
+		#var offset := closest_pos - center_of_mass_global
+		apply_impulse((closest_pos - center_of_mass_global).normalized() * -impulse_magnitude, closest_pos)
 		#apply_torque_impulse(offset
-		#angular_velocity = atan2(closest_pos.y - center_of_mass.y, closest_pos.x - center_of_mass.x)
+		#angular_velocity = atan2(closest_pos.y - center_of_mass_global.y, closest_pos.x - center_of_mass_global.x)
 		angular_velocity = clampf(angular_velocity, -max_angular_velocity, max_angular_velocity)
 		impulse_cooldown = 10
 	if kamera:
@@ -127,10 +124,6 @@ func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	return closest_pos
 
 func ripple_delete(child: Node2D):
-	pop(child.global_position)
-	child.queue_free()
-
-func ripple_pull(child: Node2D, position: Vector2):
 	pop(child.global_position)
 	child.queue_free()
 

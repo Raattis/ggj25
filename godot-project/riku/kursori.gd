@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var target :Cluster= $"../cluster"
 @onready var uusi_kupla :Node2D= $"../uusi_kupla"
-@onready var kamera = $"../Pääkamera"
+var kamera :Camera2D= null
 const KUPLA_GFX := preload("res://riku/kupla_gfx.tscn")
 const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
@@ -26,6 +26,8 @@ var spawn_radius_grow_sign := 1.0
 var bubbles_add_mode := true
 
 func _ready():
+	if get_tree().root.has_node("Pääkamera"):
+		kamera = get_tree().root.get_node("Pääkamera")
 	var rect := get_viewport().get_visible_rect()
 	target.global_position.y = rect.position.y + rect.size.y * 0.9
 	target.global_position.x = rect.position.x + rect.size.x * 0.5

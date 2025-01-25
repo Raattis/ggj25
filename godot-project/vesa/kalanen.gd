@@ -17,12 +17,10 @@ var kupla_kohde_sijainti := Vector2(0,0);
 
 func etippä_toi(kuplunen : Cluster):
 	kupla_kohde_sijainti = kuplunen.position
-	kuplan_metästys_kesken = true;
-	kuplunen.position
-	olen_toimeton =false;
+	kuplan_metästys_kesken = true
+	olen_toimeton =false
 
 func _ready():
-	z_index = 100
 	kalan_koko = scale;
 
 func kuplan_metsästys_tilanpäivitys(delta : float):
@@ -57,9 +55,6 @@ func toimeton_elämäntila_tilannepäivitys(delta: float):
 			else:
 				elämänsuunta.y = -1
 		position.y = clamp(position.y + elämänsuunta.y * toimeton_y_nopeus * delta, maailman_alaraja_y, maailman_yläraja_y);
-
-func _physics_process(delta: float) -> void:
-	pass
 
 func _process(delta: float):
 	if(olen_toimeton):
