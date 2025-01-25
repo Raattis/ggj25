@@ -27,6 +27,7 @@ text = "1=autopeli"
 script = ExtResource("1_hcm2b")
 
 [node name="kakkospeli" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 235.0
 offset_top = 53.0
 offset_right = 360.0
