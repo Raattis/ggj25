@@ -3,7 +3,7 @@ shader_type canvas_item;
 const int BUBBLES_COUNT = 512;
 const float PI_HALF = PI / 2.0;
 
-uniform sampler2D tex_bg : repeat_enable;
+uniform sampler2D tex_bg; //: repeat_enable;
 uniform vec3 bubble_color : source_color;
 uniform float aspect_ratio;
 uniform float bubbles_active_count;

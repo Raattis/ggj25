@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nvargs4oqefh"
-path.s3tc="res://.godot/imported/kala.png-86e866f303b5623e7a3583760dedf7aa.s3tc.ctex"
+uid="uid://cuymoywjfsjxf"
+path.s3tc="res://.godot/imported/kelp.png-fc2d0a2f42bcfa89b6582da602be54b5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://vesa/kala.png"
-dest_files=["res://.godot/imported/kala.png-86e866f303b5623e7a3583760dedf7aa.s3tc.ctex"]
+source_file="res://janne/kelp.png"
+dest_files=["res://.godot/imported/kelp.png-fc2d0a2f42bcfa89b6582da602be54b5.s3tc.ctex"]
 
 [params]
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://baye7jmkprwtr"]
+[gd_scene load_steps=14 format=3 uid="uid://baye7jmkprwtr"]
 
 [ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_bo0uw"]
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
 [ext_resource type="Shader" uid="uid://clostlp4rfcns" path="res://janne/terrain.gdshader" id="3_u224b"]
 [ext_resource type="Texture2D" uid="uid://bp2als6xo6tmt" path="res://janne/scene_noise.tres" id="4_yms0o"]
+[ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="5_1u3gn"]
+[ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="6_14p64"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_u224b"]
 viewport_path = NodePath("maisema")
@@ -23,6 +25,9 @@ shader_parameter/bubbles_extra = null
 background_mode = 1
 ambient_light_source = 2
 ambient_light_color = Color(8.42288e-07, 0.197873, 0.385655, 1)
+fog_enabled = true
+fog_light_color = Color(0, 0.341126, 0.667341, 1)
+fog_density = 0.0677
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1u3gn"]
 render_priority = 0
@@ -35,6 +40,14 @@ material = SubResource("ShaderMaterial_1u3gn")
 size = Vector2(100, 100)
 subdivide_width = 32
 subdivide_depth = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nayvl"]
+transparency = 1
+albedo_texture = ExtResource("6_14p64")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_1u3gn"]
+material = SubResource("StandardMaterial3D_nayvl")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -62,9 +75,90 @@ size = Vector2i(640, 360)
 transform = Transform3D(0.970418, 0, 0.241431, 0, 1, 0, -0.241431, 0, 0.970418, 1.19981, 0.595106, 1.98614)
 environment = SubResource("Environment_bo0uw")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="maisema"]
-transform = Transform3D(1, 0, 0, 0, 1, 0.00020944, 0, -0.00020944, 1, 0.191115, 0.950753, 1.26687)
-
 [node name="terrain" type="MeshInstance3D" parent="maisema"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.172, -47.2324)
 mesh = SubResource("PlaneMesh_bo0uw")
+
+[node name="Node3D" type="Node3D" parent="maisema"]
+
+[node name="Sprite3D" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86854, -3.02928, -12.3604)
+texture = ExtResource("5_1u3gn")
+region_enabled = true
+region_rect = Rect2(0, 3.60953, 64, 250.335)
+
+[node name="Sprite3D6" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5511, -3.02928, -14.0105)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D7" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5511, -1.41436, -26.0105)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D8" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.79499, -1.33692, -22.9422)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D2" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37496, -6.50957, -12.2054)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D3" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.818701, -3.02928, -7.0705)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D4" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02007, 0.89352, -4.40032)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D5" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77807, -2.37406, -16.1352)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D9" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1979, -3.00233, -12.6803)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D10" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6206, -1.82653, -12.8184)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D11" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5649, 0.363142, -30.7983)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D12" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64462, -1.30998, -30.3834)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D13" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13413, -3.71515, -6.17293)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D14" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14807, -3.00233, -7.39046)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D15" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2363, -3.00233, -16.9049)
+texture = ExtResource("5_1u3gn")
+
+[node name="Sprite3D16" type="Sprite3D" parent="maisema/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99232, -4.61839, -16.4551)
+texture = ExtResource("5_1u3gn")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="maisema"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57492e-05, 0.995054, -10.5139)
+amount = 27
+lifetime = 4.16
+preprocess = 3.03
+mesh = SubResource("QuadMesh_1u3gn")
+emission_shape = 3
+emission_box_extents = Vector3(15.42, 5.465, 6.03)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 7.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="maisema"]
+transform = Transform3D(-0.569912, -0.730587, -0.376089, -0.0154724, -0.44807, 0.893865, -0.82156, 0.515243, 0.244057, 0, 0, 0)
