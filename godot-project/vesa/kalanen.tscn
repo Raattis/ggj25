@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b684m0s4us8kb"]
 
-[ext_resource type="Script" path="res://vesa/kalanen.gd" id="1_4gne8"]
+[ext_resource type="Script" uid="uid://dnhr17xgn8n5k" path="res://vesa/kalanen.gd" id="1_4gne8"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="2_y30yw"]
 [ext_resource type="Texture2D" uid="uid://dj1s7ow3hiq6d" path="res://vesa/naamat.png" id="4_5e8o5"]
 
