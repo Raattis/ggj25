@@ -26,6 +26,13 @@ func _process(delta: float):
 	var target_pos := target.find_closest_spot(position)
 	var t :float= 1.0 - pow(0.00001, delta)
 	uusi_kupla.global_position = lerp(uusi_kupla.global_position, target_pos, t)
+	
+	var view_size = get_viewport_rect().size
+	var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
+	renderer.push_bubble(
+		(uusi_kupla.global_position - view_size / 2.0) / view_size.y,
+		target.get_child(0).shape.get_radius() / view_size.y
+	)
 	if Input.is_action_pressed("spawn"):
 		if not was_pressd:
 			was_pressd = true
@@ -34,7 +41,6 @@ func _process(delta: float):
 			cll.add_child(gfx)
 			target.add_child(cll)
 			cll.global_position = uusi_kupla.global_position
-			#gfx.global_position = uusi_kupla.global_position
 			launch()
 	else:
 		was_pressd = false
@@ -42,15 +48,10 @@ func _process(delta: float):
 	if launch_cooldown < 0:
 		launch()
 	
+	
+	
 	if Input.is_action_pressed("move_camera"):
 		Input.get_last_mouse_velocity()
-	
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		Engine.physics_ticks_per_second = 120
-		Engine.time_scale = 2
-	else:
-		Engine.physics_ticks_per_second = 60
-		Engine.time_scale = 1
 
 func launch():
 	launch_cooldown = 1.0

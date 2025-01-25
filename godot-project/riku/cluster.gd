@@ -9,6 +9,13 @@ func _process(delta: float):
 	impulse_cooldown -= delta
 	if global_position.length() > 10000:
 		queue_free()
+	var view_size = get_viewport_rect().size
+	for child in get_children() as Array[Node2D]:
+		var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
+		renderer.push_bubble(
+			(child.global_position - view_size / 2.0) / view_size.y,
+			child.shape.get_radius() / view_size.y
+		)
 
 func pop(pop_position: Vector2):
 	var effekti = POKS.instantiate()

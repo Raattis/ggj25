@@ -1,6 +1,7 @@
 extends CollisionShape2D
 
 func _process(delta: float) -> void:
+	return
 	var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
 	var view_size = get_viewport_rect().size
 	renderer.push_bubble(
