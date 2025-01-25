@@ -20,7 +20,11 @@ func next():
 	add_child(obu)
 	obu.position = Vector2(0,0)
 
-func _process(delta):
+func _process(_delta):
+	if kursori.bubbles_add_mode:
+		dragging = false
+		return
+
 	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		global_position = get_global_mouse_position() + offset
 	else:
@@ -32,6 +36,9 @@ func is_mouse_over() -> bool:
 	return ((get_global_mouse_position() - global_position) * scale).length() < ($CollisionShape2D.shape as CircleShape2D).radius
 
 func _input(event : InputEvent):
+	if kursori.bubbles_add_mode:
+		return
+
 	if event is InputEventMouse and dragging:
 		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
 			var rot := 1.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0

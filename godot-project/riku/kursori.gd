@@ -23,6 +23,8 @@ var spawn_cooldown :float= 0.5
 var spawn_radius := 0.1
 var spawn_radius_grow_sign := 1.0
 
+var bubbles_add_mode := true
+
 func _ready():
 	var rect := get_viewport().get_visible_rect()
 	target.global_position.y = rect.position.y + rect.size.y * 0.9
@@ -38,7 +40,7 @@ func _process(delta: float):
 		get_parent().move_child(cluster_parent, 0)
 
 	spawn_cooldown -= delta
-	if Input.is_action_pressed("spawn"):
+	if Input.is_action_pressed("spawn") and bubbles_add_mode:
 		spawn_radius += delta * 20.0 * spawn_radius_grow_sign
 		if spawn_radius > 30.0:
 			spawn_radius_grow_sign = -1.0
@@ -49,21 +51,19 @@ func _process(delta: float):
 	var target_pos := target.find_closest_spot(position, spawn_radius)
 	var t :float= 1.0 - pow(0.00001, delta)
 	uusi_kupla.global_position = lerp(uusi_kupla.global_position, target_pos, t)
-	
-	var view_size = get_viewport_rect().size
-	var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
-	renderer.push_bubble(
-		(uusi_kupla.global_position - view_size / 2.0) / view_size.y,
-		spawn_radius / view_size.y
-	)
+	uusi_kupla.visible = bubbles_add_mode
+	if bubbles_add_mode:
+		var view_size = get_viewport_rect().size
+		var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
+		renderer.push_bubble(
+			(uusi_kupla.global_position - view_size / 2.0) / view_size.y,
+			spawn_radius / view_size.y
+		)
 	launch_cooldown -= delta
 	if launch_cooldown < 0 and tee_auto_laukaisuja:
 		launch()
 
-	if Input.is_action_pressed("move_camera"):
-		Input.get_last_mouse_velocity()
-		
-	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 :
+	if Input.is_action_just_pressed("laukaise") and launch_cooldown < 0 and bubbles_add_mode:
 		launch()
 
 func launch():
@@ -92,9 +92,9 @@ func _input(event: InputEvent):
 		siirreltava.global_position = get_global_mouse_position()
 	if event.is_action_pressed("launch"):
 		launch()
-	if event.is_action_pressed("remove") and target.get_child_count() > 1:
+	if event.is_action_pressed("remove") and target.get_child_count() > 1 and bubbles_add_mode:
 		target.remove_closest_child(position)
-	if event.is_action_released("spawn") and spawn_cooldown < 0.0:
+	if event.is_action_released("spawn") and spawn_cooldown < 0.0 and bubbles_add_mode:
 		if target.get_child_count() > 31:
 			target.remove_child(target.get_child(31))
 			spawn_cooldown = 0.5
