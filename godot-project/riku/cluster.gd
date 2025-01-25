@@ -41,7 +41,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		for child in get_children() as Array[CollisionShape2D]:
 			var dont_move := false
 			var p := child.position
-			var n :Vector2= lerp(p, center_of_mass_local, 0.05)
+			var center_dist :Vector2= (center_of_mass_local - p)
+			if center_dist.length_squared() > 1.0:
+				center_dist = center_dist.normalized()
+			var n :Vector2= p + center_dist * 0.1
 			var r :float= child.shape.radius
 			for b in get_children() as Array[CollisionShape2D]:
 				if child == b:

@@ -7,10 +7,11 @@ const KUPLA_COLL := preload("res://riku/kupla_coll.tscn")
 var cluster_parent : Node2D = null
 
 @export var gravity_scale := -1
-@export var linear_damping := 10.0
-@export var angular_damping := 0.9
+@export var linear_damping := 1.0
+@export var angular_damping := 0.1
 @export var impulse_magnitude := 300.0
 @export var max_angular_velocity := 10000.0
+@export var auto_launch_cooldown := 1.0
 
 var target_position :Vector2= Vector2(0,0)
 var was_pressd :bool= false
@@ -61,7 +62,7 @@ func _process(delta: float):
 func launch():
 	if cluster_parent.get_child_count() > 15: # MAX CLUSTER COUNT
 		return
-	launch_cooldown = 10.0
+	launch_cooldown = auto_launch_cooldown
 	var new :RigidBody2D= target.duplicate()
 	cluster_parent.add_child(new)
 	new.collision_layer = 2
