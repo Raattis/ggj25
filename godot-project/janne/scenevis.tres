@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bfw0giedr1qdb"]
+
+[ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_q6k2k"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q6k2k"]
+noise_type = 0
+seed = 10
+frequency = 0.0162
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q6k2k"]
+width = 64
+height = 64
+generate_mipmaps = false
+seamless = true
+noise = SubResource("FastNoiseLite_q6k2k")
+
+[resource]
+shader = ExtResource("1_q6k2k")
+shader_parameter/tex_bg = SubResource("NoiseTexture2D_q6k2k")
+shader_parameter/aspect_ratio = null
+shader_parameter/bubbles_active_count = null
+shader_parameter/bubbles_pos = null
+shader_parameter/bubbles_radius = null
