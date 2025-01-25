@@ -5,7 +5,7 @@ var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
 var merge_velocity :float= 3.0
-const POKS = preload("res://vesa/poks.tscn")
+const POKS := preload("res://vesa/poks.tscn")
 
 func _process(delta: float):
 	impulse_cooldown -= delta
