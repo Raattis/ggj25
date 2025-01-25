@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b16pwl1lkdp8p"]
+
+[ext_resource type="Texture2D" uid="uid://clb4py016gnvw" path="res://vesa/ankkurinmappi.png" id="1_y6w5e"]
+[ext_resource type="Script" uid="uid://buf7yicrf2ho4" path="res://vesa/ankkurininen.gd" id="1_yk35j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
+
+[node name="ankkuri" type="Area2D"]
+scale = Vector2(0.16, 0.16)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_yk35j")
+
+[node name="gfx" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_y6w5e")
+
+[node name="coll" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cspln")
