@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://pibjdynkpeer"]
+
+[ext_resource type="Texture2D" uid="uid://c4kiht3yqvrsi" path="res://poks.png" id="1_yydfh"]
+[ext_resource type="Script" uid="uid://dyaqvlmr7vuad" path="res://vesa/poks.gd" id="2_gmuju"]
+
+[node name="poks" type="Sprite2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_yydfh")
+hframes = 2
+vframes = 2
+script = ExtResource("2_gmuju")
