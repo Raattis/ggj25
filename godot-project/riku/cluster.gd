@@ -4,7 +4,8 @@ extends RigidBody2D
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
-const POKS = preload("res://vesa/poks.tscn")
+var merge_velocity :float= 3.0
+const POKS := preload("res://vesa/poks.tscn")
 
 func _process(delta: float):
 	impulse_cooldown -= delta
@@ -49,38 +50,23 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		for child in get_children():
 			child = child as CollisionShape2D
 			var dont_move := false
-<<<<<<< Updated upstream
 			var p = child.position
 			var candidate_position :Vector2= p + (center_of_mass_local - p).limit_length(merge_velocity)
-=======
-			var p := child.position
-			var n :Vector2= lerp(p, center_of_mass_local, 0.05)
->>>>>>> Stashed changes
 			var r :float= child.shape.radius
 			for b in get_children() as Array[CollisionShape2D]:
 				if b == child:
 					continue
 				var radii :float= r + child.shape.radius
 				var radii_sqrd := radii * radii
-<<<<<<< Updated upstream
 				var dist_sqrd = (b.position - p).length_squared()
 				var new_dist_sqrd = (b.position - candidate_position).length_squared()
-=======
-				var dist_sqrd := (b.position - p).length_squared()
-				var new_dist_sqrd := (b.position - n).length_squared()
->>>>>>> Stashed changes
 				if dist_sqrd <= radii_sqrd and new_dist_sqrd < dist_sqrd:
 					# touching, and moving would make these closer
 					dont_move = true
 					break
 			if not dont_move:
-<<<<<<< Updated upstream
 				child.position = candidate_position
 	
-=======
-				child.position = n
-
->>>>>>> Stashed changes
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var contact_point := state.get_contact_collider_position(0)
@@ -118,9 +104,8 @@ func _on_body_entered(body: Node2D):
 	if (body as StaticBody2D).collision_layer & (1<<3) != 0:
 		destroy()
 	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
-		print("you win!")
-	if (body as StaticBody2D).collision_layer & (1<<5) != 0:
-		print("you win!")
+		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
+		print("Kalanen hengitti kuplan!")
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF
@@ -147,6 +132,8 @@ func remove_closest_child(pos: Vector2):
 	var closest_dist :float= INF
 	var closest_child :CollisionShape2D= null
 	for child in get_children() as Array[CollisionShape2D]:
+		if child.get_index() == 0:
+			continue
 		var diff := (child.global_position - pos)
 		var dist := diff.length_squared()
 		if dist < closest_dist:
