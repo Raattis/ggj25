@@ -22,6 +22,7 @@ func etippä_toi(kuplunen : Cluster):
 	olen_toimeton =false;
 
 func _ready():
+	z_index = 100
 	kalan_koko = scale;
 
 func kuplan_metsästys_tilanpäivitys(delta : float):

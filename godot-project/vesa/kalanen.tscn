@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b684m0s4us8kb"]
+[gd_scene load_steps=5 format=3 uid="uid://dx66bfx2xx7hu"]
 
 [ext_resource type="Script" uid="uid://dnhr17xgn8n5k" path="res://vesa/kalanen.gd" id="1_4gne8"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="2_y30yw"]
@@ -26,6 +26,7 @@ scale = Vector2(0.350424, 0.356418)
 texture = ExtResource("4_5e8o5")
 hframes = 2
 vframes = 2
+frame = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
