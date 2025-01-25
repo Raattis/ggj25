@@ -20,7 +20,7 @@ func next():
 	obu.position = Vector2(0,0)
 
 func _process(delta):
-	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		global_position = get_global_mouse_position() + offset
 	else:
 		if dragging and (start - get_global_mouse_position()).length() < 3:
@@ -35,10 +35,12 @@ func _input(event : InputEvent):
 		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
 			var rot := 1.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0
 			obu.rotate(rot * PI / 16)
+		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_LEFT):
+			queue_free()
 
 	if event is InputEventMouse:
 		if event is InputEventMouseButton and event.pressed and is_mouse_over():
-			if (event as InputEventMouseButton).button_index == MOUSE_BUTTON_LEFT:
+			if (event as InputEventMouseButton).button_index == MOUSE_BUTTON_RIGHT:
 				dragging = true
 				start = get_global_mouse_position()
 				offset = global_position - get_global_mouse_position()

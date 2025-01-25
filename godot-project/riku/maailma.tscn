@@ -291,12 +291,31 @@ scale = Vector2(24.1192, 0.469113)
 
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
 
-[node name="siirreltava" parent="." instance=ExtResource("10_msu6y")]
-position = Vector2(339, 283)
-rotation = -3.50811
+[node name="siirreltavat" type="Node" parent="."]
 
-[node name="siirreltava2" parent="." instance=ExtResource("10_msu6y")]
+[node name="siirreltava" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(339, 283)
+rotation = 2.77507
+
+[node name="siirreltava2" parent="siirreltavat" instance=ExtResource("10_msu6y")]
 position = Vector2(131, 260)
 rotation = -0.58294
+
+[node name="siirreltava3" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(577, 145)
+
+[node name="siirreltava6" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(371, 9)
+rotation = 0.785398
+
+[node name="siirreltava7" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(552, 63)
+rotation = 2.0944
+
+[node name="siirreltava4" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(574, 230)
+
+[node name="siirreltava5" parent="siirreltavat" instance=ExtResource("10_msu6y")]
+position = Vector2(572, 319)
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

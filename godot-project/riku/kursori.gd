@@ -73,7 +73,12 @@ func launch():
 	new.impulse_magnitude = impulse_magnitude
 	new.max_angular_velocity = max_angular_velocity
 
+const SIIRRELTAVA = preload("res://riku/siirreltava.tscn")
 func _input(event: InputEvent):
+	if event is InputEventMouseButton and event.double_click and event.button_index == MOUSE_BUTTON_RIGHT:
+		var siirreltava := SIIRRELTAVA.instantiate()
+		$"../siirreltavat".add_child(siirreltava)
+		siirreltava.global_position = get_global_mouse_position()
 	if event.is_action_pressed("launch"):
 		launch()
 	if event.is_action_pressed("remove") and target.get_child_count() > 1:
