@@ -8,10 +8,7 @@ var toimeton_nopeus = 60;
 var olen_toimeton = true;
 var kalan_koko = Vector2(1,1)
 var toimeton_y_nopeus = 10;
-var maailman_alaraja_x = 100;
-var maailman_yläraja_x = 600;
-var maailman_alaraja_y = 30;
-var maailman_yläraja_y = 500;
+@export var kalan_alue := Vector4(0,0,0,0);
 var kuplan_metästys_kesken = false;
 var kupla_kohde_sijainti := Vector2(0,0);
 var huojunta := 0.0
@@ -44,7 +41,7 @@ func toimeton_elämäntila_tilannepäivitys(delta: float):
 		elämänsuunta.x = randi_range(-1,1)
 	position.x += toimeton_nopeus * elämänsuunta.x * delta;	
 
-	position.x = clamp(position.x, maailman_alaraja_x, maailman_yläraja_x);
+	position.x = clamp(position.x, kalan_alue.x, kalan_alue.z);
 	if(elämänsuunta.x != 0):
 		aika_paikallaan = 0;
 		elämänsuunta.y = 0;
@@ -57,7 +54,7 @@ func toimeton_elämäntila_tilannepäivitys(delta: float):
 				elämänsuunta.y = 1
 			else:
 				elämänsuunta.y = -1
-		position.y = clamp(position.y + elämänsuunta.y * toimeton_y_nopeus * delta, maailman_alaraja_y, maailman_yläraja_y);
+		position.y = clamp(position.y + elämänsuunta.y * toimeton_y_nopeus * delta, kalan_alue.y, kalan_alue.w);
 
 func _process(delta: float):
 	if(olen_toimeton):

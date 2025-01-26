@@ -47,7 +47,6 @@ script = ExtResource("11_msu6y")
 arr = Array[PackedScene]([ExtResource("9_nd4rt"), ExtResource("10_ru51m"), ExtResource("11_l1arq")])
 
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
-visible = false
 position = Vector2(566, 365)
 
 [node name="voitto_teksti" type="Label" parent="."]
