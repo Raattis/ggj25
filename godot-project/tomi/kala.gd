@@ -8,10 +8,11 @@ var flying_game = null
 @export var hungry := 1
 @export var shrink_when_ready = false
 
-@onready var label = $Label
+var label = null
 
 
 func _ready():
+	label = find_child("Label")
 	flying_game = get_tree().get_current_scene() as FlyingGame
 	flying_game.kaloja_on += 1
 

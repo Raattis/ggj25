@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3n68y1dv773t" path="res://riku/piikki.gd" id="1_e5uyx"]
 [ext_resource type="Texture2D" uid="uid://d3yylr5yhuygk" path="res://piikkiii.png" id="1_pa8mk"]
-[ext_resource type="Script" uid="uid://cr8m8rw4utvoy" path="res://riku/piikki_chilling.gd" id="2_bc5vh"]
+[ext_resource type="Script" path="res://riku/piikki_chilling.gd" id="2_bc5vh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspln"]
 radius = 5.0

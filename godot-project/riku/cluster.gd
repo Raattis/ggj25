@@ -140,11 +140,13 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var pos := state.get_contact_collider_position(0)
-		var obj := state.get_contact_collider_object(0) as StaticBody2D
+		var obj = state.get_contact_collider_object(0)
 		if obj and obj.collision_layer == (1<<2):
+			if obj is PiikkiKala:
+				obj.pelaaja_hittas()
 			var closest: CollisionShape2D = null
-			var closest_dist :float= INF
-			var closest_pos := Vector2(0,0)
+			var closest_dist: float = INF
+			var closest_pos := Vector2.ZERO
 			for child in get_children() as Array[Node2D]:
 				var dist := (child.global_position - pos).length_squared()
 				if dist < closest_dist:
@@ -182,6 +184,7 @@ func _on_body_entered(body: Node2D):
 		destroy()
 	var ab = body as Area2D
 	if ab and ab.collision_layer & (1<<4) != 0 and ankkurit.size() > 0:
+		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
 		print("Voittoon mentiin ", ankkurit.size(), " ankkurin kanssa.")
 		GameManager.anchors_collected += ankkurit.size()
 		ankkurit.clear()
