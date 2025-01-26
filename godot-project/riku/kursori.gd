@@ -18,10 +18,10 @@ var cluster_parent : Node2D = null
 @export var tee_auto_laukaisuja := true
 @export var näytä_kuplia := false
 @export var cluster_parent_index = 0
-var target_position :Vector2= Vector2(0,0)
-var was_pressd :bool= false
-var launch_cooldown :float= 0.5
-var spawn_cooldown :float= 0.5
+var target_position: Vector2 = Vector2(0,0)
+var was_pressd: bool = false
+var launch_cooldown: float = 0.5
+var spawn_cooldown: float = 0.5
 var spawn_radius := 0.1
 var spawn_radius_grow_sign := 1.0
 
