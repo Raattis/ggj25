@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://baye7jmkprwtr"]
+[gd_scene load_steps=20 format=3 uid="uid://baye7jmkprwtr"]
 
 [ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_bo0uw"]
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
 [ext_resource type="Shader" uid="uid://clostlp4rfcns" path="res://janne/terrain.gdshader" id="3_u224b"]
+[ext_resource type="Shader" uid="uid://boacklpdu8hdg" path="res://janne/vedenpinta.gdshader" id="4_14p64"]
 [ext_resource type="Texture2D" uid="uid://bp2als6xo6tmt" path="res://janne/scene_noise.tres" id="4_yms0o"]
 [ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="5_1u3gn"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="6_14p64"]
@@ -20,26 +21,54 @@ shader_parameter/bubbles_active_count = null
 shader_parameter/bubbles_pos = null
 shader_parameter/bubbles_radius = null
 shader_parameter/bubbles_extra = null
+shader_parameter/light_pos = null
 
 [sub_resource type="Environment" id="Environment_bo0uw"]
 background_mode = 1
 ambient_light_source = 2
 ambient_light_color = Color(8.42288e-07, 0.197873, 0.385655, 1)
 fog_enabled = true
-fog_light_color = Color(0, 0.341126, 0.667341, 1)
-fog_density = 0.0677
+fog_light_color = Color(0, 0.147849, 0.314899, 1)
+fog_light_energy = 2.69
+fog_density = 0.0388
+
+[sub_resource type="Gradient" id="Gradient_nayvl"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.668966, 1)
+colors = PackedColorArray(0.194358, 0.0937623, 3.60981e-08, 1, 0.447059, 0.290196, 0, 1, 0.780392, 0.431373, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_plcbv"]
+noise_type = 5
+frequency = 0.9047
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_glcjq"]
+color_ramp = SubResource("Gradient_nayvl")
+noise = SubResource("FastNoiseLite_plcbv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1u3gn"]
 render_priority = 0
 shader = ExtResource("3_u224b")
 shader_parameter/heightmap = ExtResource("4_yms0o")
 shader_parameter/displacement = 19.645
+shader_parameter/albedo = SubResource("NoiseTexture2D_glcjq")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bo0uw"]
 material = SubResource("ShaderMaterial_1u3gn")
 size = Vector2(100, 100)
 subdivide_width = 32
 subdivide_depth = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_plcbv"]
+render_priority = 0
+shader = ExtResource("4_14p64")
+shader_parameter/displacement = 1.62
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_glcjq"]
+material = SubResource("ShaderMaterial_plcbv")
+flip_faces = true
+size = Vector2(100, 100)
+subdivide_width = 256
+subdivide_depth = 256
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nayvl"]
 transparency = 1
@@ -78,6 +107,10 @@ environment = SubResource("Environment_bo0uw")
 [node name="terrain" type="MeshInstance3D" parent="maisema"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.172, -47.2324)
 mesh = SubResource("PlaneMesh_bo0uw")
+
+[node name="vedenpinta" type="MeshInstance3D" parent="maisema"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.425159, 10.5102, -48.0923)
+mesh = SubResource("PlaneMesh_glcjq")
 
 [node name="Node3D" type="Node3D" parent="maisema"]
 

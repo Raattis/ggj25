@@ -10,6 +10,7 @@ uniform float bubbles_active_count;
 uniform vec2 bubbles_pos[BUBBLES_COUNT];
 uniform float bubbles_radius[BUBBLES_COUNT];
 uniform float bubbles_extra[BUBBLES_COUNT];
+uniform vec3 light_pos;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
