@@ -6,13 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
 [ext_resource type="PackedScene" uid="uid://ckchqys4sj7xu" path="res://riku/mapit.tscn" id="8_3c7bh"]
+[ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="9_em6w7"]
 [ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="Script" uid="uid://db24hqv5btw2k" path="res://kentat/voitto_teksti.gd" id="11_cuxj6"]
 [ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_3c7bh"]
-outline_size = 6
-outline_color = Color(0, 0, 0, 1)
 
 [node name="maailma" type="Node2D"]
 script = ExtResource("1_w20kg")
@@ -29,13 +26,11 @@ script = ExtResource("1_v0xw8")
 [node name="kupla_coll" parent="cluster" instance=ExtResource("3_h4tqo")]
 
 [node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("2_cspln")]
-self_modulate = Color(1, 1, 1, 1)
 position = Vector2(-250, -266)
 
 [node name="uusi_kupla" type="Node2D" parent="."]
 
 [node name="kupla_gfx" parent="uusi_kupla" instance=ExtResource("2_cspln")]
-self_modulate = Color(1, 1, 1, 1)
 position = Vector2(-175, -61)
 
 [node name="kursori" parent="." instance=ExtResource("1_c3fsg")]
@@ -57,7 +52,7 @@ offset_top = 6.0
 offset_right = 439.0
 offset_bottom = 29.0
 text = "0/10 anchors collected"
-label_settings = SubResource("LabelSettings_3c7bh")
+label_settings = ExtResource("9_em6w7")
 horizontal_alignment = 1
 script = ExtResource("11_cuxj6")
 

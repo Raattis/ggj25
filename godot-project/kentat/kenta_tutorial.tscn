@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://71mwi3rl47cg"]
+[gd_scene load_steps=7 format=3 uid="uid://71mwi3rl47cg"]
 
+[ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="1_8tc5p"]
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_hovwc"]
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_8tc5p"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="3_loxyf"]
@@ -9,14 +10,16 @@
 [node name="kenta_tutorial" type="Node2D"]
 
 [node name="ohjeet" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 118.0
-offset_right = 292.0
-offset_bottom = 219.0
-text = "Left click to attach bubbles
-Right click to delete
-Collect 10 anchors to win the level!
+offset_left = 6.0
+offset_top = 254.0
+offset_right = 328.0
+offset_bottom = 381.0
+text = "Left click to attach bubbles.
+Right click to delete.
+Bring 10 anchors to the bottom
+of the sea to win the level!
 "
+label_settings = ExtResource("1_8tc5p")
 
 [node name="esteet" type="Node" parent="."]
 

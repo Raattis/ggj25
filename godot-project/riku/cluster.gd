@@ -13,7 +13,10 @@ var kierto_nopeus = 10000.0
 
 var anchors_collected := 0
 
+var o := 0.0
+
 func _ready():
+	o = randf() * 12.0
 	if get_tree().get_current_scene().name.find("fly") != -1:
 		liiku_napein = true
 
@@ -21,13 +24,19 @@ func _process(_delta: float):
 	if global_position.length() > 10000:
 		destroy()
 	var view_size = get_viewport_rect().size
+	var oo := o
 	for child in get_children():
+		var dy = sin(Time.get_ticks_msec() / 200.0 + oo)
+		var dx = sin(Time.get_ticks_msec() / 190.0 + 50 + oo)
+		var ds = sin(Time.get_ticks_msec() / 300.0 + 50 + oo)
+		oo += o
 		if child is Pääkamera:
 			continue
 		var renderer: SceneVis = scenevis.find_child("BubbleSceneRenderer")
 		renderer.push_bubble(
-			(child.global_position - view_size / 2.0) / view_size.y,
-			child.shape.get_radius() / view_size.y
+			(child.global_position - view_size / 2.0 + Vector2(dx, dy)) / view_size.y,
+			(child.shape.get_radius() + ds) / view_size.y,
+			anchors_collected / 3.0
 		)
 
 func pop(pop_position: Vector2):
@@ -198,3 +207,12 @@ func _input(event):
 		if event.as_text() == "C":
 			# cheats
 			liiku_napein = true
+
+var ankkurit :Array[Node2D]= []
+func add_ankkuri(ankkuri: Node2D) -> bool:
+	if ankkuri in ankkurit:
+		return false
+	ankkurit.append(ankkuri)
+	gravity_scale = 1;
+	anchors_collected += 1
+	return true

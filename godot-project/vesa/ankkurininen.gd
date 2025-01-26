@@ -12,6 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	var cluster := (body as Cluster)
-	cluster.gravity_scale = 1;
-	cluster.anchors_collected += 1
-	bounce = 2.0
+	if cluster.add_ankkuri(self):
+		bounce = 2.0

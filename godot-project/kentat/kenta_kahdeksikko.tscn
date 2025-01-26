@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcrrmnmev2k1t"]
+[gd_scene load_steps=10 format=3 uid="uid://bcrrmnmev2k1t"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_brnge"]
+[ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="1_lt1uk"]
 [ext_resource type="Script" uid="uid://cvsm8k5032xtw" path="res://kentat/edit_help.gd" id="2_pwlaw"]
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="3_c42sy"]
@@ -17,6 +18,7 @@ offset_top = 329.0
 offset_right = 313.0
 offset_bottom = 352.0
 text = "<-- Click here to edit currents!"
+label_settings = ExtResource("1_lt1uk")
 script = ExtResource("7_hfthl")
 
 [node name="edit_help" type="Label" parent="."]
@@ -30,6 +32,7 @@ Hold left click and scroll to rotate
 Hold left click and click right to delete
 Double click to add new
 Click to switch between spike and current"
+label_settings = ExtResource("1_lt1uk")
 script = ExtResource("2_pwlaw")
 
 [node name="esteet" type="Node" parent="."]
