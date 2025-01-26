@@ -11,7 +11,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="gfx" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.06, 0.06)
 texture = ExtResource("1_pa8mk")
 script = ExtResource("2_bc5vh")
 
