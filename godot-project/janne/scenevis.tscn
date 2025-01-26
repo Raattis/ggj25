@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
 [ext_resource type="Shader" uid="uid://clostlp4rfcns" path="res://janne/terrain.gdshader" id="3_u224b"]
 [ext_resource type="Shader" uid="uid://boacklpdu8hdg" path="res://janne/vedenpinta.gdshader" id="4_14p64"]
-[ext_resource type="Texture2D" uid="uid://bp2als6xo6tmt" path="res://janne/scene_noise.tres" id="4_yms0o"]
+[ext_resource type="Texture2D" uid="uid://bglxyd08bom18" path="res://janne/scene_noise.tres" id="4_yms0o"]
 [ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="5_1u3gn"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="6_14p64"]
 
@@ -14,6 +14,7 @@ viewport_path = NodePath("maisema")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yms0o"]
 resource_local_to_scene = true
 shader = ExtResource("1_bo0uw")
+shader_parameter/camera_offset = null
 shader_parameter/tex_bg = SubResource("ViewportTexture_u224b")
 shader_parameter/bubble_color = Color(0.14411, 0.452147, 0.790088, 1)
 shader_parameter/aspect_ratio = null
@@ -89,8 +90,7 @@ grow_vertical = 2
 [node name="BubbleSceneRenderer" type="ColorRect" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_yms0o")
-layout_mode = 1
-anchors_preset = 15
+layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -103,6 +103,7 @@ size = Vector2i(640, 360)
 [node name="Camera3D" type="Camera3D" parent="maisema"]
 transform = Transform3D(0.970418, 0, 0.241431, 0, 1, 0, -0.241431, 0, 0.970418, 1.19981, 0.595106, 1.98614)
 environment = SubResource("Environment_bo0uw")
+current = true
 
 [node name="terrain" type="MeshInstance3D" parent="maisema"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.172, -47.2324)

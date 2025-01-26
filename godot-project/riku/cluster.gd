@@ -1,6 +1,9 @@
 class_name Cluster
 extends RigidBody2D
 
+const POP_1 = preload("res://riku/sfx/pop1.ogg")
+const POP_2 = preload("res://riku/sfx/pop2.ogg")
+
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
@@ -47,11 +50,15 @@ func pop(pop_position: Vector2):
 	get_parent().add_child(effekti)
 	effekti.global_position = pop_position
 	
+	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	if not kulkee:
 		return
 	if get_child_count() == 0:
+		destroy()
+		return
+	if liiku_napein and get_child_count() == 1:
 		destroy()
 		return
 	
@@ -80,11 +87,17 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 			if linear_velocity.y > 0:
 				multi = 10
 			y = -liike_nopeus * multi
+			if x != 0:
+				y /= 1.41
+				x /= 1.41
 		if Input.is_action_pressed("alas"):
 			var multi = 1
 			if linear_velocity.y < 0:
 				multi = 5
 			y = liike_nopeus * multi
+			if x != 0:
+				y /= 1.41
+				x /= 1.41
 		constant_force = Vector2(x, y)
 		
 		# Rotate?
@@ -151,6 +164,7 @@ func destroy():
 	for c in get_children():
 		if c is Pääkamera:
 			remove_child(c)
+			
 	for child in get_children() as Array[Node2D]:
 		child.queue_free()
 	queue_free()

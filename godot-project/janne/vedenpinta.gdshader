@@ -5,13 +5,14 @@ render_mode skip_vertex_transform;
 uniform float displacement;
 
 void vertex() {
+	float time = TIME + 324.0;
 	vec3 vert_original = VERTEX;
 	vec3 normal_original = NORMAL;
 
 	vec3 phase = vec3(
-		vert_original.x * 1.3 * (sin(TIME / 6. + sin(TIME * 0.3 + vert_original.z * 0.03 + TIME) + cos(TIME / 8. + vert_original.z / 8.)) / 8.) + TIME,
+		vert_original.x * 1.3 * (sin(time / 6. + sin(time * 0.3 + vert_original.z * 0.03 + time) + cos(time / 8. + vert_original.z / 8.)) / 8.) + time,
 		0.,
-		vert_original.z * 1.2 * (sin(TIME / 5. + PI + cos(TIME / 7. + vert_original.x / (TIME * 1.2)) + sin(TIME * 2.8 + vert_original.x / 5.)) / 5.) + TIME * 3.5
+		vert_original.z * 1.2 * (sin(time / 5. + PI + cos(time / 7. + vert_original.x / (time * 1.2)) + sin(time * 2.8 + vert_original.x / 5.)) / 5.) + time * 3.5
 	);
 	float asdf = sin(phase.x) + cos(phase.z);
 
