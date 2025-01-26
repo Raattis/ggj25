@@ -128,7 +128,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 		var pos := state.get_contact_collider_position(0)
 		var obj := state.get_contact_collider_object(0) as StaticBody2D
 		if obj and obj.collision_layer == (1<<2):
-			var closest :CollisionShape2D= null
+			var closest: CollisionShape2D = null
 			var closest_dist :float= INF
 			var closest_pos := Vector2(0,0)
 			for child in get_children() as Array[Node2D]:
@@ -151,20 +151,22 @@ func destroy():
 	for c in get_children():
 		if c is Pääkamera:
 			remove_child(c)
-			
 	for child in get_children() as Array[Node2D]:
-		child.queue_free() # TODO: Pop effect
+		child.queue_free()
 	queue_free()
 
 func _on_body_entered(body: Node2D):
 	if body as Kala:
 		if body.spawn_sydän():
-			remove_closest_child(body.position)
+			remove_closest_child(body.position, true)
+			if get_child_count() == 2:
+				# viimeinen kupla on menossa pois, mut viel laskuissa ja kamera
+				destroy()
 	var sb = body as StaticBody2D
 	if sb and sb.collision_layer & (1<<3) != 0:
 		destroy()
 	var ab = body as Area2D
-	if ab and ab.collision_layer & (1<<4) != 0 and ankkurit.size()>0:
+	if ab and ab.collision_layer & (1<<4) != 0 and ankkurit.size() > 0:
 		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
 		print("Voittoon mentiin ", ankkurit.size(), " ankkurin kanssa.")
 		GameManager.anchors_collected += ankkurit.size()
@@ -173,7 +175,7 @@ func _on_body_entered(body: Node2D):
 		GameManager.win_grow = 1.2
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
-	var closest_dist :float= INF
+	var closest_dist: float = INF
 	var closest_pos := Vector2(0,0)
 	for child in get_children():
 		if child is Pääkamera:
@@ -191,15 +193,15 @@ func ripple_delete(child: Node2D):
 	pop(child.global_position)
 	child.queue_free()
 
-func remove_closest_child(pos: Vector2):
-	var closest_dist :float= INF
-	var closest_child :CollisionShape2D= null
+func remove_closest_child(pos: Vector2, force: bool = false):
+	var closest_dist: float = INF
+	var closest_child: CollisionShape2D = null
 	for child in get_children():
 		if not child is CollisionShape2D:
 			continue
-		if child.get_index() == 0:
+		if child.get_index() == 0 and not force:
 			continue
-		var diff = (child.global_position - pos)
+		var diff = child.global_position - pos
 		var dist = diff.length_squared()
 		if dist < closest_dist:
 			closest_dist = dist
