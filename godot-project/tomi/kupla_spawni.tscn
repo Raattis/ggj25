@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c884t5hg3te2t"]
+[gd_scene load_steps=4 format=3 uid="uid://c884t5hg3te2t"]
 
 [ext_resource type="Script" uid="uid://dfl0x5jbealpm" path="res://tomi/kupla_spawni.gd" id="1_yuw2a"]
 [ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="2_0hnup"]
+[ext_resource type="Script" uid="uid://bj7di5jlwkm3g" path="res://tomi/huojutin.gd" id="3_cpfc5"]
 
 [node name="Kupla_spawni" type="Node2D"]
 script = ExtResource("1_yuw2a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(0, 17)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_0hnup")
+centered = false
+offset = Vector2(-31.215, -234.12)
+script = ExtResource("3_cpfc5")
