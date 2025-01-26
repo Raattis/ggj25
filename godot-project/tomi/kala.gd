@@ -3,12 +3,20 @@ class_name Kala
 
 const SYDÄN = preload("res://tomi/sydän.tscn")
 @onready var sprite_2d = $Sprite2D
+var flying_game = null
+
 
 var ruokittu = false
+
+func _ready():
+	flying_game = get_tree().get_current_scene() as FlyingGame
+	flying_game.kaloja_on += 1
+	
 
 func spawn_sydän():
 	if ruokittu:
 		return false
+	flying_game.kalat_ruokittu += 1
 	ruokittu = true
 	var mew = SYDÄN.instantiate()
 	add_child(mew)

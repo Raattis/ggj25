@@ -19,7 +19,7 @@ func _ready():
 
 func _process(_delta: float):
 	if global_position.length() > 10000:
-		queue_free()
+		destroy()
 	var view_size = get_viewport_rect().size
 	for child in get_children():
 		if child is Pääkamera:
@@ -40,7 +40,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	if not kulkee:
 		return
 	if get_child_count() == 0:
-		queue_free()
+		destroy()
 		return
 	
 	var kamera = null
@@ -173,17 +173,21 @@ func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	return closest_pos
 
 func ripple_delete(child: Node2D):
+	if not child:
+		return
 	pop(child.global_position)
 	child.queue_free()
 
 func remove_closest_child(pos: Vector2):
 	var closest_dist :float= INF
 	var closest_child :CollisionShape2D= null
-	for child in get_children() as Array[CollisionShape2D]:
+	for child in get_children():
+		if not child is CollisionShape2D:
+			continue
 		if child.get_index() == 0:
 			continue
-		var diff := (child.global_position - pos)
-		var dist := diff.length_squared()
+		var diff = (child.global_position - pos)
+		var dist = diff.length_squared()
 		if dist < closest_dist:
 			closest_dist = dist
 			closest_child = child

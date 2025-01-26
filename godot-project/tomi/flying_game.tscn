@@ -36,6 +36,13 @@ script = ExtResource("1_owugb")
 position = Vector2(990, 969)
 texture = SubResource("NoiseTexture2D_5gb5r")
 
+[node name="ruokittu_info" type="Label" parent="."]
+offset_left = 507.0
+offset_top = 409.0
+offset_right = 669.0
+offset_bottom = 432.0
+text = "Kaloja ruokittu 1 / 40"
+
 [node name="esteet" type="Node" parent="."]
 
 [node name="piikki" parent="esteet" instance=ExtResource("1_ddaic")]

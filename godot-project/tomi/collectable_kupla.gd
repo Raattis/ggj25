@@ -28,7 +28,8 @@ func _process(_delta: float):
 func _on_body_entered(body):
 	if not body is Cluster:
 		return
-	for c in get_children() as Array[Node2D]:
+	var all = get_children() as Array[Node2D] 
+	for c in all:
 		var pos = c.global_position
 		remove_child(c)
 		body.add_child(c)
