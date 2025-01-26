@@ -55,16 +55,11 @@ scale = Vector2(24.1192, 0.469113)
 [node name="siirreltavat" type="Node" parent="."]
 
 [node name="siirreltava" parent="siirreltavat" instance=ExtResource("6_4813r")]
-position = Vector2(342, 283)
-rotation = 2.77507
-
-[node name="siirreltava2" parent="siirreltavat" instance=ExtResource("6_4813r")]
-position = Vector2(131, 260)
-rotation = -0.58294
+position = Vector2(319, 280)
+rotation = -1.5708
 
 [node name="win_plane" parent="." instance=ExtResource("7_2v3jv")]
-position = Vector2(368, 523)
-scale = Vector2(10, 1)
+position = Vector2(303, 255)
 
 [node name="ankkuri" parent="." instance=ExtResource("8_sono7")]
 position = Vector2(115, -312)
@@ -236,6 +231,30 @@ position = Vector2(199, 292)
 
 [node name="piikki75" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(413, 295)
+
+[node name="piikki107" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(375, 342)
+
+[node name="piikki108" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(319, 350)
+
+[node name="piikki109" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(221, 306)
+
+[node name="piikki110" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(268, 335)
+
+[node name="piikki111" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(242, 321)
+
+[node name="piikki112" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(294, 349)
+
+[node name="piikki113" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(350, 353)
+
+[node name="piikki114" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(399, 318)
 
 [node name="piikki76" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(149, 202)
