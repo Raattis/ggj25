@@ -3,12 +3,12 @@
 [ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="1_y033t"]
 [ext_resource type="Script" uid="uid://d1nf1apeye4ib" path="res://kentat/click_here_to_add_currents.gd" id="2_54psa"]
 [ext_resource type="Script" uid="uid://cvsm8k5032xtw" path="res://kentat/edit_help.gd" id="3_swe42"]
+[ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="4_i7qtg"]
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="5_mygo1"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="6_4813r"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="7_2v3jv"]
 [ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="8_sono7"]
 [ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="9_t7rbw"]
-[ext_resource type="PackedScene" uid="uid://cr0r65aeku0jd" path="res://vesa/seinäläinen.tscn" id="9_y033t"]
 
 [node name="kenta_pitkiksikkö" type="Node2D"]
 
@@ -76,12 +76,10 @@ offset_bottom = 353.0
 text = "editing
 bubbles"
 
-[node name="Seinäläinen" parent="." instance=ExtResource("9_y033t")]
-position = Vector2(1, 61)
+[node name="piikki" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(71, 5)
 
-[node name="Seinäläinen2" parent="." instance=ExtResource("9_y033t")]
-position = Vector2(253, -37)
-rotation = 0.524307
-scale = Vector2(1.65957, 1)
+[node name="piikki2" parent="." instance=ExtResource("4_i7qtg")]
+position = Vector2(95, 3)
 
 [connection signal="pressed" from="mode_switch" to="mode_switch" method="_on_pressed"]

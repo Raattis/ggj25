@@ -7,8 +7,9 @@
 b = Vector2(258, 0)
 
 [node name="Seinäläinen" type="RigidBody2D"]
-collision_layer = 29
-collision_mask = 29
+collision_layer = 16
+collision_mask = 0
+custom_integrator = true
 script = ExtResource("1_gito7")
 
 [node name="muoto" type="CollisionShape2D" parent="."]
