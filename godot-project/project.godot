@@ -118,6 +118,8 @@ alas={
 2d_physics/layer_3="Piikit"
 2d_physics/layer_4="Ehkä piikit"
 2d_physics/layer_5="maalialue"
+2d_physics/layer_6="tomin kalat"
+2d_physics/layer_7="tomin ei törmättävät kalat"
 
 [physics]
 

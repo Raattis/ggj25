@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=23 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://dt6ij857100sd" path="res://tomi/polygon_2d_to_collider.gd" id="12_hjf23"]
 [ext_resource type="PackedScene" uid="uid://c884t5hg3te2t" path="res://tomi/kupla_spawni.tscn" id="13_28at8"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="13_q7y3b"]
+[ext_resource type="PackedScene" uid="uid://iammpwfmhv2k" path="res://tomi/mega_kala.tscn" id="17_180vv"]
 
 [sub_resource type="Gradient" id="Gradient_owugb"]
 colors = PackedColorArray(0.0156863, 0.611765, 0.827451, 1, 0.47451, 0.717647, 0.835294, 1)
@@ -102,10 +103,10 @@ position = Vector2(557, 294)
 position = Vector2(589, 295)
 
 [node name="ruokittu_info" type="Label" parent="."]
-offset_left = 507.0
-offset_top = 409.0
-offset_right = 669.0
-offset_bottom = 432.0
+offset_left = 847.0
+offset_top = 489.0
+offset_right = 1009.0
+offset_bottom = 512.0
 text = "Kaloja ruokittu 1 / 40"
 
 [node name="esteet" type="Node" parent="."]
@@ -223,7 +224,7 @@ position = Vector2(627, 361)
 position = Vector2(294, 386)
 
 [node name="piikki197" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(270, 387)
+position = Vector2(268, 390)
 
 [node name="piikki198" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(246, 387)
@@ -475,24 +476,100 @@ position = Vector2(1032, 363)
 rotation = 2.34659
 
 [node name="piikki261" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(443, 442)
+position = Vector2(473, 440)
 rotation = 2.34659
 
 [node name="piikki262" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(419, 443)
+position = Vector2(449, 441)
 rotation = 2.34659
 
 [node name="piikki263" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(395, 443)
+position = Vector2(425, 441)
 rotation = 2.34659
 
 [node name="piikki264" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(374, 445)
+position = Vector2(404, 443)
 rotation = 2.34659
 
 [node name="piikki265" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(349, 444)
+position = Vector2(384, 442)
 rotation = 2.34659
+
+[node name="piikki401" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(381, 542)
+rotation = 0.1633
+
+[node name="piikki412" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(398, 539)
+rotation = 0.1633
+
+[node name="piikki413" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(417, 535)
+rotation = 0.1633
+
+[node name="piikki414" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(437, 538)
+rotation = 0.1633
+
+[node name="piikki415" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(458, 540)
+rotation = 0.1633
+
+[node name="piikki416" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(481, 549)
+rotation = 0.1633
+
+[node name="piikki417" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(503, 554)
+rotation = 0.1633
+
+[node name="piikki418" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(525, 557)
+rotation = 0.1633
+
+[node name="piikki419" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(545, 559)
+rotation = 0.1633
+
+[node name="piikki402" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(359, 540)
+rotation = 0.1633
+
+[node name="piikki403" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(335, 536)
+rotation = 0.1633
+
+[node name="piikki404" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(314, 530)
+rotation = 0.1633
+
+[node name="piikki405" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(289, 529)
+rotation = 0.1633
+
+[node name="piikki406" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(285, 508)
+rotation = 0.1633
+
+[node name="piikki407" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(284, 488)
+rotation = 0.1633
+
+[node name="piikki408" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(274, 468)
+rotation = 0.1633
+
+[node name="piikki409" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(264, 450)
+rotation = 0.1633
+
+[node name="piikki410" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(258, 432)
+rotation = 0.1633
+
+[node name="piikki411" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(259, 410)
+rotation = 0.1633
 
 [node name="piikki266" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(1237, 711)
@@ -2022,5 +2099,12 @@ texture = ExtResource("13_q7y3b")
 
 [node name="Kala" parent="kalat_parentti" instance=ExtResource("11_hjf23")]
 position = Vector2(505, 332)
+
+[node name="Kala2" parent="kalat_parentti" instance=ExtResource("17_180vv")]
+position = Vector2(632, 493)
+rotation = 0.551111
+collision_layer = 32
+hungry = 10
+shrink_when_ready = true
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://iammpwfmhv2k"]
+
+[ext_resource type="Script" uid="uid://cgno41iq2gd" path="res://tomi/kala.gd" id="1_3f3be"]
+[ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="2_iyf6v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q7y3b"]
+radius = 46.48
+height = 135.91
+
+[node name="Kala2" type="RigidBody2D"]
+collision_layer = 15
+collision_mask = 15
+gravity_scale = 0.0
+script = ExtResource("1_3f3be")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_iyf6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_q7y3b")

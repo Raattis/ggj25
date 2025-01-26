@@ -5,22 +5,27 @@ const SYDÄN = preload("res://tomi/sydän.tscn")
 @onready var sprite_2d = $Sprite2D
 var flying_game = null
 
+@export var hungry := 1
+@export var shrink_when_ready = false
 
-var ruokittu = false
 
 func _ready():
 	flying_game = get_tree().get_current_scene() as FlyingGame
 	flying_game.kaloja_on += 1
-	
+
 
 func spawn_sydän():
-	if ruokittu:
+	if hungry <= 0:
 		return false
-	flying_game.kalat_ruokittu += 1
-	ruokittu = true
+	if hungry == 1:
+		flying_game.kalat_ruokittu += 1
+		gravity_scale = -.2
+		sprite_2d.self_modulate = Color(.51, .41, .31, 1)
+		if shrink_when_ready:
+			set_collision_layer_value(1<<6, false)
+			set_collision_layer_value(1<<7, true)
+	hungry -= 1
 	var mew = SYDÄN.instantiate()
 	add_child(mew)
-	gravity_scale = -.2
-	sprite_2d.self_modulate = Color(.51, .41, .31, 1)
 	return true
 	
