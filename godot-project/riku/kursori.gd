@@ -85,6 +85,7 @@ func launch():
 	cluster_parent.add_child(new)
 	new.collision_layer = 2
 	new.collision_mask = ((1<<8)-1) & ~3
+	new.set_collision_mask_value(7, false) # tyydytetty megakala
 	new.gravity_scale = gravity_scale
 	new.linear_damp = linear_damping
 	new.angular_damp = angular_damping

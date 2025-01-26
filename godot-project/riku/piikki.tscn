@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://xjwqtpiaaa4o"]
+[gd_scene load_steps=5 format=3 uid="uid://xjwqtpiaaa4o"]
 
+[ext_resource type="Script" uid="uid://b3n68y1dv773t" path="res://riku/piikki.gd" id="1_e5uyx"]
 [ext_resource type="Texture2D" uid="uid://d3yylr5yhuygk" path="res://piikkiii.png" id="1_pa8mk"]
 [ext_resource type="Script" uid="uid://cr8m8rw4utvoy" path="res://riku/piikki_chilling.gd" id="2_bc5vh"]
 
@@ -9,6 +10,7 @@ radius = 5.0
 [node name="piikki" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 4
+script = ExtResource("1_e5uyx")
 
 [node name="gfx" type="Sprite2D" parent="."]
 scale = Vector2(0.03, 0.03)

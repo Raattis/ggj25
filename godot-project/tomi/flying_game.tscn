@@ -112,14 +112,14 @@ text = "Kaloja ruokittu 1 / 40"
 [node name="esteet" type="Node" parent="."]
 script = ExtResource("3_dck5g")
 
-[node name="piikki2" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(162, 7)
-
 [node name="piikki400" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(185, 7)
 
 [node name="piikki35" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(141, 6)
+
+[node name="piikki429" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(162, 7)
 
 [node name="piikki36" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(115, 7)
@@ -479,92 +479,104 @@ rotation = 2.34659
 position = Vector2(473, 440)
 rotation = 2.34659
 
+[node name="piikki428" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(490, 441)
+rotation = 2.34659
+
 [node name="piikki262" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(449, 441)
+position = Vector2(453, 436)
 rotation = 2.34659
 
 [node name="piikki263" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(425, 441)
+position = Vector2(431, 438)
 rotation = 2.34659
 
 [node name="piikki264" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(404, 443)
+position = Vector2(408, 440)
 rotation = 2.34659
 
 [node name="piikki265" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(384, 442)
+position = Vector2(386, 444)
+rotation = 2.34659
+
+[node name="piikki426" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(370, 449)
+rotation = 2.34659
+
+[node name="piikki427" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(353, 461)
 rotation = 2.34659
 
 [node name="piikki401" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(381, 542)
+position = Vector2(364, 558)
 rotation = 0.1633
 
 [node name="piikki412" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(398, 539)
+position = Vector2(388, 562)
 rotation = 0.1633
 
 [node name="piikki413" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(417, 535)
+position = Vector2(411, 558)
 rotation = 0.1633
 
 [node name="piikki414" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(437, 538)
+position = Vector2(434, 553)
 rotation = 0.1633
 
 [node name="piikki415" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(458, 540)
+position = Vector2(456, 550)
 rotation = 0.1633
 
 [node name="piikki416" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(481, 549)
+position = Vector2(476, 555)
 rotation = 0.1633
 
 [node name="piikki417" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(503, 554)
+position = Vector2(499, 559)
 rotation = 0.1633
 
 [node name="piikki418" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(525, 557)
+position = Vector2(523, 562)
 rotation = 0.1633
 
 [node name="piikki419" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(545, 559)
+position = Vector2(547, 563)
 rotation = 0.1633
 
 [node name="piikki402" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(359, 540)
+position = Vector2(342, 558)
 rotation = 0.1633
 
 [node name="piikki403" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(335, 536)
+position = Vector2(317, 554)
 rotation = 0.1633
 
 [node name="piikki404" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(314, 530)
+position = Vector2(293, 549)
 rotation = 0.1633
 
 [node name="piikki405" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(289, 529)
+position = Vector2(274, 530)
 rotation = 0.1633
 
 [node name="piikki406" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(285, 508)
+position = Vector2(264, 510)
 rotation = 0.1633
 
 [node name="piikki407" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(284, 488)
+position = Vector2(252, 490)
 rotation = 0.1633
 
 [node name="piikki408" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(274, 468)
+position = Vector2(244, 470)
 rotation = 0.1633
 
 [node name="piikki409" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(264, 450)
+position = Vector2(242, 449)
 rotation = 0.1633
 
 [node name="piikki410" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(258, 432)
+position = Vector2(245, 427)
 rotation = 0.1633
 
 [node name="piikki411" parent="esteet" instance=ExtResource("1_ddaic")]
@@ -771,14 +783,29 @@ rotation = 2.34659
 position = Vector2(1433, 344)
 rotation = 2.34659
 
+[node name="piikki420" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(623, 387)
+
+[node name="piikki421" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(622, 404)
+
+[node name="piikki422" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(620, 422)
+
+[node name="piikki423" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(637, 433)
+
+[node name="piikki424" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(569, 555)
+
+[node name="piikki425" parent="esteet" instance=ExtResource("1_ddaic")]
+position = Vector2(593, 546)
+
 [node name="piikki20" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(611, 26)
 
 [node name="piikki25" parent="esteet/piikki20" instance=ExtResource("1_ddaic")]
 position = Vector2(-434, 362)
-
-[node name="piikki20" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
-position = Vector2(446, -1)
 
 [node name="piikki21" parent="esteet/piikki20/piikki25" instance=ExtResource("1_ddaic")]
 position = Vector2(422, 0)
@@ -2099,11 +2126,14 @@ texture = ExtResource("13_q7y3b")
 
 [node name="Kala" parent="kalat_parentti" instance=ExtResource("11_hjf23")]
 position = Vector2(505, 332)
+collision_mask = 46
 
 [node name="Kala2" parent="kalat_parentti" instance=ExtResource("17_180vv")]
 position = Vector2(632, 493)
 rotation = 0.551111
 collision_layer = 32
+collision_mask = 46
+mass = 300.0
 hungry = 10
 shrink_when_ready = true
 
