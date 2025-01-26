@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=19 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
 [ext_resource type="PackedScene" uid="uid://raub18716gf3" path="res://tomi/kala.tscn" id="11_hjf23"]
 [ext_resource type="Script" uid="uid://dt6ij857100sd" path="res://tomi/polygon_2d_to_collider.gd" id="12_hjf23"]
+[ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="13_q7y3b"]
 
 [sub_resource type="Gradient" id="Gradient_owugb"]
 colors = PackedColorArray(0.0156863, 0.611765, 0.827451, 1, 0.47451, 0.717647, 0.835294, 1)
@@ -1715,6 +1716,16 @@ position = Vector2(318, 3)
 [node name="piikki5" parent="esteet" instance=ExtResource("1_ddaic")]
 position = Vector2(929, 207)
 
+[node name="Pääkamera" type="Camera2D" parent="."]
+position = Vector2(98, 258)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 2048
+position_smoothing_enabled = true
+script = ExtResource("11_5gb5r")
+
 [node name="cluster" type="RigidBody2D" parent="."]
 editor_description = "Ykkönen on kun kasataan
 kakkonen kun liikkuu
@@ -1805,15 +1816,6 @@ cluster_parent_index = 1
 visible = false
 position = Vector2(572, 590)
 
-[node name="Pääkamera" type="Camera2D" parent="."]
-position = Vector2(315, 278)
-limit_left = 0
-limit_top = 0
-limit_right = 2048
-limit_bottom = 2048
-position_smoothing_enabled = true
-script = ExtResource("11_5gb5r")
-
 [node name="Collectable_klupla2" parent="." instance=ExtResource("6_owugb")]
 position = Vector2(388, 354)
 
@@ -1886,11 +1888,12 @@ position = Vector2(721, 1600)
 [node name="Collectable_klupla25" parent="." instance=ExtResource("6_owugb")]
 position = Vector2(842, 1652)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 259.0
-offset_top = 211.0
-offset_right = 527.0
-offset_bottom = 312.0
+[node name="ohjeet" type="Label" parent="."]
+offset_left = 61.0
+offset_top = 204.0
+offset_right = 329.0
+offset_bottom = 305.0
+scale = Vector2(0.445399, 0.445399)
 text = "Space to (re)start
 WASD or arrows to move
 Q & E to rotate
@@ -1905,11 +1908,48 @@ position = Vector2(505, 332)
 [node name="Koti" type="RigidBody2D" parent="."]
 position = Vector2(105, 118)
 collision_layer = 8
-collision_mask = 0
-freeze = true
+collision_mask = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 0.5
 
 [node name="Polygon2D" type="Polygon2D" parent="Koti"]
 polygon = PackedVector2Array(1, 0, -63, 69, -63, 180, 63, 179, 64, 161, 52, 161, 51, 170, -53, 171, -54, 71, 2, 12, 49, 63, 52, 118, 62, 118, 61, 60)
 script = ExtResource("12_hjf23")
+
+[node name="taulu" type="Sprite2D" parent="Koti"]
+position = Vector2(41, -10)
+
+[node name="Label" type="Label" parent="Koti/taulu"]
+offset_left = -34.0
+offset_top = 53.0
+offset_right = 6.0
+offset_bottom = 141.0
+scale = Vector2(0.581583, 0.581583)
+theme_override_colors/font_color = Color(0.714269, 0.267927, 0.474208, 1)
+theme_override_font_sizes/font_size = 64
+text = "❤️"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Koti/taulu"]
+position = Vector2(-28, 74)
+scale = Vector2(0.0152038, 0.0152038)
+texture = ExtResource("13_q7y3b")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Koti/taulu"]
+position = Vector2(-25, 80)
+scale = Vector2(0.0152038, 0.0152038)
+texture = ExtResource("13_q7y3b")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Koti/taulu"]
+position = Vector2(-21, 73)
+scale = Vector2(0.0152038, 0.0152038)
+texture = ExtResource("13_q7y3b")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Koti/taulu"]
+position = Vector2(-18, 79)
+scale = Vector2(0.0152038, 0.0152038)
+texture = ExtResource("13_q7y3b")
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

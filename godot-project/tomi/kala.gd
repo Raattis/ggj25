@@ -20,7 +20,7 @@ func spawn_sydän():
 	ruokittu = true
 	var mew = SYDÄN.instantiate()
 	add_child(mew)
-	gravity_scale = -1
+	gravity_scale = -.2
 	sprite_2d.self_modulate = Color(.51, .41, .31, 1)
 	return true
 	
