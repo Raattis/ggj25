@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="3_c42sy"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="4_hfthl"]
-[ext_resource type="Script" path="res://kentat/bubble_help.gd" id="5_b1k8p"]
+[ext_resource type="Script" uid="uid://crajtgy3wovcw" path="res://kentat/bubble_help.gd" id="5_b1k8p"]
 [ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="5_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="6_c42sy"]
 [ext_resource type="Script" uid="uid://d1nf1apeye4ib" path="res://kentat/click_here_to_add_currents.gd" id="7_hfthl"]
 [ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="11_pf06l"]
-[ext_resource type="PackedScene" uid="uid://bpl3s1iqnpt8l" path="res://vesa/kupla_nam.tscn" id="12_l7vnp"]
+[ext_resource type="PackedScene" path="res://vesa/kupla_nam.tscn" id="12_l7vnp"]
 
 [node name="kenta_kahdeksikko" type="Node2D"]
 
@@ -58,228 +58,303 @@ script = ExtResource("5_b1k8p")
 
 [node name="piikki" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(340, 53)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki2" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(317, 54)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki35" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(296, 53)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki36" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(270, 54)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki37" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(245, 53)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki38" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(216, 53)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki39" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(191, 55)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki3" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(449, 52)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki7" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(421, 53)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki10" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(264, 229)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki11" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(289, 228)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki12" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(312, 227)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki13" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(333, 227)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki14" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(358, 227)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki15" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(383, 227)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki16" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(408, 228)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki17" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(239, 230)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki18" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(431, 229)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki19" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(626, 137)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki60" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 116)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki61" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 95)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki62" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(629, 72)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki63" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(630, 49)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki64" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(633, 24)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki65" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(633, 2)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki66" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(633, 2)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki40" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(626, 163)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki41" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 187)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki42" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 213)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki43" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(628, 240)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki44" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 266)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki45" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 289)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki46" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(626, 313)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki47" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 335)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki48" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 361)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki49" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(627, 361)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki20" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(601, 139)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki21" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(577, 140)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki22" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(553, 140)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki23" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(532, 142)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki24" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(507, 141)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki25" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(484, 141)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki26" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(182, 146)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki27" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(155, 147)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki28" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(134, 146)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki29" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(110, 149)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki30" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(85, 149)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki31" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(58, 150)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki32" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(33, 150)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki33" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(8, 151)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki34" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(8, 151)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki67" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(10, 130)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki68" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(11, 105)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki69" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(13, 83)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki70" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(12, 60)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki71" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(14, 37)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki72" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(14, 37)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki73" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(13, 21)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki74" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(14, 0)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki75" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(14, 0)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki50" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(7, 177)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki51" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(6, 201)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki52" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(5, 222)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki53" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(5, 245)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki54" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(5, 271)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki55" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(4, 291)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki56" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(3, 314)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki57" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(2, 339)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki58" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(1, 363)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki59" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(1, 363)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki8" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(392, 54)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki9" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(365, 52)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki4" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(496, 50)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki6" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(473, 50)
+scale = Vector2(1.8, 1.8)
 
 [node name="piikki5" parent="esteet" instance=ExtResource("1_brnge")]
 position = Vector2(929, 207)
+scale = Vector2(1.8, 1.8)
 
 [node name="death_plane" parent="." instance=ExtResource("2_qxlhe")]
 position = Vector2(-80, 251)
