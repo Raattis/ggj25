@@ -4,10 +4,9 @@ extends ColorRect
 var bubbles_pos = []
 var bubbles_radius = []
 var bubbles_extra = []
-var orig_camera_pos : Vector2
-func _ready():
-	if get_viewport().get_camera_2d():
-		orig_camera_pos = get_viewport().get_camera_2d().position
+
+var orig_camera_initialized = false
+var orig_camera_pos: Vector2
 
 func push_bubble(pos: Vector2, radius: float, extra: float = 0.0):
 	bubbles_pos.push_back(pos)
@@ -15,6 +14,10 @@ func push_bubble(pos: Vector2, radius: float, extra: float = 0.0):
 	bubbles_extra.push_back(extra)
 
 func _process(_delta: float) -> void:
+	if !orig_camera_initialized && get_viewport().get_camera_2d():
+		orig_camera_pos = get_viewport().get_camera_2d().position
+		orig_camera_initialized = true
+	
 	var mat: ShaderMaterial = material;
 	
 	var aspect_ratio = size.x / size.y
@@ -29,7 +32,11 @@ func _process(_delta: float) -> void:
 	bubbles_radius.clear()
 	bubbles_extra.clear()
 	
-	if get_viewport().get_camera_2d():
+	if orig_camera_initialized:
+		var camera = get_viewport().get_camera_2d()
+		get_parent().position = camera.position - get_parent().size / 2.
+		
 		var camera_offset := get_viewport().get_camera_2d().position - orig_camera_pos
 		# HEI JANNE! Tassa sulle kameran offsetti :)
-		#mat.set_shader_parameter("camera_offset", camera_offset)
+		var normalized = camera_offset / size
+		mat.set_shader_parameter("camera_offset",normalized )

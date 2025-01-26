@@ -3,6 +3,7 @@ shader_type canvas_item;
 const int BUBBLES_COUNT = 512;
 const float PI_HALF = PI / 2.0;
 
+uniform vec2 camera_offset;
 uniform sampler2D tex_bg; //: repeat_enable;
 uniform vec3 bubble_color : source_color;
 uniform float aspect_ratio;
@@ -32,7 +33,7 @@ vec3 normal_circle(vec2 p, float r) {
 
 void fragment() {
 	// Called for every pixel the material is visible on.
-	vec2 pos = vec2(aspect_ratio, 1.0) * (UV - vec2(0.5));
+	vec2 pos = vec2(aspect_ratio, 1.0) * (UV - vec2(0.5) + camera_offset);
 	float dist = 99999999.0;
 	vec3 normal = vec3(1,1,1);
 	float metasum = 0.0;
