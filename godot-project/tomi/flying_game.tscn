@@ -1,6 +1,5 @@
 [gd_scene load_steps=23 format=3 uid="uid://dcpki1xvxqot0"]
 
-[ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
 [ext_resource type="Script" uid="uid://brytn3qf3ut81" path="res://tomi/vesi.gd" id="2_e6t4c"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="2_x03cg"]
@@ -9,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="4_yfi2e"]
 [ext_resource type="PackedScene" uid="uid://b5kyj7iqtoiq6" path="res://tomi/collectable_klupla.tscn" id="6_owugb"]
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="7_ibo5b"]
+[ext_resource type="PackedScene" uid="uid://emddrx6t1od5" path="res://tomi/piikki_2.tscn" id="7_k7fq2"]
 [ext_resource type="PackedScene" uid="uid://pibjdynkpeer" path="res://vesa/poks.tscn" id="8_7oywc"]
 [ext_resource type="Script" uid="uid://555ydg2oiu3j" path="res://tomi/kupla_spawnerit.gd" id="10_5gb5r"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
@@ -22,10 +22,11 @@
 colors = PackedColorArray(0.0156863, 0.611765, 0.827451, 1, 0.47451, 0.717647, 0.835294, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uwra1"]
+frequency = 0.0198
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5gb5r"]
-width = 2048
-height = 2048
+width = 3048
+height = 3048
 color_ramp = SubResource("Gradient_owugb")
 noise = SubResource("FastNoiseLite_uwra1")
 
@@ -39,7 +40,7 @@ radius = 5.0
 script = ExtResource("1_owugb")
 
 [node name="vesi" type="Sprite2D" parent="."]
-position = Vector2(990, 969)
+position = Vector2(1000, 1000)
 texture = SubResource("NoiseTexture2D_5gb5r")
 script = ExtResource("2_e6t4c")
 metadata/_edit_lock_ = true
@@ -211,2026 +212,2160 @@ text = "Kaloja ruokittu 1 / 40"
 [node name="esteet" type="Node" parent="."]
 script = ExtResource("3_dck5g")
 
-[node name="piikki400" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki400" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(185, 7)
 
-[node name="piikki498" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki498" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(245, 221)
 
-[node name="piikki35" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki35" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(141, 6)
 
-[node name="piikki429" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki429" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(162, 7)
 
-[node name="piikki36" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki36" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(115, 7)
 
-[node name="piikki37" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki37" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(90, 6)
 
-[node name="piikki38" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki38" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(61, 6)
 
-[node name="piikki39" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki39" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(36, 8)
 
-[node name="piikki3" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki3" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(294, 5)
 
-[node name="piikki7" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki7" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(266, 6)
 
-[node name="piikki10" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki10" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(389, 4)
 
-[node name="piikki11" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki11" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(414, 3)
 
-[node name="piikki12" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki12" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(437, 2)
 
-[node name="piikki13" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki13" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(458, 2)
 
-[node name="piikki14" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki14" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(483, 2)
 
-[node name="piikki15" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki15" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(508, 2)
 
-[node name="piikki16" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki16" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(533, 3)
 
-[node name="piikki17" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki17" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(364, 5)
 
-[node name="piikki18" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki18" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(556, 4)
 
-[node name="piikki19" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki19" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(626, 137)
 
-[node name="piikki60" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki60" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 116)
 
-[node name="piikki61" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki61" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 95)
 
-[node name="piikki62" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki62" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(629, 72)
 
-[node name="piikki63" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki63" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(630, 49)
 
-[node name="piikki64" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki64" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(633, 24)
 
-[node name="piikki65" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki65" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(633, 2)
 
-[node name="piikki66" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki66" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(633, 2)
 
-[node name="piikki40" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki40" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(626, 163)
 
-[node name="piikki41" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki41" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 187)
 
-[node name="piikki42" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki42" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 213)
 
-[node name="piikki43" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki43" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(628, 240)
 
-[node name="piikki44" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki44" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 266)
 
-[node name="piikki45" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki45" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 289)
 
-[node name="piikki46" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki46" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(626, 313)
 
-[node name="piikki47" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki47" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 335)
 
-[node name="piikki48" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki48" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(627, 361)
 
-[node name="piikki49" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(627, 361)
-
-[node name="piikki196" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki196" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(294, 386)
 
-[node name="piikki197" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki197" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(268, 390)
 
-[node name="piikki198" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki198" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(246, 387)
 
-[node name="piikki199" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki199" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(225, 389)
 
-[node name="piikki200" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki200" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(200, 388)
 
-[node name="piikki201" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki201" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1059, 676)
 rotation = 2.34659
 
-[node name="piikki202" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki202" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1035, 677)
 rotation = 2.34659
 
-[node name="piikki203" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki203" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1033, 613)
 rotation = 2.34659
 
-[node name="piikki204" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki204" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(990, 679)
 rotation = 2.34659
 
-[node name="piikki205" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki205" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(965, 678)
 rotation = 2.34659
 
-[node name="piikki206" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki206" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1073, 446)
 rotation = 2.34659
 
-[node name="piikki207" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki207" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1049, 447)
 rotation = 2.34659
 
-[node name="piikki208" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki208" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1025, 447)
 rotation = 2.34659
 
-[node name="piikki209" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki209" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1004, 449)
 rotation = 2.34659
 
-[node name="piikki210" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki210" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(979, 448)
 rotation = 2.34659
 
-[node name="piikki211" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki211" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1137, 299)
 rotation = 2.34659
 
-[node name="piikki212" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki212" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1113, 300)
 rotation = 2.34659
 
-[node name="piikki213" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki213" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1089, 300)
 rotation = 2.34659
 
-[node name="piikki214" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki214" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1069, 259)
 rotation = 2.34659
 
-[node name="piikki450" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki450" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(111, 930)
 rotation = 2.34659
 
-[node name="piikki452" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki452" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(179, 674)
 rotation = 2.34659
 
-[node name="piikki453" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki453" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(328, 722)
 rotation = 2.34659
 
-[node name="piikki454" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki454" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(218, 800)
 rotation = 2.34659
 
-[node name="piikki455" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki455" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(327, 901)
 rotation = 2.34659
 
-[node name="piikki456" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki456" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(512, 749)
 rotation = 2.34659
 
-[node name="piikki457" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki457" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(789, 896)
 rotation = 2.34659
 
-[node name="piikki458" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki458" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(526, 909)
 rotation = 2.34659
 
-[node name="piikki459" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki459" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(519, 1572)
 rotation = 2.34659
 
-[node name="piikki460" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki460" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(512, 1600)
 rotation = 2.34659
 
-[node name="piikki461" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki461" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(581, 1560)
 rotation = 2.34659
 
-[node name="piikki462" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki462" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(514, 1630)
 rotation = 2.34659
 
-[node name="piikki463" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki463" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(528, 1657)
 rotation = 2.34659
 
-[node name="piikki464" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki464" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(547, 1679)
 rotation = 2.34659
 
-[node name="piikki465" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki465" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(356, 1708)
 rotation = 2.34659
 
-[node name="piikki466" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki466" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(388, 1715)
 rotation = 2.34659
 
-[node name="piikki467" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki467" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(426, 1726)
 rotation = 2.34659
 
-[node name="piikki468" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki468" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(464, 1738)
 rotation = 2.34659
 
-[node name="piikki469" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki469" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(425, 1837)
 rotation = 2.34659
 
-[node name="piikki470" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki470" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(144, 1791)
 rotation = 2.34659
 
-[node name="piikki471" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki471" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(231, 1596)
 rotation = 2.34659
 
-[node name="piikki451" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki451" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(202, 964)
 rotation = 2.34659
 
-[node name="piikki215" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki215" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1043, 301)
 rotation = 2.34659
 
-[node name="piikki216" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1359, 173)
+[node name="piikki216" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1278, 120)
 rotation = 2.34659
 
-[node name="piikki217" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1335, 174)
+[node name="piikki217" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1266, 96.0001)
 rotation = 2.34659
 
-[node name="piikki218" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1311, 174)
+[node name="piikki218" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1267, 69.9999)
 rotation = 2.34659
 
-[node name="piikki219" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1290, 176)
+[node name="piikki219" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1289, 131)
 rotation = 2.34659
 
-[node name="piikki220" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1265, 175)
+[node name="piikki220" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1273, 43)
 rotation = 2.34659
 
-[node name="piikki221" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki221" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1467, 416)
 rotation = 2.34659
 
-[node name="piikki222" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki222" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1443, 417)
 rotation = 2.34659
 
-[node name="piikki223" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki223" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1419, 417)
 rotation = 2.34659
 
-[node name="piikki224" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki224" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1398, 419)
 rotation = 2.34659
 
-[node name="piikki225" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki225" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1373, 418)
 rotation = 2.34659
 
-[node name="piikki226" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki226" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1356, 366)
 rotation = 2.34659
 
-[node name="piikki227" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki227" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1321, 317)
 rotation = 2.34659
 
-[node name="piikki228" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki228" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1297, 317)
 rotation = 2.34659
 
-[node name="piikki229" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki229" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1276, 319)
 rotation = 2.34659
 
-[node name="piikki230" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki230" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1251, 318)
 rotation = 2.34659
 
-[node name="piikki231" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki231" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1303, 384)
 rotation = 2.34659
 
-[node name="piikki232" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki232" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1279, 385)
 rotation = 2.34659
 
-[node name="piikki233" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1405, 303)
+[node name="piikki233" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1449, 226)
 rotation = 2.34659
 
-[node name="piikki234" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki511" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1524, 50.0001)
+rotation = 2.34659
+
+[node name="piikki512" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1525, 68)
+rotation = 2.34659
+
+[node name="piikki513" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1527, 85.9999)
+rotation = 2.34659
+
+[node name="piikki514" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1529, 104)
+rotation = 2.34659
+
+[node name="piikki515" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1598, 107)
+rotation = 2.34659
+
+[node name="piikki516" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1596, 90.9999)
+rotation = 2.34659
+
+[node name="piikki517" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1594, 60.9999)
+rotation = 2.34659
+
+[node name="piikki518" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1638, 32)
+rotation = 2.34659
+
+[node name="piikki519" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1647, 48.0001)
+rotation = 2.34659
+
+[node name="piikki520" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1657, 60.0001)
+rotation = 2.34659
+
+[node name="piikki521" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1668, 75.0001)
+rotation = 2.34659
+
+[node name="piikki522" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1679, 91.9999)
+rotation = 2.34659
+
+[node name="piikki523" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1754, 132)
+rotation = 2.34659
+
+[node name="piikki524" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1766, 113)
+rotation = 2.34659
+
+[node name="piikki525" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1774, 167)
+rotation = 1.94921
+
+[node name="piikki527" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1791, 168)
+rotation = 1.94921
+
+[node name="piikki528" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1857, 144)
+rotation = 1.94921
+
+[node name="piikki532" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1872, 145)
+rotation = 1.94921
+
+[node name="piikki529" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1910, 146)
+rotation = 1.94921
+
+[node name="piikki530" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1892, 145)
+rotation = 1.94921
+
+[node name="piikki531" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1927, 141)
+rotation = 1.94921
+
+[node name="piikki526" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1774, 101)
+rotation = 1.94921
+
+[node name="piikki499" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1440, 244)
+rotation = 2.34659
+
+[node name="piikki500" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1426, 250)
+rotation = 2.34659
+
+[node name="piikki501" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1426, 250)
+rotation = 2.34659
+
+[node name="piikki502" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1407, 250)
+rotation = 2.34659
+
+[node name="piikki503" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1390, 249)
+rotation = 2.34659
+
+[node name="piikki504" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1374, 242)
+rotation = 2.34659
+
+[node name="piikki505" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1362, 235)
+rotation = 2.34659
+
+[node name="piikki506" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1350, 228)
+rotation = 2.34659
+
+[node name="piikki507" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1339, 220)
+rotation = 2.34659
+
+[node name="piikki508" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1326, 211)
+rotation = 2.34659
+
+[node name="piikki509" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1311, 201)
+rotation = 2.34659
+
+[node name="piikki234" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1234, 387)
 rotation = 2.34659
 
-[node name="piikki235" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki235" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1209, 386)
 rotation = 2.34659
 
-[node name="piikki236" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki236" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1279, 462)
 rotation = 2.34659
 
-[node name="piikki237" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki237" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1255, 463)
 rotation = 2.34659
 
-[node name="piikki238" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki238" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1231, 463)
 rotation = 2.34659
 
-[node name="piikki239" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki239" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1210, 465)
 rotation = 2.34659
 
-[node name="piikki240" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki240" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1185, 464)
 rotation = 2.34659
 
-[node name="piikki241" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki241" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1274, 577)
 rotation = 2.34659
 
-[node name="piikki242" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki242" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1250, 578)
 rotation = 2.34659
 
-[node name="piikki243" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki243" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1226, 578)
 rotation = 2.34659
 
-[node name="piikki244" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki244" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1205, 580)
 rotation = 2.34659
 
-[node name="piikki245" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki245" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1180, 579)
 rotation = 2.34659
 
-[node name="piikki246" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki246" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1469, 506)
 rotation = 2.34659
 
-[node name="piikki247" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki247" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1445, 507)
 rotation = 2.34659
 
-[node name="piikki248" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki248" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1421, 507)
 rotation = 2.34659
 
-[node name="piikki249" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki249" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1400, 509)
 rotation = 2.34659
 
-[node name="piikki250" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki250" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1375, 508)
 rotation = 2.34659
 
-[node name="piikki251" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki251" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1132, 535)
 rotation = 2.34659
 
-[node name="piikki252" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki252" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1108, 536)
 rotation = 2.34659
 
-[node name="piikki253" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki253" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1137, 447)
 rotation = 2.34659
 
-[node name="piikki254" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki254" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1063, 538)
 rotation = 2.34659
 
-[node name="piikki255" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki255" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1038, 537)
 rotation = 2.34659
 
-[node name="piikki256" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki256" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1126, 361)
 rotation = 2.34659
 
-[node name="piikki257" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki257" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1102, 362)
 rotation = 2.34659
 
-[node name="piikki258" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki258" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1176, 337)
 rotation = 2.34659
 
-[node name="piikki259" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki259" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1057, 364)
 rotation = 2.34659
 
-[node name="piikki260" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki260" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1032, 363)
 rotation = 2.34659
 
-[node name="piikki261" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki261" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(473, 440)
 rotation = 2.34659
 
-[node name="piikki428" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki428" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(490, 441)
 rotation = 2.34659
 
-[node name="piikki262" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki262" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(453, 436)
 rotation = 2.34659
 
-[node name="piikki263" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki263" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(431, 438)
 rotation = 2.34659
 
-[node name="piikki264" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki264" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(408, 440)
 rotation = 2.34659
 
-[node name="piikki265" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki265" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(386, 444)
 rotation = 2.34659
 
-[node name="piikki426" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki426" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(370, 449)
 rotation = 2.34659
 
-[node name="piikki427" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki427" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(353, 461)
 rotation = 2.34659
 
-[node name="piikki401" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki401" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(364, 558)
 rotation = 0.1633
 
-[node name="piikki412" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki412" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(388, 562)
 rotation = 0.1633
 
-[node name="piikki413" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki413" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(411, 558)
 rotation = 0.1633
 
-[node name="piikki414" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki414" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(434, 553)
 rotation = 0.1633
 
-[node name="piikki415" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki415" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(456, 550)
 rotation = 0.1633
 
-[node name="piikki430" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki430" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(897, 1453)
 rotation = 0.1633
 
-[node name="piikki431" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki431" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(872, 1453)
 rotation = 0.1633
 
-[node name="piikki432" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki432" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(848, 1455)
 rotation = 0.1633
 
-[node name="piikki433" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki433" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(826, 1455)
 rotation = 0.1633
 
-[node name="piikki434" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki434" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(801, 1455)
 rotation = 0.1633
 
-[node name="piikki435" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki435" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(591, 1462)
 rotation = 0.1633
 
-[node name="piikki436" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki436" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(619, 1454)
 rotation = 0.1633
 
-[node name="piikki437" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki437" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(646, 1449)
 rotation = 0.1633
 
-[node name="piikki438" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki438" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(669, 1456)
 rotation = 0.1633
 
-[node name="piikki439" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki439" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(691, 1458)
 rotation = 0.1633
 
-[node name="piikki440" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki440" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(692, 1400)
 rotation = 0.1633
 
-[node name="piikki441" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki441" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(715, 1401)
 rotation = 0.1633
 
-[node name="piikki442" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki442" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(737, 1400)
 rotation = 0.1633
 
-[node name="piikki443" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki443" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(759, 1401)
 rotation = 0.1633
 
-[node name="piikki444" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki444" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(781, 1403)
 rotation = 0.1633
 
-[node name="piikki445" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki445" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1778, 1764)
 rotation = 0.1633
 
-[node name="piikki449" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki449" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1356, 1554)
 rotation = 0.1633
 
-[node name="piikki472" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki472" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1419, 1483)
 rotation = 0.1633
 
-[node name="piikki473" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki473" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1483, 1430)
 rotation = 0.1633
 
-[node name="piikki474" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki474" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1564, 1367)
 rotation = 0.1633
 
-[node name="piikki475" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki475" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1647, 1316)
 rotation = 0.1633
 
-[node name="piikki476" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki476" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1724, 1276)
 rotation = 0.1633
 
-[node name="piikki477" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki477" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1819, 1243)
 rotation = 0.1633
 
-[node name="piikki478" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki478" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1297, 1632)
 rotation = 0.1633
 
-[node name="piikki479" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki479" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1245, 1700)
 rotation = 0.1633
 
-[node name="piikki480" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki480" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1201, 1804)
 rotation = 0.1633
 
-[node name="piikki481" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki481" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1160, 1875)
 rotation = 0.1633
 
-[node name="piikki482" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki482" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1376, 1870)
 rotation = 0.1633
 
-[node name="piikki483" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki483" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1463, 1756)
 rotation = 0.1633
 
-[node name="piikki484" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki484" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1544, 1679)
 rotation = 0.1633
 
-[node name="piikki485" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki485" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1544, 1679)
 rotation = -1.04322
 
-[node name="piikki486" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki486" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1617, 1615)
 rotation = -1.04322
 
-[node name="piikki487" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki487" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1701, 1552)
 rotation = -1.04322
 
-[node name="piikki488" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki488" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1818, 1473)
 rotation = -1.04322
 
-[node name="piikki489" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki489" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1159, 1339)
 rotation = -1.04322
 
-[node name="piikki490" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki490" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1186, 1476)
 rotation = -1.04322
 
-[node name="piikki491" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki491" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1298, 1359)
 rotation = -1.04322
 
-[node name="piikki446" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki446" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1870, 1709)
 rotation = 0.1633
 
-[node name="piikki447" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki447" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1866, 1788)
 rotation = 0.1633
 
-[node name="piikki448" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki448" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1714, 1853)
 rotation = 0.1633
 
-[node name="piikki416" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki416" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(476, 555)
 rotation = 0.1633
 
-[node name="piikki417" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki417" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(499, 559)
 rotation = 0.1633
 
-[node name="piikki418" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki418" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(523, 562)
 rotation = 0.1633
 
-[node name="piikki419" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki419" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(547, 563)
 rotation = 0.1633
 
-[node name="piikki402" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki402" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(342, 558)
 rotation = 0.1633
 
-[node name="piikki403" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki403" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(317, 554)
 rotation = 0.1633
 
-[node name="piikki404" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki404" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(293, 549)
 rotation = 0.1633
 
-[node name="piikki405" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki405" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(274, 530)
 rotation = 0.1633
 
-[node name="piikki406" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki406" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(264, 510)
 rotation = 0.1633
 
-[node name="piikki407" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki407" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(252, 490)
 rotation = 0.1633
 
-[node name="piikki408" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki408" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(244, 470)
 rotation = 0.1633
 
-[node name="piikki409" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki409" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(242, 449)
 rotation = 0.1633
 
-[node name="piikki410" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki410" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(245, 427)
 rotation = 0.1633
 
-[node name="piikki411" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki411" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(259, 410)
 rotation = 0.1633
 
-[node name="piikki266" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki266" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1237, 711)
 rotation = 2.34659
 
-[node name="piikki267" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki267" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1213, 712)
 rotation = 2.34659
 
-[node name="piikki268" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki268" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1189, 644)
 rotation = 2.34659
 
-[node name="piikki269" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki269" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1168, 714)
 rotation = 2.34659
 
-[node name="piikki270" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki270" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1143, 713)
 rotation = 2.34659
 
-[node name="piikki304" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki304" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1095, 1076)
 rotation = 2.34659
 
-[node name="piikki305" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki305" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1071, 1077)
 rotation = 2.34659
 
-[node name="piikki306" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki306" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1047, 1077)
 rotation = 2.34659
 
-[node name="piikki307" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki307" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1026, 1079)
 rotation = 2.34659
 
-[node name="piikki308" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki308" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1001, 1078)
 rotation = 2.34659
 
-[node name="piikki309" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki309" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1205, 1179)
 rotation = 2.34659
 
-[node name="piikki310" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki310" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1181, 1180)
 rotation = 2.34659
 
-[node name="piikki311" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki311" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1157, 1180)
 rotation = 2.34659
 
-[node name="piikki312" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki312" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1136, 1182)
 rotation = 2.34659
 
-[node name="piikki313" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki313" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1271, 1177)
 rotation = 2.34659
 
-[node name="piikki314" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki314" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1318, 1070)
 rotation = 2.34659
 
-[node name="piikki315" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki315" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1294, 1071)
 rotation = 2.34659
 
-[node name="piikki316" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki316" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1376, 1070)
 rotation = 2.34659
 
-[node name="piikki317" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki317" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1249, 1073)
 rotation = 2.34659
 
-[node name="piikki318" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki318" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1165, 1079)
 rotation = 2.34659
 
-[node name="piikki319" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki319" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1467, 1170)
 rotation = 2.34659
 
-[node name="piikki320" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki320" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1399, 1174)
 rotation = 2.34659
 
-[node name="piikki321" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki321" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1375, 1174)
 rotation = 2.34659
 
-[node name="piikki322" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki322" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1354, 1176)
 rotation = 2.34659
 
-[node name="piikki323" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki323" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1329, 1175)
 rotation = 2.34659
 
-[node name="piikki324" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki324" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1529, 1063)
 rotation = 2.34659
 
-[node name="piikki325" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki325" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1505, 1064)
 rotation = 2.34659
 
-[node name="piikki326" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki326" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1481, 1064)
 rotation = 2.34659
 
-[node name="piikki327" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki327" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1460, 1066)
 rotation = 2.34659
 
-[node name="piikki328" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki328" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1435, 1065)
 rotation = 2.34659
 
-[node name="piikki329" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki329" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1639, 1166)
 rotation = 2.34659
 
-[node name="piikki330" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki330" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1615, 1167)
 rotation = 2.34659
 
-[node name="piikki331" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki331" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1591, 1167)
 rotation = 2.34659
 
-[node name="piikki332" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki332" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1570, 1169)
 rotation = 2.34659
 
-[node name="piikki333" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki333" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1545, 1168)
 rotation = 2.34659
 
-[node name="piikki334" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki334" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1739, 1058)
 rotation = 2.34659
 
-[node name="piikki335" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki335" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1715, 1059)
 rotation = 2.34659
 
-[node name="piikki336" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki336" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1691, 1059)
 rotation = 2.34659
 
-[node name="piikki337" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki337" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1670, 1061)
 rotation = 2.34659
 
-[node name="piikki338" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki338" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1897, 1057)
 rotation = 2.34659
 
-[node name="piikki339" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki339" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1861, 1154)
 rotation = 2.34659
 
-[node name="piikki340" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki340" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1837, 1155)
 rotation = 2.34659
 
-[node name="piikki341" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki341" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1813, 1155)
 rotation = 2.34659
 
-[node name="piikki342" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki342" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1792, 1157)
 rotation = 2.34659
 
-[node name="piikki343" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki343" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1657, 1116)
 rotation = 2.34659
 
-[node name="piikki271" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki271" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1527, 342)
 rotation = 2.34659
 
-[node name="piikki272" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki272" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1503, 343)
 rotation = 2.34659
 
-[node name="piikki273" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki273" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1479, 343)
 rotation = 2.34659
 
-[node name="piikki274" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki274" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1458, 345)
 rotation = 2.34659
 
-[node name="piikki275" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki275" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1433, 344)
 rotation = 2.34659
 
-[node name="piikki420" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki420" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(623, 387)
 
-[node name="piikki421" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki421" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(622, 404)
 
-[node name="piikki422" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki422" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(620, 422)
 
-[node name="piikki423" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki423" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(637, 433)
 
-[node name="piikki424" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki424" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(569, 555)
 
-[node name="piikki425" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki425" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(593, 546)
 
-[node name="piikki492" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki492" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(599, 388)
 
-[node name="piikki493" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki493" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(575, 388)
 
-[node name="piikki494" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki494" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(554, 390)
 
-[node name="piikki495" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki495" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(529, 389)
 
-[node name="piikki496" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki496" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(506, 389)
 
-[node name="piikki497" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki497" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(177, 388)
 
-[node name="piikki20" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki20" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(611, 26)
 
-[node name="piikki21" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki21" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(587, 27)
 
-[node name="piikki22" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki22" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(563, 27)
 
-[node name="piikki23" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki23" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(542, 29)
 
-[node name="piikki24" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki24" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(517, 28)
 
-[node name="piikki25" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki25" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(494, 28)
 
-[node name="piikki26" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki26" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(152, 386)
 
-[node name="piikki27" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki27" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(125, 387)
 
-[node name="piikki28" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki28" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(104, 386)
 
-[node name="piikki29" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki29" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(80, 389)
 
-[node name="piikki30" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki30" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(55, 389)
 
-[node name="piikki31" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki31" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(28, 390)
 
-[node name="piikki32" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki32" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(3, 390)
 
-[node name="piikki33" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki33" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(8, 151)
 
-[node name="piikki34" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki34" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(8, 151)
 
-[node name="piikki67" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki67" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(10, 130)
 
-[node name="piikki68" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki68" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(11, 105)
 
-[node name="piikki69" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki69" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(13, 83)
 
-[node name="piikki70" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki70" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(12, 60)
 
-[node name="piikki71" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki71" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(14, 37)
 
-[node name="piikki72" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki72" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(14, 37)
 
-[node name="piikki73" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki73" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(13, 21)
 
-[node name="piikki74" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki74" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(14, 0)
 
-[node name="piikki75" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki75" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(14, 0)
 
-[node name="piikki76" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki76" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-6, 448)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki77" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki77" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-5, 521)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki78" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki78" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-5, 597)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki79" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki79" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-4, 670)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki80" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki80" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-2, 739)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki81" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki81" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-1, 812)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki82" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki82" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-1, 888)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki83" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki83" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(0, 961)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki84" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki84" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(0, 1021)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki85" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki85" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 1094)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki86" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki86" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 1170)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki87" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki87" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(2, 1243)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki88" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki88" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1312)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki89" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki89" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1385)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki90" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki90" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1461)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki91" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki91" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(6, 1534)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki92" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki92" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(3, 1594)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki93" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki93" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1667)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki94" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki94" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1743)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki95" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki95" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1816)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki96" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki96" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(7, 1885)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki97" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki97" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(8, 1958)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki98" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki98" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(-1, 888)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki99" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki99" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(0, 961)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki108" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki108" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(0, 1021)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki109" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki109" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 1094)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki110" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki110" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 1170)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki111" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki111" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(2, 1243)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki112" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki112" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1312)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki113" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki113" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1385)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki114" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki114" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1461)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki115" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki115" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(6, 1534)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki116" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki116" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(3, 1594)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki117" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki117" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1667)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki344" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki344" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(529, 1234)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki345" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki345" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(529, 1310)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki346" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki346" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(530, 1383)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki347" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki347" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(527, 1443)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki348" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki348" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(528, 1516)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki349" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki349" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(529, 1234)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki350" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki350" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(529, 1310)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki351" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki351" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(530, 1383)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki352" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki352" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(527, 1443)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki353" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki353" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(528, 1516)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki374" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki374" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(958, 1232)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki375" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki375" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(959, 1305)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki376" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki376" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(956, 1365)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki377" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki377" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(957, 1438)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki378" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki378" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(958, 1232)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki379" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki379" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(959, 1305)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki380" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki380" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(956, 1365)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki381" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki381" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(957, 1438)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki354" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki354" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(709, 1512)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki355" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki355" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(694, 1698)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki356" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki356" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(695, 1771)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki357" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki357" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(692, 1831)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki358" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki358" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(693, 1904)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki359" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki359" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(937, 1517)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki360" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki360" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(925, 1723)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki361" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki361" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(889, 1813)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki362" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki362" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(692, 1831)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki363" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki363" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(829, 1891)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki364" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki364" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(295, 1629)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki365" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki365" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(295, 1705)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki366" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki366" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(296, 1778)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki367" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki367" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(293, 1838)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki368" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki368" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(294, 1911)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki369" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki369" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(218, 1665)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki370" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki370" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(212, 1741)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki371" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki371" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(349, 1456)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki372" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki372" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(160, 1202)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki373" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki373" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(388, 1215)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki118" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki118" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 1743)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki119" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki119" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 1816)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki120" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki120" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(7, 1885)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki121" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki121" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(8, 1958)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki122" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki122" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(85, 1962)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki123" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki123" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(148, 1961)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki124" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki124" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(225, 1965)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki125" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki125" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(294, 1958)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki126" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki126" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(348, 1953)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki127" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki127" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(411, 1952)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki128" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki128" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(488, 1956)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki129" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki129" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(551, 1961)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki130" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki130" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(628, 1965)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki131" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki131" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(691, 1964)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki132" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki132" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(768, 1968)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki133" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki133" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(831, 1960)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki134" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki134" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(894, 1959)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki135" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki135" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(971, 1963)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki136" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki136" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1034, 1968)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki137" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki137" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1111, 1972)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki138" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki138" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1174, 1971)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki139" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki139" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1251, 1975)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki140" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki140" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1304, 1961)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki141" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki141" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1367, 1960)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki142" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki142" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1444, 1964)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki143" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki143" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1507, 1969)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki144" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki144" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1584, 1973)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki145" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki145" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1647, 1972)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki178" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki178" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(926, 2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki193" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki193" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(835, 3)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki194" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki194" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(756, 8)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki195" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki195" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(677, 8)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki179" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki179" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1003, 6)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki180" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki180" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1066, -2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki181" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki181" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1129, -3)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki182" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki182" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1206, 1)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki183" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki183" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1269, 6)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki184" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki184" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1346, 10)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki185" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki185" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1409, 9)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki186" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki186" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1486, 13)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki187" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki187" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1539, -1)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki188" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki188" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1602, -2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki189" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki189" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1679, 2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki190" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki190" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1742, 7)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki191" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki191" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1819, 11)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki276" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1473, 156)
+[node name="piikki276" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1299, 170)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki277" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1550, 160)
+[node name="piikki277" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1479, 206)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki278" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1603, 146)
+[node name="piikki278" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1466, 138)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki279" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1666, 145)
+[node name="piikki279" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1514, 166)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki280" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1743, 149)
+[node name="piikki510" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1562, 172)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki281" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1806, 154)
+[node name="piikki280" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1594, 137)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki282" parent="esteet" instance=ExtResource("1_ddaic")]
-position = Vector2(1883, 158)
+[node name="piikki281" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1657, 142)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki283" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki282" parent="esteet" instance=ExtResource("7_k7fq2")]
+position = Vector2(1739, 167)
+rotation = -0.000136768
+scale = Vector2(3.97, 3.97)
+
+[node name="piikki283" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(62, 1100)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki284" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki284" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(139, 1104)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki285" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki285" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(192, 1090)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki286" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki286" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(255, 1089)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki287" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki287" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(332, 1093)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki288" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki288" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(395, 1098)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki289" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki289" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(472, 1102)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki290" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki290" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(539, 1103)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki291" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki291" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(616, 1107)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki292" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki292" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(669, 1093)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki293" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki293" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(732, 1092)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki294" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki294" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(809, 1096)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki295" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki295" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(872, 1101)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki296" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki296" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(949, 1105)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki297" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki297" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(541, 1167)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki298" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki298" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(618, 1171)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki299" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki299" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(671, 1157)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki300" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki300" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(734, 1156)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki301" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki301" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(811, 1160)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki302" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki302" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(874, 1165)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki303" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki303" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(951, 1169)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki192" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki192" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1882, 10)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki382" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki382" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(960, 2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki383" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki383" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(869, 3)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki384" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki384" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(790, 8)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki385" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki385" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(711, 8)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki386" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki386" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1037, 6)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki387" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki387" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1100, -2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki388" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki388" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1163, -3)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki389" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki389" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1240, 1)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki390" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki390" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1303, 6)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki391" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki391" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1380, 10)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki392" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki392" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1443, 9)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki393" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki393" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1520, 13)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki394" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki394" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1573, -1)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki395" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki395" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1636, -2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki396" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki396" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1713, 2)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki397" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki397" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1776, 7)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki398" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki398" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1853, 11)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki399" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki399" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1916, 10)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki146" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki146" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1724, 1976)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki147" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki147" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1788, 1968)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki148" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki148" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1851, 1967)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki149" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki149" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1928, 1971)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki150" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki150" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1991, 1976)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki100" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki100" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1966, 1446)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki101" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki101" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1967, 1519)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki102" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki102" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1967, 1595)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki103" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki103" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1968, 1668)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki104" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki104" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1970, 1737)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki105" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki105" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1971, 1810)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki106" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki106" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1971, 1886)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki107" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki107" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1972, 1959)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki151" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki151" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1980, 1403)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki152" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki152" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1973, 939)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki153" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki153" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1956, 946)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki154" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki154" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1956, 1022)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki155" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki155" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1957, 1095)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki156" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki156" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1959, 1164)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki157" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki157" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1960, 1237)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki158" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki158" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1960, 1313)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki159" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki159" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1961, 1386)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki160" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki160" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1972, 803)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki161" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki161" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1947, 273)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki162" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki162" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1948, 346)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki163" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki163" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1948, 422)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki164" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki164" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1949, 495)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki165" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki165" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1951, 564)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki166" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki166" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1952, 637)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki167" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki167" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1952, 713)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki168" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki168" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1953, 786)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki169" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki169" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1980, 233)
 rotation = -0.000136768
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki170" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki170" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1955, -297)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki171" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki171" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1956, -224)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki172" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki172" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1956, -148)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki173" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki173" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1957, -75)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki174" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki174" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1959, -6)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki175" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki175" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1960, 67)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki176" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki176" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1960, 143)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki177" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki177" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1961, 216)
 scale = Vector2(3.97, 3.97)
 
-[node name="piikki50" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki50" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(7, 177)
 
-[node name="piikki51" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki51" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(6, 201)
 
-[node name="piikki52" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki52" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 222)
 
-[node name="piikki53" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki53" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 245)
 
-[node name="piikki54" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki54" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(5, 271)
 
-[node name="piikki55" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki55" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(4, 291)
 
-[node name="piikki56" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki56" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(3, 314)
 
-[node name="piikki57" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki57" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(2, 339)
 
-[node name="piikki58" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki58" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 363)
 
-[node name="piikki59" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki59" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(1, 363)
 
-[node name="piikki8" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki8" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(237, 7)
 
-[node name="piikki9" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki9" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(210, 5)
 
-[node name="piikki4" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki4" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(341, 3)
 
-[node name="piikki6" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki6" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(318, 3)
 
-[node name="piikki5" parent="esteet" instance=ExtResource("1_ddaic")]
+[node name="piikki5" parent="esteet" instance=ExtResource("7_k7fq2")]
 position = Vector2(929, 207)
 
 [node name="Pääkamera" type="Camera2D" parent="."]
@@ -2441,6 +2576,15 @@ collision_mask = 46
 
 [node name="Kala2" parent="kalat_parentti" instance=ExtResource("17_180vv")]
 position = Vector2(632, 493)
+rotation = 0.551111
+collision_layer = 32
+collision_mask = 46
+mass = 300.0
+hungry = 10
+shrink_when_ready = true
+
+[node name="Kala3" parent="kalat_parentti" instance=ExtResource("17_180vv")]
+position = Vector2(1373, 136)
 rotation = 0.551111
 collision_layer = 32
 collision_mask = 46
