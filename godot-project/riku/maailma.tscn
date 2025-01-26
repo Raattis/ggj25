@@ -61,4 +61,6 @@ label_settings = ExtResource("9_em6w7")
 horizontal_alignment = 1
 script = ExtResource("11_cuxj6")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="voitto_teksti"]
+
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

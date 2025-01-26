@@ -1,6 +1,9 @@
 class_name Cluster
 extends RigidBody2D
 
+const POP_1 = preload("res://riku/sfx/pop1.ogg")
+const POP_2 = preload("res://riku/sfx/pop2.ogg")
+
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
@@ -46,6 +49,7 @@ func pop(pop_position: Vector2):
 	var effekti = POKS.instantiate()
 	get_parent().add_child(effekti)
 	effekti.global_position = pop_position
+	
 	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
