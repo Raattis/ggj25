@@ -62,7 +62,7 @@ void fragment() {
 		vec4 refracted_sample = texture(
 			tex_bg,
 			UV_rippled - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
-		); 
+		);
 		COLOR = vec4(
 			mix(
 				(bubble_color + extra) * light,
