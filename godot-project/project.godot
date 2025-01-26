@@ -13,7 +13,10 @@ config_version=5
 config/name="ggj25"
 run/main_scene="uid://cdtngtk4i4wot"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.119103, 0.329527, 0.517688, 1)
+boot_splash/image="uid://d3yylr5yhuygk"
+boot_splash/fullsize=false
+config/icon="uid://d3yylr5yhuygk"
 
 [autoload]
 
