@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=17 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -22,6 +22,12 @@ width = 2048
 height = 2048
 color_ramp = SubResource("Gradient_owugb")
 noise = SubResource("FastNoiseLite_uwra1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gb5r"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hjf23"]
+radius = 5.0
 
 [node name="flying_game" type="Node2D"]
 script = ExtResource("1_owugb")
@@ -849,6 +855,8 @@ max_contacts_reported = 10
 script = ExtResource("2_x03cg")
 
 [node name="kupla_coll" parent="cluster" instance=ExtResource("3_vhjie")]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_5gb5r")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -856,6 +864,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll2" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(11, 0)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll2" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -863,6 +872,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll3" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(5, -10)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll3" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -870,6 +880,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll4" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(-7, -9)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll4" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -877,6 +888,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll5" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(-12, 1)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll5" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -884,6 +896,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll6" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(-6, 10)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll6" instance=ExtResource("4_yfi2e")]
 visible = true
@@ -891,6 +904,7 @@ scale = Vector2(0.018, 0.018)
 
 [node name="kupla_coll7" parent="cluster" instance=ExtResource("3_vhjie")]
 position = Vector2(7, 11)
+shape = SubResource("CircleShape2D_hjf23")
 
 [node name="kupla_gfx" parent="cluster/kupla_coll7" instance=ExtResource("4_yfi2e")]
 visible = true

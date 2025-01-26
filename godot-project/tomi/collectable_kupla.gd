@@ -26,9 +26,7 @@ func _process(_delta: float):
 
 
 func _on_body_entered(body):
-	if body is Cluster:
-		print("on") 
-	else:
+	if not body is Cluster:
 		return
 	for c in get_children() as Array[Node2D]:
 		var pos = c.global_position
