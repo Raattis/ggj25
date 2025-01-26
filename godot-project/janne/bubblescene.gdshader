@@ -52,20 +52,22 @@ void fragment() {
 		metasum += 1.0 - smoothstep(0.0, r * 1.3, length(p));
 	}
 
+	vec2 UV_rippled = UV + sin(TIME + UV.y * 16.) * 0.01 + cos(TIME + UV.x * 14.) * 0.01;
+
 	if (metasum < 0.3) {
 		//COLOR = texture(tex_bg, pos);
-		COLOR = texture(tex_bg, UV);
+		COLOR = texture(tex_bg, UV_rippled);
 	} else {
 		float light = -dot(normalize(vec3(pos, -.25)), normal) * 1.4;
 		vec4 refracted_sample = texture(
 			tex_bg,
-			UV - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
+			UV_rippled - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
 		); 
 		COLOR = vec4(
 			mix(
 				(bubble_color + extra) * light,
 				refracted_sample.xyz,
-				1. - normal.z
+				1. - normal.z * 0.4
 			),
 			1.0
 		);
