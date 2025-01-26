@@ -76,485 +76,485 @@ bubbles"
 
 [node name="piikki" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(137, -1)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki3" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(71, -110)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki26" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(157, -10)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki27" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(178, -4)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki28" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(200, 9)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki29" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(214, 15)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki30" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(234, 18)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki31" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(267, 18)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki32" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(286, 11)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki33" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(311, 9)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki34" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(248, 20)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki35" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(327, -2)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki36" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(346, -3)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki37" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(365, -1)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki38" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(386, -3)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki39" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(405, -1)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki40" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(368, 27)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki41" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(400, 26)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki42" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(423, 14)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki43" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(428, 33)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki44" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(418, 47)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki45" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(409, 62)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki46" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(399, 79)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki47" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(387, 93)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki48" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(370, 110)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki49" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(359, 121)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki50" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(345, 132)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki51" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(331, 142)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki52" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(317, 149)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki53" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(298, 150)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki54" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(278, 149)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki55" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(261, 152)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki56" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(245, 144)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki57" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(559, -28)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki58" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(560, -7)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki59" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(561, 14)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki60" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(552, 34)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki61" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(543, 53)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki62" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(536, 74)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki63" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(528, 97)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki64" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(517, 120)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki65" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(503, 141)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki66" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(493, 162)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki67" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(481, 182)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki68" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(474, 205)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki69" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(464, 230)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki70" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(412, 360)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki71" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(463, 255)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki72" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(463, 278)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki73" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(196, 275)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki74" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(200, 305)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki75" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(445, 320)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki107" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(390, 371)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki108" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(342, 381)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki109" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(214, 327)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki110" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(247, 363)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki111" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(233, 346)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki112" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(291, 383)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki113" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(458, 296)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki115" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(267, 375)
 rotation = -0.191774
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki116" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(315, 384)
 rotation = -0.191774
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki117" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(364, 377)
 rotation = -0.191774
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki114" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(430, 341)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki76" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(149, 202)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki77" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(167, 216)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki78" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(172, 236)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki79" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(185, 255)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki80" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(85, -128)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki81" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(327, -198)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki94" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(345, -193)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki95" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(365, -186)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki96" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(441, -147)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki100" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(458, -133)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki101" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(507, -93)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki102" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(475, -119)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki103" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(492, -102)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki104" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(521, -79)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki105" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(550, -48)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki106" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(537, -64)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki97" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(384, -176)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki98" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(403, -170)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki99" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(425, -160)
 rotation = -3.13618
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki82" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(305, -197)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki83" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(283, -199)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki84" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(264, -197)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki85" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(244, -201)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki86" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(225, -197)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki87" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(205, -198)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki88" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(183, -193)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki89" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(166, -184)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki90" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(149, -182)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki91" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(133, -172)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki92" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(116, -160)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki93" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(101, -144)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki4" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(56, -91)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki5" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(43, -70)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki6" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(34, -50)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki7" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(129, 16)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki8" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(134, 29)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki9" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(155, 37)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki10" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(175, 53)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki11" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(193, 69)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki12" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(216, 82)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki13" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(232, 91)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki14" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(241, 109)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki15" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(245, 129)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki16" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(131, 188)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki17" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(115, 169)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki18" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(97, 148)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki19" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(80, 129)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki20" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(68, 109)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki21" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(53, 85)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki22" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(46, 64)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki23" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(33, 46)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki24" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(27, 24)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki25" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(25, 0)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="piikki2" parent="." instance=ExtResource("4_i7qtg")]
 position = Vector2(25, -25)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 
 [node name="ankkuri3" parent="." instance=ExtResource("8_sono7")]
 position = Vector2(272, -97)
