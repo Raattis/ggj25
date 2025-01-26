@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=20 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
+[ext_resource type="Script" uid="uid://brytn3qf3ut81" path="res://tomi/vesi.gd" id="2_e6t4c"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="2_x03cg"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_vhjie"]
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="4_yfi2e"]
@@ -34,9 +35,10 @@ radius = 5.0
 [node name="flying_game" type="Node2D"]
 script = ExtResource("1_owugb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="vesi" type="Sprite2D" parent="."]
 position = Vector2(990, 969)
 texture = SubResource("NoiseTexture2D_5gb5r")
+script = ExtResource("2_e6t4c")
 metadata/_edit_lock_ = true
 
 [node name="ruokittu_info" type="Label" parent="."]
