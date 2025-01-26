@@ -7,6 +7,8 @@ const KALA = preload("res://tomi/kala.tscn")
 func _init():
 	for x in range(0.0, 2000, 150):
 		for y in range(0.0, 2000, 150):
+			if y > 1000:
+				continue
 			var new = KUPLA_SPAWNI.instantiate()
 			add_child(new)
 			new.position = Vector2(x + randf() * 100, y + randf() * 100)
