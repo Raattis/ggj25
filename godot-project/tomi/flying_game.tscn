@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dcpki1xvxqot0"]
+[gd_scene load_steps=18 format=3 uid="uid://dcpki1xvxqot0"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_ddaic"]
 [ext_resource type="Script" uid="uid://bptm2iibra84w" path="res://tomi/flying_game.gd" id="1_owugb"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://555ydg2oiu3j" path="res://tomi/kupla_spawnerit.gd" id="10_5gb5r"]
 [ext_resource type="Script" uid="uid://cqy8kuxkc4q3y" path="res://tomi/pääkamera.gd" id="11_5gb5r"]
 [ext_resource type="PackedScene" uid="uid://raub18716gf3" path="res://tomi/kala.tscn" id="11_hjf23"]
+[ext_resource type="Script" uid="uid://dt6ij857100sd" path="res://tomi/polygon_2d_to_collider.gd" id="12_hjf23"]
 
 [sub_resource type="Gradient" id="Gradient_owugb"]
 colors = PackedColorArray(0.0156863, 0.611765, 0.827451, 1, 0.47451, 0.717647, 0.835294, 1)
@@ -1715,7 +1716,13 @@ position = Vector2(318, 3)
 position = Vector2(929, 207)
 
 [node name="cluster" type="RigidBody2D" parent="."]
-position = Vector2(572, 591)
+editor_description = "Ykkönen on kun kasataan
+kakkonen kun liikkuu
+kolmonen piikit
+nelonen ??? ehkäö piikki
+vitonen maali
+"
+position = Vector2(98, 258)
 collision_mask = 0
 gravity_scale = 0.0
 continuous_cd = 2
@@ -1894,5 +1901,15 @@ script = ExtResource("10_5gb5r")
 
 [node name="Kala" parent="." instance=ExtResource("11_hjf23")]
 position = Vector2(505, 332)
+
+[node name="Koti" type="RigidBody2D" parent="."]
+position = Vector2(105, 118)
+collision_layer = 8
+collision_mask = 0
+freeze = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Koti"]
+polygon = PackedVector2Array(1, 0, -63, 69, -63, 180, 63, 179, 64, 161, 52, 161, 51, 170, -53, 171, -54, 71, 2, 12, 49, 63, 52, 118, 62, 118, 61, 60)
+script = ExtResource("12_hjf23")
 
 [connection signal="body_entered" from="cluster" to="cluster" method="_on_body_entered"]

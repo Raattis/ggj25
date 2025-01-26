@@ -26,10 +26,11 @@ var spawn_radius := 0.1
 var spawn_radius_grow_sign := 1.0
 
 func _ready():
-	var rect := get_viewport().get_visible_rect()
-	target.global_position.y = rect.position.y + rect.size.y * 0.9
-	target.global_position.x = rect.position.x + rect.size.x * 0.5
-	target_position = target.global_position
+	if tee_auto_laukaisuja:
+		var rect := get_viewport().get_visible_rect()
+		target.global_position.y = rect.position.y + rect.size.y * 0.9
+		target.global_position.x = rect.position.x + rect.size.x * 0.5
+		target_position = target.global_position
 
 
 func _process(delta: float):
