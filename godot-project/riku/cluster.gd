@@ -182,7 +182,6 @@ func _on_body_entered(body: Node2D):
 		destroy()
 	var ab = body as Area2D
 	if ab and ab.collision_layer & (1<<4) != 0 and ankkurit.size() > 0:
-		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
 		print("Voittoon mentiin ", ankkurit.size(), " ankkurin kanssa.")
 		GameManager.anchors_collected += ankkurit.size()
 		ankkurit.clear()

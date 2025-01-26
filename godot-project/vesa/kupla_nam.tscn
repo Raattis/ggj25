@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpl3s1iqnpt8l"]
+
+[ext_resource type="Script" uid="uid://bq3mf7gixg2am" path="res://vesa/kupla_nam.gd" id="1_lggyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6khai"]
+
+[node name="KuplaNam" type="Area2D"]
+collision_layer = 32
+collision_mask = 62
+script = ExtResource("1_lggyp")
+
+[node name="kupla_alue" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6khai")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
