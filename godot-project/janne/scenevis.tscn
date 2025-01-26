@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://baye7jmkprwtr"]
+[gd_scene load_steps=23 format=3 uid="uid://baye7jmkprwtr"]
 
 [ext_resource type="Shader" uid="uid://duneg1mt00gfr" path="res://janne/bubblescene.gdshader" id="1_bo0uw"]
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bglxyd08bom18" path="res://janne/scene_noise.tres" id="4_yms0o"]
 [ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="5_1u3gn"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="6_14p64"]
+[ext_resource type="Texture2D" uid="uid://d3yylr5yhuygk" path="res://piikkiii.png" id="7_nayvl"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_u224b"]
 viewport_path = NodePath("maisema")
@@ -71,9 +72,17 @@ size = Vector2(100, 100)
 subdivide_width = 256
 subdivide_depth = 256
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nayvl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plcbv"]
 transparency = 1
 albedo_texture = ExtResource("6_14p64")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_glcjq"]
+material = SubResource("StandardMaterial3D_plcbv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nayvl"]
+transparency = 1
+albedo_texture = ExtResource("7_nayvl")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_1u3gn"]
@@ -186,10 +195,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57492e-05, 0.995054, -10.5
 amount = 27
 lifetime = 4.16
 preprocess = 3.03
+mesh = SubResource("QuadMesh_glcjq")
+emission_shape = 3
+emission_box_extents = Vector3(15.42, 5.465, 6.03)
+direction = Vector3(0, 0, 1)
+spread = 180.0
+flatness = 0.62
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 7.0
+
+[node name="CPUParticles3D2" type="CPUParticles3D" parent="maisema"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14984e-05, 1.99011, -21.0278)
+amount = 27
+lifetime = 4.16
+preprocess = 3.03
 mesh = SubResource("QuadMesh_1u3gn")
 emission_shape = 3
 emission_box_extents = Vector3(15.42, 5.465, 6.03)
+direction = Vector3(0, 0, 1)
 spread = 180.0
+flatness = 0.81
 gravity = Vector3(0, 0, 0)
 initial_velocity_min = 3.0
 initial_velocity_max = 7.0
