@@ -3,7 +3,6 @@ extends RigidBody2D
 
 const POP_1 = preload("res://riku/sfx/pop1.ogg")
 const POP_2 = preload("res://riku/sfx/pop2.ogg")
-
 var impulse_magnitude := 300.0
 var max_angular_velocity := 30.0
 var impulse_cooldown :int= 0
@@ -18,6 +17,8 @@ var o := 0.0
 
 func _win_area_hit(body: RigidBody2D, area: Area2D):
 	if body == self:
+		if ankkurit.size() > 0:
+			area.collect()
 		_on_body_entered(area)
 
 func _ready():
@@ -187,6 +188,7 @@ func _on_body_entered(body: Node2D):
 		ankkurit.clear()
 		gravity_scale = -1
 		GameManager.win_grow = 1.2
+		
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist: float = INF
