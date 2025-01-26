@@ -4,7 +4,7 @@ extends Label
 
 const TADAA_2 = preload("res://riku/sfx/tadaa2.ogg")
 const TADAA = preload("res://riku/sfx/tadaa.ogg")
-const WIN := 100
+const WIN := 20
 var won := false
 
 func _process(delta):
