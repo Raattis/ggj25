@@ -1,18 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqcs45ssbagov"]
+[gd_scene load_steps=11 format=3 uid="uid://cqcs45ssbagov"]
 
 [ext_resource type="PackedScene" uid="uid://dafehync2qrhk" path="res://riku/kursori.tscn" id="1_c3fsg"]
 [ext_resource type="Script" uid="uid://ctngu81qq6mn4" path="res://riku/cluster.gd" id="1_v0xw8"]
-[ext_resource type="Script" uid="uid://0jsxf63umreb" path="res://riku/maailma.gd" id="1_w20kg"]
+[ext_resource type="Script" path="res://riku/maailma.gd" id="1_w20kg"]
 [ext_resource type="PackedScene" uid="uid://daq0pfywwl0eb" path="res://riku/kupla_gfx.tscn" id="2_cspln"]
 [ext_resource type="PackedScene" uid="uid://cdh1dxarb8aqr" path="res://riku/kupla_coll.tscn" id="3_h4tqo"]
 [ext_resource type="PackedScene" uid="uid://ckchqys4sj7xu" path="res://riku/mapit.tscn" id="8_3c7bh"]
 [ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="9_em6w7"]
-[ext_resource type="PackedScene" uid="uid://71mwi3rl47cg" path="res://kentat/kenta_tutorial.tscn" id="9_nd4rt"]
-[ext_resource type="PackedScene" uid="uid://dx66bfx2xx7hu" path="res://vesa/kalanen.tscn" id="10_em6w7"]
-[ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="10_ru51m"]
+[ext_resource type="PackedScene" path="res://vesa/kalanen.tscn" id="10_em6w7"]
 [ext_resource type="Script" uid="uid://db24hqv5btw2k" path="res://kentat/voitto_teksti.gd" id="11_cuxj6"]
-[ext_resource type="PackedScene" uid="uid://b03i3juefj3r5" path="res://kentat/kenttä_pitkä.tscn" id="11_l1arq"]
-[ext_resource type="Script" uid="uid://ckt0usd1iobuf" path="res://riku/drag_kamera.gd" id="11_msu6y"]
+[ext_resource type="Script" path="res://riku/drag_kamera.gd" id="11_msu6y"]
 
 [node name="maailma" type="Node2D"]
 script = ExtResource("1_w20kg")
@@ -44,7 +41,6 @@ position = Vector2(320, 180)
 script = ExtResource("11_msu6y")
 
 [node name="mapit" parent="." instance=ExtResource("8_3c7bh")]
-arr = Array[PackedScene]([ExtResource("9_nd4rt"), ExtResource("10_ru51m"), ExtResource("11_l1arq")])
 
 [node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
 position = Vector2(566, 365)

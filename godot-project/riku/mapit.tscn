@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckchqys4sj7xu"]
+[gd_scene load_steps=6 format=3 uid="uid://ckchqys4sj7xu"]
 
-[ext_resource type="Script" uid="uid://cj3j5u15dfmam" path="res://riku/mapin_vaihto.gd" id="1_fp74k"]
+[ext_resource type="Script" path="res://riku/mapin_vaihto.gd" id="1_fp74k"]
 [ext_resource type="PackedScene" uid="uid://71mwi3rl47cg" path="res://kentat/kenta_tutorial.tscn" id="2_yw55f"]
 [ext_resource type="PackedScene" uid="uid://bcrrmnmev2k1t" path="res://kentat/kenta_kahdeksikko.tscn" id="3_mdfsl"]
+[ext_resource type="PackedScene" uid="uid://b03i3juefj3r5" path="res://kentat/kenttä_pitkä.tscn" id="4_4wwrj"]
+[ext_resource type="PackedScene" uid="uid://bdjofpoeh3pho" path="res://kentat/kenttä_pitkempi.tscn" id="4_mdfsl"]
 
 [node name="mapit" type="Node"]
 script = ExtResource("1_fp74k")
-arr = Array[PackedScene]([ExtResource("2_yw55f"), ExtResource("3_mdfsl")])
+arr = Array[PackedScene]([ExtResource("2_yw55f"), ExtResource("3_mdfsl"), ExtResource("4_4wwrj"), ExtResource("4_mdfsl")])
