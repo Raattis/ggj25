@@ -11,14 +11,17 @@ var liiku_napein = false
 var liike_nopeus = 500.0
 var kierto_nopeus = 10000.0
 
-var anchors_collected := 0
-
 var o := 0.0
+
+func _win_area_hit(body: RigidBody2D, area: Area2D):
+	if body == self:
+		_on_body_entered(area)
 
 func _ready():
 	o = randf() * 12.0
 	if get_tree().get_current_scene().name.find("fly") != -1:
 		liiku_napein = true
+	GameManager.win_area_hit.connect(_win_area_hit)
 
 func _process(_delta: float):
 	if global_position.length() > 10000:
@@ -36,7 +39,7 @@ func _process(_delta: float):
 		renderer.push_bubble(
 			(child.global_position - view_size / 2.0 + Vector2(dx, dy)) / view_size.y,
 			(child.shape.get_radius() + ds) / view_size.y,
-			anchors_collected / 3.0
+			ankkurit.size() / 3.0
 		)
 
 func pop(pop_position: Vector2):
@@ -123,8 +126,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	impulse_cooldown -= 1
 	if impulse_cooldown < 0 and state.get_contact_count() > 0:
 		var pos := state.get_contact_collider_position(0)
-		var obj := state.get_contact_collider_object(0)
-		if obj is StaticBody2D:
+		var obj := state.get_contact_collider_object(0) as StaticBody2D
+		if obj and obj.collision_layer == (1<<2):
 			var closest :CollisionShape2D= null
 			var closest_dist :float= INF
 			var closest_pos := Vector2(0,0)
@@ -154,19 +157,20 @@ func destroy():
 	queue_free()
 
 func _on_body_entered(body: Node2D):
-	var sb = body as StaticBody2D
 	if body as Kala:
 		if body.spawn_sydän():
 			remove_closest_child(body.position)
-	if not sb:
-		return
-	if (body as StaticBody2D).collision_layer & (1<<3) != 0:
+	var sb = body as StaticBody2D
+	if sb and sb.collision_layer & (1<<3) != 0:
 		destroy()
-	if (body as StaticBody2D).collision_layer & (1<<4) != 0:
+	var ab = body as Area2D
+	if ab and ab.collision_layer & (1<<4) != 0 and ankkurit.size()>0:
 		get_parent().get_parent().find_child("the kalanen").etippä_toi(self);
-		print("Voittoon mentiin ", anchors_collected, " ankkurin kanssa.")
-		GameManager.anchors_collected += anchors_collected
-		
+		print("Voittoon mentiin ", ankkurit.size(), " ankkurin kanssa.")
+		GameManager.anchors_collected += ankkurit.size()
+		ankkurit.clear()
+		gravity_scale = -1
+		GameManager.win_grow = 1.2
 
 func find_closest_spot(pos: Vector2, radius: float) -> Vector2:
 	var closest_dist :float= INF
@@ -214,5 +218,4 @@ func add_ankkuri(ankkuri: Node2D) -> bool:
 		return false
 	ankkurit.append(ankkuri)
 	gravity_scale = 1;
-	anchors_collected += 1
 	return true

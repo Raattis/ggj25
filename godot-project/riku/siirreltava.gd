@@ -23,8 +23,10 @@ func next():
 func _process(_delta):
 	if GameManager.bubbles_add_mode:
 		dragging = false
+		modulate.a = 0.2
 		return
 
+	modulate.a = 0.8
 	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		global_position = get_global_mouse_position() + offset
 	else:
@@ -38,20 +40,17 @@ func is_mouse_over() -> bool:
 func _input(event : InputEvent):
 	if GameManager.bubbles_add_mode:
 		return
-
-	if event is InputEventMouse and dragging:
-		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
-			var rot := 1.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0
+	var mb := event as InputEventMouseButton
+	if mb and (mb.button_index == MOUSE_BUTTON_WHEEL_UP or mb.button_index == MOUSE_BUTTON_WHEEL_DOWN):
+		if (is_mouse_over() and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) or dragging:
+			var rot := 1.0 if mb.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0
 			obu.rotate(rot * PI / 16)
 			done_stuff = true
-		if event.is_pressed() and (event.button_index == MOUSE_BUTTON_RIGHT):
-			queue_free()
-			done_stuff = true
-
-	if event is InputEventMouse:
-		if event is InputEventMouseButton and event.pressed and is_mouse_over():
-			if (event as InputEventMouseButton).button_index == MOUSE_BUTTON_LEFT:
-				dragging = true
-				done_stuff = false
-				start = get_global_mouse_position()
-				offset = global_position - get_global_mouse_position()
+	if mb and event.is_pressed() and (event.button_index == MOUSE_BUTTON_RIGHT):
+		queue_free()
+		done_stuff = true
+	if mb and event.pressed and is_mouse_over() and mb.button_index == MOUSE_BUTTON_LEFT:
+			dragging = true
+			done_stuff = false
+			start = get_global_mouse_position()
+			offset = global_position - get_global_mouse_position()

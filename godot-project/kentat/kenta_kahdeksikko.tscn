@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bcrrmnmev2k1t"]
+[gd_scene load_steps=11 format=3 uid="uid://bcrrmnmev2k1t"]
 
 [ext_resource type="PackedScene" uid="uid://xjwqtpiaaa4o" path="res://riku/piikki.tscn" id="1_brnge"]
 [ext_resource type="LabelSettings" uid="uid://ckvvb4oje4406" path="res://riku/font_settings.tres" id="1_lt1uk"]
@@ -6,11 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://dagu8ijc37k04" path="res://riku/death_plane.tscn" id="2_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://cf81ogclcnnb6" path="res://riku/siirreltava.tscn" id="3_c42sy"]
 [ext_resource type="PackedScene" uid="uid://c1iba0jrj8j7w" path="res://riku/win_plane.tscn" id="4_hfthl"]
+[ext_resource type="Script" uid="uid://crajtgy3wovcw" path="res://kentat/bubble_help.gd" id="5_b1k8p"]
 [ext_resource type="PackedScene" uid="uid://b16pwl1lkdp8p" path="res://vesa/ankkurininen.tscn" id="5_qxlhe"]
 [ext_resource type="PackedScene" uid="uid://blhgyhqy0sdsu" path="res://riku/mode_switch.tscn" id="6_c42sy"]
 [ext_resource type="Script" uid="uid://d1nf1apeye4ib" path="res://kentat/click_here_to_add_currents.gd" id="7_hfthl"]
 
 [node name="kenta_kahdeksikko" type="Node2D"]
+
+[node name="win_plane" parent="." instance=ExtResource("4_hfthl")]
+position = Vector2(320, 310)
 
 [node name="click_here_to_add_currents" type="Label" parent="."]
 offset_left = 85.0
@@ -27,13 +31,26 @@ offset_left = 207.0
 offset_top = 88.0
 offset_right = 529.0
 offset_bottom = 215.0
-text = "Drag currents with mouse
-Hold left click and scroll to rotate
-Hold left click and click right to delete
+text = "Drag currents using mouse
+Scroll to rotate
+Right click right to delete
 Double click to add new
-Click to switch between spike and current"
+Click current to make a spike"
 label_settings = ExtResource("1_lt1uk")
 script = ExtResource("2_pwlaw")
+
+[node name="bubble_help" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0.52549)
+offset_left = 207.0
+offset_top = 88.0
+offset_right = 529.0
+offset_bottom = 215.0
+text = "Right click to delete bubbles
+Left click add new bubbles
+Hold left click to make them bigger
+Click that button in the bottom right too!"
+label_settings = ExtResource("1_lt1uk")
+script = ExtResource("5_b1k8p")
 
 [node name="esteet" type="Node" parent="."]
 
@@ -287,10 +304,6 @@ rotation = 2.77507
 [node name="siirreltava2" parent="siirreltavat" instance=ExtResource("3_c42sy")]
 position = Vector2(131, 260)
 rotation = -0.58294
-
-[node name="win_plane" parent="." instance=ExtResource("4_hfthl")]
-position = Vector2(368, 523)
-scale = Vector2(10, 1)
 
 [node name="ankkuri" parent="." instance=ExtResource("5_qxlhe")]
 position = Vector2(108, 35)

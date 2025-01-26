@@ -39,15 +39,16 @@ position = Vector2(-175, -61)
 [node name="kursori" parent="." instance=ExtResource("1_c3fsg")]
 position = Vector2(378, -80)
 
-[node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
-position = Vector2(566, 365)
-
 [node name="drag_camera" type="Camera2D" parent="."]
 position = Vector2(320, 180)
 script = ExtResource("11_msu6y")
 
 [node name="mapit" parent="." instance=ExtResource("8_3c7bh")]
 arr = Array[PackedScene]([ExtResource("9_nd4rt"), ExtResource("10_ru51m"), ExtResource("11_l1arq")])
+
+[node name="the kalanen" parent="." instance=ExtResource("10_em6w7")]
+visible = false
+position = Vector2(566, 365)
 
 [node name="voitto_teksti" type="Label" parent="."]
 z_index = 10

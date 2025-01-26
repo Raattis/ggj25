@@ -9,6 +9,9 @@
 
 [node name="kenta_tutorial" type="Node2D"]
 
+[node name="win_plane" parent="." instance=ExtResource("3_loxyf")]
+position = Vector2(320, 310)
+
 [node name="ohjeet" type="Label" parent="."]
 offset_left = 6.0
 offset_top = 254.0
@@ -51,17 +54,25 @@ scale = Vector2(24.1192, 0.469113)
 
 [node name="siirreltavat" type="Node" parent="."]
 
-[node name="win_plane" parent="." instance=ExtResource("3_loxyf")]
-position = Vector2(368, 466)
-scale = Vector2(10, 1)
-
 [node name="ankkuri3" parent="." instance=ExtResource("4_ktpr6")]
 position = Vector2(331, 101)
 
 [node name="the virtanen" parent="." instance=ExtResource("5_i1tjq")]
+modulate = Color(1, 1, 1, 0.470588)
 position = Vector2(280, 74)
 rotation = 0.329232
 
+[node name="the virtanen3" parent="." instance=ExtResource("5_i1tjq")]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(190, 278)
+rotation = 0.0623502
+
+[node name="the virtanen4" parent="." instance=ExtResource("5_i1tjq")]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(456, 309)
+rotation = 3.1302
+
 [node name="the virtanen2" parent="." instance=ExtResource("5_i1tjq")]
+modulate = Color(1, 1, 1, 0.470588)
 position = Vector2(375, 51)
 rotation = 2.69337
