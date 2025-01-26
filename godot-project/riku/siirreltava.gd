@@ -46,7 +46,7 @@ func _input(event : InputEvent):
 			var rot := 1.0 if mb.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0
 			obu.rotate(rot * PI / 16)
 			done_stuff = true
-	if mb and event.is_pressed() and (event.button_index == MOUSE_BUTTON_RIGHT):
+	if mb and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT and is_mouse_over():
 		queue_free()
 		done_stuff = true
 	if mb and event.pressed and is_mouse_over() and mb.button_index == MOUSE_BUTTON_LEFT:
