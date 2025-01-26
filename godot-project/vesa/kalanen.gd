@@ -38,6 +38,10 @@ func kuplan_metsästys_tilanpäivitys(delta : float):
 	var magnitude := sqrt((direction.x* direction.x) + (direction.y*direction.y));
 	var unit_vector := direction / magnitude;
 	var kupla_etäisyys = kupla_kohde_sijainti.distance_to(position)
+	if(direction.x < 0):
+		scale.x = kalan_koko.x;
+	else:
+		scale.x = -kalan_koko.x;
 	if kupla_etäisyys > 10:
 		position += unit_vector * delta * 400;
 		find_child("kalasprite").find_child("animenaama").frame = 2
