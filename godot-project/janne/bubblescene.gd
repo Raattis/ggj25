@@ -22,6 +22,8 @@ func _process(_delta: float) -> void:
 		
 	if orig_camera_initialized:
 		var camera = get_viewport().get_camera_2d()
+		if not camera:
+			return
 		get_parent().position = camera.position - get_parent().size / 2.
 		
 		var camera_offset := get_viewport().get_camera_2d().position - orig_camera_pos
