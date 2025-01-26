@@ -15,13 +15,13 @@ viewport_path = NodePath("maisema")
 resource_local_to_scene = true
 shader = ExtResource("1_bo0uw")
 shader_parameter/tex_bg = SubResource("ViewportTexture_u224b")
-shader_parameter/bubble_color = Color(1, 0.219406, 0.0701913, 1)
+shader_parameter/bubble_color = Color(0.14411, 0.452147, 0.790088, 1)
 shader_parameter/aspect_ratio = null
 shader_parameter/bubbles_active_count = null
 shader_parameter/bubbles_pos = null
 shader_parameter/bubbles_radius = null
 shader_parameter/bubbles_extra = null
-shader_parameter/light_pos = null
+shader_parameter/light_pos = Vector3(0, 1, -0.25)
 
 [sub_resource type="Environment" id="Environment_bo0uw"]
 background_mode = 1

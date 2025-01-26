@@ -58,16 +58,16 @@ void fragment() {
 		//COLOR = texture(tex_bg, pos);
 		COLOR = texture(tex_bg, UV_rippled);
 	} else {
-		float light = -dot(normalize(vec3(pos, -.25)), normal) * 1.4;
+		float light = -dot(normalize(vec3(pos, 0.) + light_pos), normal);
 		vec4 refracted_sample = texture(
 			tex_bg,
 			UV_rippled - normal.xy * (log(normal.z * 1.13)) * 0.12 // Heretic math
 		);
 		COLOR = vec4(
 			mix(
-				(bubble_color + extra) * light,
 				refracted_sample.xyz,
-				1. - normal.z * 0.4
+				(bubble_color + vec3(-extra * .6, extra * 1.5, -extra * .6)) * (exp(light * 1.99) * 0.4),
+				normal.z * light
 			),
 			1.0
 		);
