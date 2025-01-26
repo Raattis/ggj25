@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr0r65aeku0jd"]
+
+[ext_resource type="Script" uid="uid://o23bnrwvy81d" path="res://vesa/seinäläinen.gd" id="1_gito7"]
+[ext_resource type="Texture2D" uid="uid://ddp4xhvcmicaw" path="res://vesa/keltainen.png" id="2_c1284"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0pdpw"]
+b = Vector2(258, 0)
+
+[node name="Seinäläinen" type="RigidBody2D"]
+collision_layer = 29
+collision_mask = 29
+script = ExtResource("1_gito7")
+
+[node name="muoto" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_0pdpw")
+
+[node name="kuva" type="Sprite2D" parent="."]
+position = Vector2(129, 0)
+scale = Vector2(25.814, 0.288361)
+texture = ExtResource("2_c1284")
