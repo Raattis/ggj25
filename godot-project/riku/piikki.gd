@@ -2,7 +2,8 @@ extends StaticBody2D
 class_name PiikkiKala
 
 @export var voi_disabloida := false
-@export var pyöri_ku_osuu := false
+@export var pyöri_ku_osuu := true
+
 
 var disablointi_aika = 5.0
 var pyöri_nopeus = 0.0
