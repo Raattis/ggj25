@@ -18,6 +18,7 @@ position = Vector2(2, 13)
 shape = SubResource("RectangleShape2D_miv4y")
 
 [node name="kalasprite" type="Sprite2D" parent="."]
+position = Vector2(-4, 4)
 texture = ExtResource("2_y30yw")
 
 [node name="animenaama" type="Sprite2D" parent="kalasprite"]

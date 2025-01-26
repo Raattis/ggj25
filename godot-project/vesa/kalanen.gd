@@ -10,28 +10,39 @@ var kalan_koko = Vector2(1,1)
 var toimeton_y_nopeus = 10;
 @export var kalan_alue := Vector4(0,0,0,0);
 var kuplan_metästys_kesken = false;
+var kupla_saattaa_muuttua_nulliksi : Cluster
 var kupla_kohde_sijainti := Vector2(0,0);
 var huojunta := 0.0
 
 func etippä_toi(kuplunen : Cluster):
+	kupla_saattaa_muuttua_nulliksi = kuplunen
 	kupla_kohde_sijainti = kuplunen.position
 	kuplan_metästys_kesken = true
 	olen_toimeton =false
 
 func _ready():
+	find_child("kalasprite").find_child("animenaama").frame = 0;
 	kalan_koko = scale;
 
 func kuplan_metsästys_tilanpäivitys(delta : float):
 	huojunta += delta * 4.0
+	if(kupla_saattaa_muuttua_nulliksi):
+		kupla_kohde_sijainti = kupla_saattaa_muuttua_nulliksi.position;
+	else:
+		kuplan_metästys_kesken = false;
+		olen_toimeton = true;
+		find_child("kalasprite").find_child("animenaama").frame = 3;
+		return
+		
 	var direction := Vector2(kupla_kohde_sijainti - position).normalized();
 	var magnitude := sqrt((direction.x* direction.x) + (direction.y*direction.y));
 	var unit_vector := direction / magnitude;
 	var kupla_etäisyys = kupla_kohde_sijainti.distance_to(position)
 	if kupla_etäisyys > 10:
-		position += unit_vector * delta * 650;
+		position += unit_vector * delta * 400;
+		find_child("kalasprite").find_child("animenaama").frame = 2
 	else:
-		kuplan_metästys_kesken = false;
-		olen_toimeton = true;
+		find_child("kalasprite").find_child("animenaama").frame = 1
 
 func toimeton_elämäntila_tilannepäivitys(delta: float):
 	huojunta += delta * 2.0
@@ -62,6 +73,6 @@ func _process(delta: float):
 		
 	if kuplan_metästys_kesken:
 		kuplan_metsästys_tilanpäivitys(delta);
-
+	
 	huojunta += delta * 0.5
 	rotation = sin(huojunta) * 0.1
