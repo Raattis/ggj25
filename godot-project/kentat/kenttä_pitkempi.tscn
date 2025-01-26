@@ -63,7 +63,7 @@ position = Vector2(64, 239)
 rotation = -0.58294
 
 [node name="win_plane" parent="." instance=ExtResource("6_47lc6")]
-position = Vector2(377, 444)
+position = Vector2(310, 456)
 scale = Vector2(10, 1)
 
 [node name="mode_switch" parent="." instance=ExtResource("8_cekkq")]
@@ -77,155 +77,719 @@ bubbles"
 
 [node name="piikki3" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(58, -87)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki31" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(29, 189)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki32" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(353, -61)
+position = Vector2(334, -31)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki36" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(382, -51)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki150" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(363, -18)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki151" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(357, 21)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki152" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(326, -2.00001)
+rotation = -1.82459
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki46" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(324, -129)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki47" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(345, -151)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki50" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(382, -152)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki33" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(296, -3)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki34" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(285, 81)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki35" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(366, 28)
+position = Vector2(170, -88)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki132" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(170, -88)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki153" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(195, -188)
+rotation = -1.18619
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki130" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(155, -48)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki133" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(166, -13)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki134" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(206, 81)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki140" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(208, 117)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki141" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(233, 153)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki142" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(215, 241)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki143" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(247, 214)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki144" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(296, 172)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki145" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(260, 136)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki146" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(250, 104)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki147" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(309, 110)
+rotation = 2.64966
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki148" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(326, 141)
+rotation = 2.64966
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki149" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(294, 140)
+rotation = 2.64966
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki135" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(111, 166)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki136" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(77, 180)
+rotation = 0.897203
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki137" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(77, 180)
+rotation = 3.02244
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki37" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(647, -225)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki40" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(694, -170)
+position = Vector2(606, -182)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki38" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(452, -243)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki39" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(356, -254)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki42" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(705, 389)
+position = Vector2(617, 377)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki45" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(601, 407)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki43" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(476, 413)
+rotation = 2.24894
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki44" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(547, -216)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki48" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(352, 104)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki49" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(342, 169)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki51" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(725, 122)
+position = Vector2(600, 113)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki105" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(608, 163)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki118" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(622, 135)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki52" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(745, 195)
+position = Vector2(620, 186)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki110" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(628, 213)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki53" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(729, 28)
+position = Vector2(604, 19)
 rotation = 0.822341
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki55" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(735, 311)
+position = Vector2(610, 302)
 rotation = 0.822341
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki54" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(493, 342)
+position = Vector2(456, 345)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki56" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(259, 180)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki57" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(533, 23)
+position = Vector2(502, -4)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki113" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(434, -64)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki114" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(472, -40)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki115" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(463, -66)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki117" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(423, -147)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki119" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(421, -181)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki120" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(397, -206)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki124" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(499, -226)
+rotation = -2.13371
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki125" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(439, -205)
+rotation = -2.13371
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki121" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(300, -254)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki122" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(360, -224)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki123" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(360, -224)
+rotation = -2.98455
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki116" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(477, -16)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki106" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(476, 22)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki107" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(450, 50)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki108" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(466, 118)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki109" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(509, 152)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki58" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(709, -100)
+position = Vector2(584, -109)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki131" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(609, -87)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki139" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(601, -149)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki159" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(578, -206)
+rotation = -1.34819
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki59" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(725, -43)
+position = Vector2(600, -52)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki60" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(665, 474)
+position = Vector2(569, 426)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki61" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(572, 475)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki63" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(572, 475)
 rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki97" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(542, 496)
+rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki98" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(466, 513)
+rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki64" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(504, 506)
 rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki66" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(429, 515)
 rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki68" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(321, 517)
+position = Vector2(273, 486)
 rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki69" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(310, 506)
+rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki70" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(362, 513)
+rotation = 0.291482
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki79" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(413, 473)
+rotation = -1.67145
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki81" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(372, 399)
+rotation = -1.30892
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki82" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(363, 363)
+rotation = 1.68569
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki84" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(290, 383)
+rotation = 1.68569
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki85" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(227, 422)
+rotation = 1.68569
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki158" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(200, 431)
+rotation = 1.68569
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki62" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(547, 98)
+position = Vector2(453, 87)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki65" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(548, 170)
+position = Vector2(445, 167)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki111" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(589, -8)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki112" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(590, 45)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki102" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(569, 71)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki103" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(596, 83)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki101" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(477, 150)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki104" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(445, 199)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki67" parent="." instance=ExtResource("9_xcihp")]
-position = Vector2(538, 262)
+position = Vector2(501, 265)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki99" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(443, 230)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki100" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(479, 242)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki71" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(399, 347)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki86" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(436, 355)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki87" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(475, 377)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki88" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(480, 316)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki89" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(504, 294)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki90" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(618, 243)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki91" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(615, 273)
+rotation = 1.71782
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki92" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(563, 336)
+rotation = 3.71158
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki96" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(592, 325)
+rotation = 3.91836
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki72" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(260, 398)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki73" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(79, 322)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki74" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(241, 458)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki83" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(166, 431)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki93" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(39, 136)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki75" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(322, 371)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki76" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(96, 393)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki154" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(130, 416)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki155" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(75, 365)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki156" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(53, 289)
+rotation = 2.72689
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki157" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(53, 289)
+rotation = 0.75301
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki77" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(44, 248)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki78" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(238, 240)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki138" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(185, 253)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki80" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(64, -189)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki94" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(235, -255)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki126" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(197, -243)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki127" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(115, -212)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki128" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(58, -138)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki129" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(36, -45)
+rotation = -0.935629
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki95" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(160, -228)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki21" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(53, 85)
+scale = Vector2(2, 2)
+script = null
+
+[node name="piikki22" parent="." instance=ExtResource("9_xcihp")]
+position = Vector2(26, 60)
+rotation = -0.194787
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki24" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(27, 24)
+scale = Vector2(2, 2)
+script = null
 
 [node name="piikki25" parent="." instance=ExtResource("9_xcihp")]
 position = Vector2(25, 0)
+scale = Vector2(2, 2)
+script = null
 
 [node name="ankkuri3" parent="." instance=ExtResource("7_bd0p4")]
-position = Vector2(277, -143)
+position = Vector2(312, -190)
 
 [connection signal="pressed" from="mode_switch" to="mode_switch" method="_on_pressed"]
