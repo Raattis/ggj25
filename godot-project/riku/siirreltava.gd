@@ -30,7 +30,7 @@ func _process(_delta):
 	if dragging and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		global_position = get_global_mouse_position() + offset
 	else:
-		if dragging and (start - get_global_mouse_position()).length() < 3 and not done_stuff:
+		if dragging and (start - get_global_mouse_position()).length() < 1 and not done_stuff:
 			next()
 		dragging = false
 
