@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d23tocyvu3qh8" path="res://janne/bubblescene.gd" id="2_bo0uw"]
 [ext_resource type="Shader" uid="uid://clostlp4rfcns" path="res://janne/terrain.gdshader" id="3_u224b"]
 [ext_resource type="Shader" uid="uid://boacklpdu8hdg" path="res://janne/vedenpinta.gdshader" id="4_14p64"]
-[ext_resource type="Texture2D" uid="uid://bp2als6xo6tmt" path="res://janne/scene_noise.tres" id="4_yms0o"]
+[ext_resource type="Texture2D" uid="uid://bglxyd08bom18" path="res://janne/scene_noise.tres" id="4_yms0o"]
 [ext_resource type="Texture2D" uid="uid://cuymoywjfsjxf" path="res://janne/kelp.png" id="5_1u3gn"]
 [ext_resource type="Texture2D" uid="uid://nvargs4oqefh" path="res://vesa/kala.png" id="6_14p64"]
 
